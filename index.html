@@ -1,0 +1,171 @@
+<html>
+<head>
+    <title></title>
+    <style>
+        html, body{
+            margin:0;
+        }
+    </style>
+
+    <script src="js/three.min.js"></script>
+    <script src="js/jsRocket.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    var syncDevice = new JSRocket.SyncDevice();
+    var BPM = 150;              // Beats per minute
+    var RPB = 4;                // Rows per beat
+    var RR = BPM / 60 * RPB;    // Row Rate
+    var _row = 0;
+    var audio;
+    var clearR, clearB, clearG;
+    var rotX, rotY, rotZ;
+    var cPosX, cPosY, cPosZ;
+    var cShakeSpeed, cShakeAmt;
+    var demo = false;
+
+    var WIDTH = 1280, HEIGHT = 720;
+    var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
+
+    var renderer = new THREE.WebGLRenderer({antialias:true});
+    camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
+    var scene = new THREE.Scene();
+
+    var cube = new THREE.Mesh(new THREE.CubeGeometry(10, 10, 10), new THREE.MeshLambertMaterial({ color: 0x0000ff }));
+
+    var ambientLight = new THREE.AmbientLight(0x212223);
+    scene.add(ambientLight);
+
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(1, 1, 1).normalize();
+
+    init();
+    function init(){
+        prepareScene();
+        prepareSync();
+    }
+
+    function prepareScene(){
+        scene.add(camera);
+        scene.add(cube);
+        scene.add(ambientLight);
+        scene.add(directionalLight);
+        renderer.setSize(WIDTH, HEIGHT);
+        document.body.appendChild(renderer.domElement);
+    }
+
+    function prepareSync(){
+        syncDevice.on('ready', onSyncReady);
+        syncDevice.on('update', onSyncUpdate);
+        syncDevice.on('play', onPlay);
+        syncDevice.on('pause', onPause);
+
+        if (demo) {
+            syncDevice.setConfig({'rocketXML':'main.rocket'});
+            syncDevice.init("demo");
+        } else {
+            syncDevice.init();
+        }
+    }
+
+    function onSyncReady(){
+        clearR = syncDevice.getTrack('clearR');
+        clearG = syncDevice.getTrack('clearG');
+        clearB = syncDevice.getTrack('clearB');
+        rotX = syncDevice.getTrack('rotX');
+        rotY = syncDevice.getTrack('rotY');
+        rotZ = syncDevice.getTrack('rotZ');
+        cPosX = syncDevice.getTrack('cPosX');
+        cPosY = syncDevice.getTrack('cPosY');
+        cPosZ = syncDevice.getTrack('cPosZ');
+        cShakeAmt = syncDevice.getTrack('cShakeAmt');
+        cShakeSpeed = syncDevice.getTrack('cShakeSpeed');
+
+        prepareAudio();
+    }
+
+    function prepareAudio(){
+        audio = new Audio();
+        // My musician's a moron! Don't know why he called it 160 when it's 150... I guess drunk or high or both
+        audio.src = "http://thorium.skriveleif.com/~joms/jomstest160.mp3";
+        audio.load();
+        audio.preload = true;
+        audio.addEventListener('canplay', onAudioReady);
+    }
+
+    function onAudioReady(){
+        console.log("audio ready");
+        if(!demo){
+            audio.pause();
+            audio.currentTime = _row / RR;
+        } else {
+            render();
+            audio.play();
+        }
+    }
+
+    function onSyncUpdate(newRow){
+        if(!isNaN(newRow))
+        {
+            _row = newRow;
+            audio.currentTime = _row / RR;
+        }
+        render(_row);
+    }
+
+    function onPlay(){
+        audio.currentTime = _row / RR;
+        audio.play();
+        render();
+    }
+
+    function onPause(){
+        _row = audio.currentTime * RR;
+        window.cancelAnimationFrame(render, document);
+        audio.pause();
+    }
+
+    function render(){
+        if(audio.paused === false) {
+            //otherwise you get the issue i mentioned in the jsRocket issue tracker
+            //seems to be related to timeFrames in the audio file
+            _row = audio.currentTime * RR;
+        }
+
+        syncDevice.update(_row);
+
+        var color = new THREE.Color()
+        color.setRGB((clearR.getValue(_row) || 0) / 255,
+                (clearG.getValue(_row) || 0) / 255,
+                (clearB.getValue(_row) || 0) / 255);
+        renderer.setClearColor(color);
+
+        // Thanks kusma!
+        var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
+        var camOffsX = Math.sin(shake_phase);
+        var camOffsY = Math.cos(shake_phase * 0.9);
+        var camOffsZ = Math.sin(shake_phase - 0.5);
+
+        camera.lookAt(scene.position);
+        camera.position.x = cPosX.getValue(_row) + (camOffsX * cShakeAmt.getValue(_row));
+        camera.position.y = cPosY.getValue(_row) + (camOffsY * cShakeAmt.getValue(_row));
+        camera.position.z = cPosZ.getValue(_row) + (camOffsZ * cShakeAmt.getValue(_row));
+
+        cube.rotation.x = rotX.getValue(_row) * Math.PI / 180;
+        cube.rotation.y = rotY.getValue(_row) * Math.PI / 180;
+        cube.rotation.z = rotZ.getValue(_row) * Math.PI / 180;
+
+        camera.lookAt( scene.position );
+
+        renderer.render(scene, camera);
+
+        if((demo === true)  || (audio.paused === false))
+            window.requestAnimationFrame(render, document);
+        else
+            window.cancelAnimationFrame(render, document);
+    }
+</script>
+
+</body>
+</html>
