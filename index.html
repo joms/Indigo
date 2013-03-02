@@ -25,9 +25,9 @@
 
             float darkness = 1.45;
             vec2 textureCoords = p - 0.5;
-            float vignette = .6 - (dot(textureCoords, textureCoords) * darkness);
+            float vignette = .4 - (dot(textureCoords, textureCoords) * darkness);
 
-            gl_FragColor= vec4(vignette, vignette, vignette, .5-vignette*2.);
+            gl_FragColor= vec4(vignette, vignette, vignette, .2-vignette*2.);
         }
     </script>
 
