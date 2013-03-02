@@ -7,6 +7,30 @@
         }
     </style>
 
+    <script id="vignette-vs" type="x-shader/x-vertex">
+        void main() {
+            gl_Position = vec4( position, 1.0 );
+        }
+    </script>
+
+    <script id="vignette-fs" type="x-shader/x-fragment">
+        #ifdef GL_ES
+            precision highp float;
+        #endif
+
+        uniform vec2 resolution;
+
+        void main(void) {
+            vec2 p = gl_FragCoord.xy / resolution.xy;
+
+            float darkness = 1.45;
+            vec2 textureCoords = p - 0.5;
+            float vignette = .4 - (dot(textureCoords, textureCoords) * darkness);
+
+            gl_FragColor= vec4(vignette, vignette, vignette, .2-vignette*2.);
+        }
+    </script>
+
     <script src="js/three.min.js"></script>
     <script src="js/jsRocket.js"></script>
 </head>
@@ -17,7 +41,7 @@
     var BPM = 160;              // Beats per minute
     var RPB = 4;                // Rows per beat
     var RR = BPM / 60 * RPB;    // Row Rate
-    var _row = 0;
+    var _row;
     var audio;
     var clearR, clearB, clearG;
     var rotX, rotY, rotZ;
@@ -32,14 +56,8 @@
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
     var scene = new THREE.Scene();
 
-
     var geometry = new THREE.CubeGeometry( 10, 10, 10 );
-
-    for ( var i = 0; i < geometry.faces.length; i ++ ) {
-
-        geometry.faces[ i ].color.setHex( Math.random() * 0xffffff );
-
-    }
+    for ( var i = 0; i < geometry.faces.length; i ++ ) geometry.faces[ i ].color.setHex( Math.random() * 0xffffff );
     var cube = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { vertexColors: THREE.FaceColors } ));
 
     var ambientLight = new THREE.AmbientLight(0x212223);
@@ -47,6 +65,24 @@
 
     var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1).normalize();
+
+    var uniforms = {
+        resolution: { type: "v2", value: new THREE.Vector2() }
+    };
+
+    uniforms.resolution.value.x = WIDTH;
+    uniforms.resolution.value.y = HEIGHT;
+
+    var material = new THREE.ShaderMaterial( {
+        uniforms: uniforms,
+        vertexShader: document.getElementById( 'vignette-vs' ).textContent,
+        fragmentShader: document.getElementById( 'vignette-fs' ).textContent
+
+    } );
+
+    var mesh = new THREE.Mesh( new THREE.PlaneGeometry(2, 2), material );
+    //scene.addObject(mesh);
+    scene.__addObject(mesh);
 
     init();
     function init(){
@@ -103,7 +139,6 @@
     }
 
     function onAudioReady(){
-        console.log("audio ready");
         if(!demo){
             audio.pause();
             audio.currentTime = _row / RR;
@@ -113,14 +148,13 @@
         }
     }
 
-    function onSyncUpdate(newRow){
-        if(!isNaN(newRow))
-        {
-            _row = newRow;
-            audio.currentTime = _row / RR;
+    function onSyncUpdate(row) {
+        if (!isNaN(row)) {
+            _row = row;
         }
-        render(_row);
+        render();
     }
+
 
     function onPlay(){
         audio.currentTime = _row / RR;
@@ -139,9 +173,8 @@
             //otherwise you get the issue i mentioned in the jsRocket issue tracker
             //seems to be related to timeFrames in the audio file
             _row = audio.currentTime * RR;
+            syncDevice.update(_row);
         }
-
-        syncDevice.update(_row);
 
         var color = new THREE.Color()
         color.setRGB((clearR.getValue(_row) || 0) / 255,
