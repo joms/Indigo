@@ -7,32 +7,17 @@
         }
     </style>
 
-    <script id="vignette-vs" type="x-shader/x-vertex">
-        void main() {
-            gl_Position = vec4( position, 1.0 );
-        }
-    </script>
-
-    <script id="vignette-fs" type="x-shader/x-fragment">
-        #ifdef GL_ES
-            precision highp float;
-        #endif
-
-        uniform vec2 resolution;
-
-        void main(void) {
-            vec2 p = gl_FragCoord.xy / resolution.xy;
-
-            float darkness = 1.45;
-            vec2 textureCoords = p - 0.5;
-            float vignette = .4 - (dot(textureCoords, textureCoords) * darkness);
-
-            gl_FragColor= vec4(vignette, vignette, vignette, .2-vignette*2.);
-        }
-    </script>
-
     <script src="js/three.min.js"></script>
     <script src="js/jsRocket.js"></script>
+
+    <script src="js/postprocessing/EffectComposer.js"></script>
+    <script src="js/postprocessing/RenderPass.js"></script>
+    <script src="js/postprocessing/ShaderPass.js"></script>
+    <script src="js/postprocessing/MaskPass.js"></script>
+    <script src="js/shaders/CopyShader.js"></script>
+
+    <script src="js/shaders/FilmShader.js"></script>
+    <script src="js/shaders/VignetteShader.js"></script>
 </head>
 <body>
 
@@ -66,24 +51,6 @@
     var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1).normalize();
 
-    var uniforms = {
-        resolution: { type: "v2", value: new THREE.Vector2() }
-    };
-
-    uniforms.resolution.value.x = WIDTH;
-    uniforms.resolution.value.y = HEIGHT;
-
-    var material = new THREE.ShaderMaterial( {
-        uniforms: uniforms,
-        vertexShader: document.getElementById( 'vignette-vs' ).textContent,
-        fragmentShader: document.getElementById( 'vignette-fs' ).textContent
-
-    } );
-
-    var mesh = new THREE.Mesh( new THREE.PlaneGeometry(2, 2), material );
-    //scene.addObject(mesh);
-    scene.__addObject(mesh);
-
     init();
     function init(){
         prepareScene();
@@ -97,6 +64,23 @@
         scene.add(directionalLight);
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
+
+        vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
+        vignettePass.uniforms[ "darkness" ].value = 1.;
+
+        filmPass = new THREE.ShaderPass( THREE.FilmShader );
+        filmPass.uniforms[ "sCount" ].value = 1500;
+        filmPass.uniforms[ "sIntensity" ].value = .2;
+        filmPass.uniforms[ "nIntensity" ].value = .4;
+
+        renderPass = new THREE.RenderPass( scene, camera );
+        copyPass = new THREE.ShaderPass( THREE.CopyShader );
+        composer = new THREE.EffectComposer(renderer);
+        composer.addPass(renderPass);
+        composer.addPass(vignettePass);
+        composer.addPass(filmPass);
+        composer.addPass(copyPass);
+        copyPass.renderToScreen = true;
     }
 
     function prepareSync(){
@@ -199,7 +183,8 @@
 
         camera.lookAt( scene.position );
 
-        renderer.render(scene, camera);
+        composer.render(0.1);
+        //renderer.render(scene, camera);
 
         if((demo === true)  || (audio.paused === false))
             window.requestAnimationFrame(render, document);
