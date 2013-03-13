@@ -18,6 +18,8 @@
 
     <script src="js/shaders/FilmShader.js"></script>
     <script src="js/shaders/VignetteShader.js"></script>
+    <script src="js/shaders/BlinkShader.js"></script>
+    <script src="js/shaders/RGBDistort.js"></script>
 </head>
 <body>
 
@@ -33,6 +35,8 @@
     var cPosX, cPosY, cPosZ;
     var cShakeSpeed, cShakeAmt;
     var demo = false;
+    var blinkAmount = .0;
+    var rgbDistAmt = .0;
 
     var WIDTH = 1280, HEIGHT = 720;
     var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
@@ -41,9 +45,22 @@
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
     var scene = new THREE.Scene();
 
-    var geometry = new THREE.CubeGeometry( 10, 10, 10 );
-    for ( var i = 0; i < geometry.faces.length; i ++ ) geometry.faces[ i ].color.setHex( Math.random() * 0xffffff );
-    var cube = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial( { vertexColors: THREE.FaceColors } ));
+    var SEPARATION = 25, AMOUNTX = 50, AMOUNTY = 50;
+    var cubes = [], cube;
+    var i = 0;
+    for (var ix = 0; ix < AMOUNTX; ix ++ )
+    {
+        for (var iy = 0; iy < AMOUNTY; iy ++ )
+        {
+            var geometry = new THREE.CubeGeometry( 10, 10, 10 );
+            for ( var c = 0; c < geometry.faces.length; c ++ ) geometry.faces[c].color.setHex( Math.random() * 0xffffff );
+
+            cube = cubes[i ++] = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({vertexColors: THREE.FaceColors}));
+            cube.position.x = ix * SEPARATION - ((AMOUNTX * SEPARATION ) / 2);
+            cube.position.z = iy * SEPARATION - ((AMOUNTY * SEPARATION ) / 2);
+            scene.add(cube);
+        }
+    }
 
     var ambientLight = new THREE.AmbientLight(0x212223);
     scene.add(ambientLight);
@@ -59,24 +76,30 @@
 
     function prepareScene(){
         scene.add(camera);
-        scene.add(cube);
         scene.add(ambientLight);
         scene.add(directionalLight);
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
 
         vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
-        vignettePass.uniforms[ "darkness" ].value = 1.;
+        vignettePass.uniforms["darkness"].value = 1.;
 
         filmPass = new THREE.ShaderPass( THREE.FilmShader );
-        filmPass.uniforms[ "sCount" ].value = 1500;
-        filmPass.uniforms[ "sIntensity" ].value = .2;
-        filmPass.uniforms[ "nIntensity" ].value = .4;
+        filmPass.uniforms["sCount"].value = 1000;
+        filmPass.uniforms["sIntensity"].value = .5;
+        filmPass.uniforms["nIntensity"].value = .4;
+
+        blinkPass = new THREE.ShaderPass(THREE.BlinkShader);
+        blinkPass.uniforms["amount"].value = .0;
+
+        RGBDistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
 
         renderPass = new THREE.RenderPass( scene, camera );
         copyPass = new THREE.ShaderPass( THREE.CopyShader );
         composer = new THREE.EffectComposer(renderer);
         composer.addPass(renderPass);
+        composer.addPass(RGBDistortPass);
+        composer.addPass(blinkPass);
         composer.addPass(vignettePass);
         composer.addPass(filmPass);
         composer.addPass(copyPass);
@@ -101,6 +124,8 @@
         clearR = syncDevice.getTrack('clearR');
         clearG = syncDevice.getTrack('clearG');
         clearB = syncDevice.getTrack('clearB');
+        blinkAmount = syncDevice.getTrack('blinkAmt');
+        rgbDistAmt = syncDevice.getTrack('rgbDistAmt');
         rotX = syncDevice.getTrack('rotX');
         rotY = syncDevice.getTrack('rotY');
         rotZ = syncDevice.getTrack('rotZ');
@@ -109,13 +134,11 @@
         cPosZ = syncDevice.getTrack('cPosZ');
         cShakeAmt = syncDevice.getTrack('cShakeAmt');
         cShakeSpeed = syncDevice.getTrack('cShakeSpeed');
-
         prepareAudio();
     }
 
     function prepareAudio(){
         audio = new Audio();
-        // My musician's a moron! Don't know why he called it 160 when it's 150... I guess drunk or high or both
         audio.src = "sound/Tromlebass 160 BPM [struktur klar].mp3";
         audio.load();
         audio.preload = true;
@@ -154,8 +177,6 @@
 
     function render(){
         if(audio.paused === false) {
-            //otherwise you get the issue i mentioned in the jsRocket issue tracker
-            //seems to be related to timeFrames in the audio file
             _row = audio.currentTime * RR;
             syncDevice.update(_row);
         }
@@ -177,10 +198,29 @@
         camera.position.y = cPosY.getValue(_row) + (camOffsY * cShakeAmt.getValue(_row));
         camera.position.z = cPosZ.getValue(_row) + (camOffsZ * cShakeAmt.getValue(_row));
 
-        cube.rotation.x = rotX.getValue(_row) * Math.PI / 180;
-        cube.rotation.y = rotY.getValue(_row) * Math.PI / 180;
-        cube.rotation.z = rotZ.getValue(_row) * Math.PI / 180;
+        var i = 0;
+        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
+            for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
+                cube = cubes[ i++ ];
 
+                if (_row <= 88){
+                    cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
+                    if (cube.position.y > 0)
+                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
+                    else
+                        cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
+                } else {
+                    cube.position.y = (Math.sin((ix + (_row * 0.075) * Math.sin(iy)) * 0.3) * 50) + (Math.sin((iy + (_row * 0.075) * Math.sin(ix)) * 0.5) * 50);
+                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
+                }
+
+                cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
+            }
+        }
+
+        filmPass.uniforms["time"].value = audio.currentTime;
+        blinkPass.uniforms["amount"].value = blinkAmount.getValue(_row);
+        RGBDistortPass.uniforms["amount"].value = rgbDistAmt.getValue(_row);
         camera.lookAt( scene.position );
 
         composer.render(0.1);
