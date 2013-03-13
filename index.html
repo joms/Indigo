@@ -85,8 +85,8 @@
         vignettePass.uniforms["darkness"].value = 1.;
 
         filmPass = new THREE.ShaderPass( THREE.FilmShader );
-        filmPass.uniforms["sCount"].value = 1500;
-        filmPass.uniforms["sIntensity"].value = .2;
+        filmPass.uniforms["sCount"].value = 1000;
+        filmPass.uniforms["sIntensity"].value = .5;
         filmPass.uniforms["nIntensity"].value = .4;
 
         blinkPass = new THREE.ShaderPass(THREE.BlinkShader);
@@ -218,6 +218,7 @@
             }
         }
 
+        filmPass.uniforms["time"].value = audio.currentTime;
         blinkPass.uniforms["amount"].value = blinkAmount.getValue(_row);
         RGBDistortPass.uniforms["amount"].value = rgbDistAmt.getValue(_row);
         camera.lookAt( scene.position );

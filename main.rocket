@@ -82,7 +82,25 @@
 			<key row="0" value="0" interpolation="0"/>
 		</track>
 		<track name="rgbDistAmt">
-			<key row="0" value="0" interpolation="0"/>
+			<key row="0" value="0.001" interpolation="0"/>
+			<key row="32" value="0.1" interpolation="0"/>
+			<key row="35" value="0" interpolation="0"/>
+			<key row="48" value="0.1" interpolation="0"/>
+			<key row="51" value="0" interpolation="0"/>
+			<key row="64" value="0.1" interpolation="0"/>
+			<key row="67" value="0" interpolation="0"/>
+			<key row="80" value="0.1" interpolation="0"/>
+			<key row="83" value="0" interpolation="0"/>
+			<key row="97" value="0.1" interpolation="0"/>
+			<key row="100" value="0" interpolation="0"/>
+			<key row="112" value="0.1" interpolation="0"/>
+			<key row="115" value="0" interpolation="0"/>
+			<key row="128" value="0.1" interpolation="0"/>
+			<key row="131" value="0" interpolation="0"/>
+			<key row="144" value="0.1" interpolation="0"/>
+			<key row="147" value="0" interpolation="0"/>
+			<key row="156" value="0.1" interpolation="0"/>
+			<key row="159" value="0" interpolation="0"/>
 		</track>
 		<track name="rotX">
 			<key row="0" value="0" interpolation="0"/>
