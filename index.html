@@ -19,6 +19,7 @@
     <script src="js/shaders/FilmShader.js"></script>
     <script src="js/shaders/VignetteShader.js"></script>
     <script src="js/shaders/BlinkShader.js"></script>
+    <script src="js/shaders/RGBDistort.js"></script>
 </head>
 <body>
 
@@ -35,6 +36,7 @@
     var cShakeSpeed, cShakeAmt;
     var demo = false;
     var blinkAmount = .0;
+    var rgbDistAmt = .0;
 
     var WIDTH = 1280, HEIGHT = 720;
     var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
@@ -80,20 +82,23 @@
         document.body.appendChild(renderer.domElement);
 
         vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
-        vignettePass.uniforms[ "darkness" ].value = 1.;
+        vignettePass.uniforms["darkness"].value = 1.;
 
         filmPass = new THREE.ShaderPass( THREE.FilmShader );
-        filmPass.uniforms[ "sCount" ].value = 1500;
-        filmPass.uniforms[ "sIntensity" ].value = .2;
-        filmPass.uniforms[ "nIntensity" ].value = .4;
+        filmPass.uniforms["sCount"].value = 1500;
+        filmPass.uniforms["sIntensity"].value = .2;
+        filmPass.uniforms["nIntensity"].value = .4;
 
         blinkPass = new THREE.ShaderPass(THREE.BlinkShader);
-        blinkPass.uniforms[ "amount" ].value = .0;
+        blinkPass.uniforms["amount"].value = .0;
+
+        RGBDistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
 
         renderPass = new THREE.RenderPass( scene, camera );
         copyPass = new THREE.ShaderPass( THREE.CopyShader );
         composer = new THREE.EffectComposer(renderer);
         composer.addPass(renderPass);
+        composer.addPass(RGBDistortPass);
         composer.addPass(blinkPass);
         composer.addPass(vignettePass);
         composer.addPass(filmPass);
@@ -120,6 +125,7 @@
         clearG = syncDevice.getTrack('clearG');
         clearB = syncDevice.getTrack('clearB');
         blinkAmount = syncDevice.getTrack('blinkAmt');
+        rgbDistAmt = syncDevice.getTrack('rgbDistAmt');
         rotX = syncDevice.getTrack('rotX');
         rotY = syncDevice.getTrack('rotY');
         rotZ = syncDevice.getTrack('rotZ');
@@ -205,18 +211,15 @@
                         cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
                 } else {
                     cube.position.y = (Math.sin((ix + (_row * 0.075) * Math.sin(iy)) * 0.3) * 50) + (Math.sin((iy + (_row * 0.075) * Math.sin(ix)) * 0.5) * 50);
-                    //if (cube.position.y > 0)
                         cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
-                    //else
-                    //    cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
                 }
 
                 cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
             }
         }
 
-        blinkPass.uniforms[ "amount" ].value = blinkAmount.getValue(_row);
-
+        blinkPass.uniforms["amount"].value = blinkAmount.getValue(_row);
+        RGBDistortPass.uniforms["amount"].value = rgbDistAmt.getValue(_row);
         camera.lookAt( scene.position );
 
         composer.render(0.1);
