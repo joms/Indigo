@@ -18,6 +18,7 @@
 
     <script src="js/shaders/FilmShader.js"></script>
     <script src="js/shaders/VignetteShader.js"></script>
+    <script src="js/shaders/DistortShader.js"></script>
 </head>
 <body>
 
@@ -32,7 +33,7 @@
     var rotX, rotY, rotZ;
     var cPosX, cPosY, cPosZ;
     var cShakeSpeed, cShakeAmt;
-    var demo = true;
+    var demo = false;
 
     var WIDTH = 1280, HEIGHT = 720;
     var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
@@ -65,6 +66,8 @@
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
 
+        distortPass = new THREE.ShaderPass(THREE.DistortShader);
+
         vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
         vignettePass.uniforms[ "darkness" ].value = 1.;
 
@@ -77,8 +80,7 @@
         copyPass = new THREE.ShaderPass( THREE.CopyShader );
         composer = new THREE.EffectComposer(renderer);
         composer.addPass(renderPass);
-        composer.addPass(vignettePass);
-        composer.addPass(filmPass);
+        composer.addPass(distortPass);
         composer.addPass(copyPass);
         copyPass.renderToScreen = true;
     }
@@ -165,6 +167,8 @@
                 (clearG.getValue(_row) || 0) / 255,
                 (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
+
+        distortPass.uniforms["time"].value = audio.currentTime;
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
