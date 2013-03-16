@@ -16,9 +16,9 @@
     <script src="js/postprocessing/MaskPass.js"></script>
     <script src="js/shaders/CopyShader.js"></script>
 
-    <script src="js/shaders/FilmShader.js"></script>
-    <script src="js/shaders/VignetteShader.js"></script>
-    <script src="js/shaders/DistortShader.js"></script>
+    <script src="js/shaders/RGBDistort.js"></script>
+    <script src="js/shaders/ImageDistort.js"></script>
+    <script src="js/shaders/Overlay.js"></script>
 </head>
 <body>
 
@@ -66,21 +66,18 @@
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
 
-        distortPass = new THREE.ShaderPass(THREE.DistortShader);
 
-        vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
-        vignettePass.uniforms[ "darkness" ].value = 1.;
+        RGBdistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
+        ImagedistortPass = new THREE.ShaderPass(THREE.ImagedistortShader);
+        overlay = new THREE.ShaderPass(THREE.OverlayShader);
 
-        filmPass = new THREE.ShaderPass( THREE.FilmShader );
-        filmPass.uniforms[ "sCount" ].value = 1500;
-        filmPass.uniforms[ "sIntensity" ].value = .2;
-        filmPass.uniforms[ "nIntensity" ].value = .4;
-
-        renderPass = new THREE.RenderPass( scene, camera );
-        copyPass = new THREE.ShaderPass( THREE.CopyShader );
+        renderPass = new THREE.RenderPass(scene, camera);
+        copyPass = new THREE.ShaderPass(THREE.CopyShader);
         composer = new THREE.EffectComposer(renderer);
         composer.addPass(renderPass);
-        composer.addPass(distortPass);
+        composer.addPass(ImagedistortPass);
+        composer.addPass(RGBdistortPass);
+        composer.addPass(overlay);
         composer.addPass(copyPass);
         copyPass.renderToScreen = true;
     }
@@ -117,7 +114,6 @@
 
     function prepareAudio(){
         audio = new Audio();
-        // My musician's a moron! Don't know why he called it 160 when it's 150... I guess drunk or high or both
         audio.src = "sound/Tromlebass 160 BPM [struktur klar].mp3";
         audio.load();
         audio.preload = true;
@@ -168,7 +164,7 @@
                 (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
-        distortPass.uniforms["time"].value = audio.currentTime;
+        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = RGBdistortPass.uniforms["time"].value = audio.currentTime;
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);

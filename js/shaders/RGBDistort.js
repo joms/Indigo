@@ -1,8 +1,10 @@
-THREE.DistortShader = {
+THREE.RGBDistortShader = {
     uniforms: {
+        // General uniforms
         "tDiffuse": {type: "t", value: null},
         "time": {type: "f", value:.0},
 
+        // Uniforms for distorting colors
         "rgbAmt": {type: "f", value:.005},
         "rgbAng": {type: "f", value:1.}
     },
@@ -17,8 +19,8 @@ THREE.DistortShader = {
     ].join("\n"),
 
     fragmentShader: [
-        "uniform float time;",
         "uniform sampler2D tDiffuse;",
+        "uniform float time;",
         "uniform float rgbAmt;",
         "uniform float rgbAng;",
         "varying vec2 vUv;",
@@ -33,13 +35,6 @@ THREE.DistortShader = {
             "vec4 cga = texture2D(tDiffuse, vUv);",
             "vec4 cb = texture2D(tDiffuse, vUv - offset);",
             "color.r = cr.r; color.g = cga.g; color.b = cb.b; color.a = cga.a;",
-
-            // Make some noise!
-            "float x = vUv.x * vUv.y * time *  1000.;",
-            "x = mod(x, 13.) * mod(x, 123.);",
-            "float dx = mod(x, .01);",
-            "vec3 noise = color.rgb + color.rgb * clamp(.1 + dx * 100., 0., 1.);",
-            "color.rgb = noise;",
 
             "gl_FragColor = color;",
         "}"
