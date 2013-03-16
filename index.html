@@ -16,6 +16,7 @@
     <script src="js/postprocessing/MaskPass.js"></script>
     <script src="js/shaders/CopyShader.js"></script>
 
+    <script src="js/shaders/BlinkShader.js"></script>
     <script src="js/shaders/RGBDistort.js"></script>
     <script src="js/shaders/ImageDistort.js"></script>
     <script src="js/shaders/Overlay.js"></script>
@@ -83,6 +84,7 @@
         RGBdistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
         ImagedistortPass = new THREE.ShaderPass(THREE.ImagedistortShader);
         overlay = new THREE.ShaderPass(THREE.OverlayShader);
+        blink = new THREE.ShaderPass(THREE.BlinkShader);
 
         renderPass = new THREE.RenderPass(scene, camera);
         copyPass = new THREE.ShaderPass(THREE.CopyShader);
@@ -90,6 +92,7 @@
         composer.addPass(renderPass);
         composer.addPass(ImagedistortPass);
         composer.addPass(RGBdistortPass);
+        composer.addPass(blink);
         composer.addPass(overlay);
         composer.addPass(copyPass);
         copyPass.renderToScreen = true;
@@ -176,7 +179,7 @@
                 (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
-        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = RGBdistortPass.uniforms["time"].value = audio.currentTime;
+        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
@@ -209,9 +212,8 @@
             }
         }
 
-        filmPass.uniforms["time"].value = audio.currentTime;
-        blinkPass.uniforms["amount"].value = blinkAmount.getValue(_row);
-        RGBDistortPass.uniforms["amount"].value = rgbDistAmt.getValue(_row);
+        blink.uniforms["amount"].value = blinkAmount.getValue(_row);
+        RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row);
         camera.lookAt( scene.position );
 
         composer.render(0.1);
