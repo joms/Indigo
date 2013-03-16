@@ -16,10 +16,9 @@
     <script src="js/postprocessing/MaskPass.js"></script>
     <script src="js/shaders/CopyShader.js"></script>
 
-    <script src="js/shaders/FilmShader.js"></script>
-    <script src="js/shaders/VignetteShader.js"></script>
-    <script src="js/shaders/BlinkShader.js"></script>
     <script src="js/shaders/RGBDistort.js"></script>
+    <script src="js/shaders/ImageDistort.js"></script>
+    <script src="js/shaders/Overlay.js"></script>
 </head>
 <body>
 
@@ -81,27 +80,17 @@
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
 
-        vignettePass = new THREE.ShaderPass( THREE.VignetteShader );
-        vignettePass.uniforms["darkness"].value = 1.;
+        RGBdistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
+        ImagedistortPass = new THREE.ShaderPass(THREE.ImagedistortShader);
+        overlay = new THREE.ShaderPass(THREE.OverlayShader);
 
-        filmPass = new THREE.ShaderPass( THREE.FilmShader );
-        filmPass.uniforms["sCount"].value = 1000;
-        filmPass.uniforms["sIntensity"].value = .5;
-        filmPass.uniforms["nIntensity"].value = .4;
-
-        blinkPass = new THREE.ShaderPass(THREE.BlinkShader);
-        blinkPass.uniforms["amount"].value = .0;
-
-        RGBDistortPass = new THREE.ShaderPass(THREE.RGBDistortShader);
-
-        renderPass = new THREE.RenderPass( scene, camera );
-        copyPass = new THREE.ShaderPass( THREE.CopyShader );
+        renderPass = new THREE.RenderPass(scene, camera);
+        copyPass = new THREE.ShaderPass(THREE.CopyShader);
         composer = new THREE.EffectComposer(renderer);
         composer.addPass(renderPass);
-        composer.addPass(RGBDistortPass);
-        composer.addPass(blinkPass);
-        composer.addPass(vignettePass);
-        composer.addPass(filmPass);
+        composer.addPass(ImagedistortPass);
+        composer.addPass(RGBdistortPass);
+        composer.addPass(overlay);
         composer.addPass(copyPass);
         copyPass.renderToScreen = true;
     }
@@ -186,6 +175,8 @@
                 (clearG.getValue(_row) || 0) / 255,
                 (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
+
+        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = RGBdistortPass.uniforms["time"].value = audio.currentTime;
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
