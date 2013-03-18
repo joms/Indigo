@@ -5,10 +5,10 @@ THREE.ImagedistortShader = {
         "time": {type: "f", value:.0},
 
         // Uniforms for image distortion
-        "distortion": {type: "f", value: 3.0},
-        "distortion2": {type: "f", value: 5.0},
+        "distortion": {type: "f", value: .0}, //5.1
+        "distortion2": {type: "f", value: .0}, //6.1
         "speed": {type: "f", value: 0.1},
-        "rollSpeed": {type: "f", value: 0.1}
+        "rollSpeed": {type: "f", value: 0.}
     },
 
     vertexShader: [

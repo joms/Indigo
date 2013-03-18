@@ -9,6 +9,7 @@
 
     <script src="js/three.min.js"></script>
     <script src="js/jsRocket.js"></script>
+    <script src="js/image.json"></script>
 
     <script src="js/postprocessing/EffectComposer.js"></script>
     <script src="js/postprocessing/RenderPass.js"></script>
@@ -33,10 +34,16 @@
     var clearR, clearB, clearG;
     var rotX, rotY, rotZ;
     var cPosX, cPosY, cPosZ;
+    var cLookX, cLookY, cLookZ;
     var cShakeSpeed, cShakeAmt;
     var demo = false;
+
+    // Shadervars
     var blinkAmount = .0;
     var rgbDistAmt = .0;
+    var imgDistAmt = .0,
+        imgDistAmt2 = .0,
+        imgRollSpeed = .0;
 
     var WIDTH = 1280, HEIGHT = 720;
     var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
@@ -45,7 +52,7 @@
     camera = new THREE.PerspectiveCamera( VIEW_ANGLE, ASPECT, NEAR, FAR );
     var scene = new THREE.Scene();
 
-    var SEPARATION = 25, AMOUNTX = 50, AMOUNTY = 50;
+    var SEPARATION = 40, AMOUNTX = 50, AMOUNTY = 50;
     var cubes = [], cube;
     var i = 0;
     for (var ix = 0; ix < AMOUNTX; ix ++ )
@@ -58,6 +65,7 @@
             cube = cubes[i ++] = new THREE.Mesh(geometry, new THREE.MeshLambertMaterial({vertexColors: THREE.FaceColors}));
             cube.position.x = ix * SEPARATION - ((AMOUNTX * SEPARATION ) / 2);
             cube.position.z = iy * SEPARATION - ((AMOUNTY * SEPARATION ) / 2);
+
             scene.add(cube);
         }
     }
@@ -89,6 +97,7 @@
         renderPass = new THREE.RenderPass(scene, camera);
         copyPass = new THREE.ShaderPass(THREE.CopyShader);
         composer = new THREE.EffectComposer(renderer);
+
         composer.addPass(renderPass);
         composer.addPass(ImagedistortPass);
         composer.addPass(RGBdistortPass);
@@ -118,12 +127,18 @@
         clearB = syncDevice.getTrack('clearB');
         blinkAmount = syncDevice.getTrack('blinkAmt');
         rgbDistAmt = syncDevice.getTrack('rgbDistAmt');
+        imgDistAmt = syncDevice.getTrack('imgDistAmt');
+        imgDistAmt2 = syncDevice.getTrack('imgDistAmt2');
+        imgRollSpeed = syncDevice.getTrack('imgRoll');
         rotX = syncDevice.getTrack('rotX');
         rotY = syncDevice.getTrack('rotY');
         rotZ = syncDevice.getTrack('rotZ');
         cPosX = syncDevice.getTrack('cPosX');
         cPosY = syncDevice.getTrack('cPosY');
         cPosZ = syncDevice.getTrack('cPosZ');
+        cLookX = syncDevice.getTrack('cLookX');
+        cLookY = syncDevice.getTrack('cLookY');
+        cLookZ = syncDevice.getTrack('cLookZ');
         cShakeAmt = syncDevice.getTrack('cShakeAmt');
         cShakeSpeed = syncDevice.getTrack('cShakeSpeed');
         prepareAudio();
@@ -179,8 +194,6 @@
                 (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
-        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;
-
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
         var camOffsX = Math.sin(shake_phase);
@@ -191,12 +204,11 @@
         camera.position.x = cPosX.getValue(_row) + (camOffsX * cShakeAmt.getValue(_row));
         camera.position.y = cPosY.getValue(_row) + (camOffsY * cShakeAmt.getValue(_row));
         camera.position.z = cPosZ.getValue(_row) + (camOffsZ * cShakeAmt.getValue(_row));
-
+/*
         var i = 0;
         for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
             for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
                 cube = cubes[ i++ ];
-
                 if (_row <= 88){
                     cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
                     if (cube.position.y > 0)
@@ -207,17 +219,35 @@
                     cube.position.y = (Math.sin((ix + (_row * 0.075) * Math.sin(iy)) * 0.3) * 50) + (Math.sin((iy + (_row * 0.075) * Math.sin(ix)) * 0.5) * 50);
                         cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
                 }
-
                 cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
             }
         }
+*/
 
-        blink.uniforms["amount"].value = blinkAmount.getValue(_row);
-        RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row);
-        camera.lookAt( scene.position );
+        var i = 0;
+        for (var ix = 0; ix < AMOUNTX; ix++)
+        {
+            for (var iy = 0; iy < AMOUNTY; iy++)
+            {
+                cube = cubes[i++];
+                cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
+                if (_row <= 88){
+                    cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
+                    if (cube.position.y > 0)
+                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
+                    else
+                        cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
+                }
+            }
+        }
+
+        overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;
+        blink.uniforms["amount"].value = blinkAmount.getValue(_row); RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row) / 1000.0;
+        ImagedistortPass.uniforms["distortion"].value = imgDistAmt.getValue(_row);
+        ImagedistortPass.uniforms["distortion2"].value = imgDistAmt2.getValue(_row);
+        ImagedistortPass.uniforms["rollSpeed"].value = imgRollSpeed.getValue(_row);
 
         composer.render(0.1);
-        //renderer.render(scene, camera);
 
         if((demo === true)  || (audio.paused === false))
             window.requestAnimationFrame(render, document);
