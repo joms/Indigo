@@ -182,6 +182,16 @@
         audio.pause();
     }
 
+    /***
+     * @param t _row/current row
+     * @param a Current position
+     * @param b Final position
+     * @returns {number}
+     */
+    function lerp(t, a, b){
+        return a + t * (b - a);
+    }
+
     function render(){
         if(audio.paused === false) {
             _row = audio.currentTime * RR;
@@ -189,9 +199,7 @@
         }
 
         var color = new THREE.Color()
-        color.setRGB((clearR.getValue(_row) || 0) / 255,
-                (clearG.getValue(_row) || 0) / 255,
-                (clearB.getValue(_row) || 0) / 255);
+        color.setRGB((clearR.getValue(_row) || 0) / 255, (clearG.getValue(_row) || 0) / 255, (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
         // Thanks kusma!
@@ -237,22 +245,23 @@
                         cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
                     else
                         cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
+                } else {
+                    var f = 25;
+                    if (_row > 159) f = 50;
+                    cube.position.y = (Math.sin((ix * iy + (_row * 0.05)) * 0.3) * f)
                 }
             }
         }
 
         overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;
-        blink.uniforms["amount"].value = blinkAmount.getValue(_row); RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row) / 1000.0;
+        blink.uniforms["amount"].value = blinkAmount.getValue(_row) / 100.0; RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row) / 100.0;
         ImagedistortPass.uniforms["distortion"].value = imgDistAmt.getValue(_row);
         ImagedistortPass.uniforms["distortion2"].value = imgDistAmt2.getValue(_row);
         ImagedistortPass.uniforms["rollSpeed"].value = imgRollSpeed.getValue(_row);
 
         composer.render(0.1);
 
-        if((demo === true)  || (audio.paused === false))
-            window.requestAnimationFrame(render, document);
-        else
-            window.cancelAnimationFrame(render, document);
+        if((demo === true)||(audio.paused === false)) window.requestAnimationFrame(render, document); else window.cancelAnimationFrame(render, document);
     }
 </script>
 
