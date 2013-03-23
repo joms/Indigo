@@ -128,7 +128,7 @@
 		</track>
 		<track name="blinkAmt">
 			<key row="0" value="0" interpolation="0"/>
-			<key row="288" value="100" interpolation="1"/>
+			<key row="288" value="75" interpolation="1"/>
 			<key row="296" value="0" interpolation="0"/>
 		</track>
 		<track name="rgbDistAmt">
@@ -220,37 +220,6 @@
 			<key row="92" value="315" interpolation="0"/>
 			<key row="94" value="337.5" interpolation="0"/>
 			<key row="96" value="0" interpolation="0"/>
-			<key row="98" value="22.5" interpolation="0"/>
-			<key row="100" value="45" interpolation="0"/>
-			<key row="102" value="67.5" interpolation="0"/>
-			<key row="104" value="90" interpolation="0"/>
-			<key row="106" value="112.5" interpolation="0"/>
-			<key row="108" value="135" interpolation="0"/>
-			<key row="110" value="157.5" interpolation="0"/>
-			<key row="112" value="180" interpolation="0"/>
-			<key row="114" value="202.5" interpolation="0"/>
-			<key row="116" value="225" interpolation="0"/>
-			<key row="118" value="247.5" interpolation="0"/>
-			<key row="120" value="270" interpolation="0"/>
-			<key row="122" value="292.5" interpolation="0"/>
-			<key row="124" value="315" interpolation="0"/>
-			<key row="126" value="337.5" interpolation="0"/>
-			<key row="128" value="0" interpolation="0"/>
-			<key row="130" value="22.5" interpolation="0"/>
-			<key row="132" value="45" interpolation="0"/>
-			<key row="134" value="67.5" interpolation="0"/>
-			<key row="136" value="90" interpolation="0"/>
-			<key row="138" value="112.5" interpolation="0"/>
-			<key row="140" value="135" interpolation="0"/>
-			<key row="142" value="157.5" interpolation="0"/>
-			<key row="144" value="180" interpolation="0"/>
-			<key row="146" value="202.5" interpolation="0"/>
-			<key row="148" value="225" interpolation="0"/>
-			<key row="150" value="247.5" interpolation="0"/>
-			<key row="152" value="270" interpolation="0"/>
-			<key row="154" value="292.5" interpolation="0"/>
-			<key row="156" value="315" interpolation="0"/>
-			<key row="158" value="337.5" interpolation="0"/>
 		</track>
 		<track name="rotZ">
 			<key row="0" value="0" interpolation="0"/>
@@ -295,73 +264,69 @@
 		</track>
 		<track name="cShakeAmt">
 			<key row="0" value="0" interpolation="0"/>
-			<key row="96" value="2" interpolation="0"/>
+			<key row="96" value="1" interpolation="1"/>
 			<key row="99" value="0" interpolation="0"/>
-			<key row="100" value="2" interpolation="0"/>
+			<key row="100" value="1" interpolation="1"/>
 			<key row="103" value="0" interpolation="0"/>
-			<key row="104" value="2" interpolation="0"/>
+			<key row="104" value="1" interpolation="1"/>
 			<key row="107" value="0" interpolation="0"/>
-			<key row="108" value="2" interpolation="0"/>
+			<key row="108" value="1" interpolation="1"/>
 			<key row="111" value="0" interpolation="0"/>
-			<key row="112" value="2" interpolation="0"/>
+			<key row="112" value="1" interpolation="1"/>
 			<key row="115" value="0" interpolation="0"/>
-			<key row="116" value="2" interpolation="0"/>
+			<key row="116" value="1" interpolation="1"/>
 			<key row="119" value="0" interpolation="0"/>
-			<key row="120" value="2" interpolation="0"/>
+			<key row="120" value="1" interpolation="1"/>
 			<key row="123" value="0" interpolation="0"/>
-			<key row="124" value="2" interpolation="0"/>
+			<key row="124" value="1" interpolation="1"/>
 			<key row="127" value="0" interpolation="0"/>
-			<key row="128" value="2" interpolation="0"/>
+			<key row="128" value="1" interpolation="1"/>
 			<key row="131" value="0" interpolation="0"/>
-			<key row="132" value="2" interpolation="0"/>
+			<key row="132" value="1" interpolation="1"/>
 			<key row="135" value="0" interpolation="0"/>
-			<key row="136" value="2" interpolation="0"/>
+			<key row="136" value="1" interpolation="1"/>
 			<key row="139" value="0" interpolation="0"/>
-			<key row="140" value="2" interpolation="0"/>
+			<key row="140" value="1" interpolation="1"/>
 			<key row="143" value="0" interpolation="0"/>
-			<key row="144" value="2" interpolation="0"/>
+			<key row="144" value="1" interpolation="1"/>
 			<key row="147" value="0" interpolation="0"/>
-			<key row="148" value="2" interpolation="0"/>
+			<key row="148" value="1" interpolation="1"/>
 			<key row="151" value="0" interpolation="0"/>
-			<key row="152" value="2" interpolation="0"/>
+			<key row="152" value="1" interpolation="1"/>
 			<key row="155" value="0" interpolation="0"/>
-			<key row="156" value="2" interpolation="0"/>
-			<key row="159" value="0" interpolation="0"/>
 		</track>
 		<track name="cShakeSpeed">
 			<key row="0" value="0" interpolation="0"/>
-			<key row="96" value="10" interpolation="1"/>
+			<key row="96" value="0.5" interpolation="1"/>
 			<key row="99" value="0" interpolation="0"/>
-			<key row="100" value="10" interpolation="1"/>
+			<key row="100" value="0.5" interpolation="1"/>
 			<key row="103" value="0" interpolation="0"/>
-			<key row="104" value="10" interpolation="1"/>
+			<key row="104" value="0.5" interpolation="1"/>
 			<key row="107" value="0" interpolation="0"/>
-			<key row="108" value="10" interpolation="1"/>
+			<key row="108" value="0.5" interpolation="1"/>
 			<key row="111" value="0" interpolation="0"/>
-			<key row="112" value="10" interpolation="1"/>
+			<key row="112" value="0.5" interpolation="1"/>
 			<key row="115" value="0" interpolation="0"/>
-			<key row="116" value="10" interpolation="1"/>
+			<key row="116" value="0.5" interpolation="1"/>
 			<key row="119" value="0" interpolation="0"/>
-			<key row="120" value="10" interpolation="1"/>
+			<key row="120" value="0.5" interpolation="1"/>
 			<key row="123" value="0" interpolation="0"/>
-			<key row="124" value="10" interpolation="1"/>
+			<key row="124" value="0.5" interpolation="1"/>
 			<key row="127" value="0" interpolation="0"/>
-			<key row="128" value="10" interpolation="1"/>
+			<key row="128" value="0.5" interpolation="1"/>
 			<key row="131" value="0" interpolation="0"/>
-			<key row="132" value="10" interpolation="1"/>
+			<key row="132" value="0.5" interpolation="1"/>
 			<key row="135" value="0" interpolation="0"/>
-			<key row="136" value="10" interpolation="1"/>
+			<key row="136" value="0.5" interpolation="1"/>
 			<key row="139" value="0" interpolation="0"/>
-			<key row="140" value="10" interpolation="1"/>
+			<key row="140" value="0.5" interpolation="1"/>
 			<key row="143" value="0" interpolation="0"/>
-			<key row="144" value="10" interpolation="1"/>
+			<key row="144" value="0.5" interpolation="1"/>
 			<key row="147" value="0" interpolation="0"/>
-			<key row="148" value="10" interpolation="1"/>
+			<key row="148" value="0.5" interpolation="1"/>
 			<key row="151" value="0" interpolation="0"/>
-			<key row="152" value="10" interpolation="1"/>
+			<key row="152" value="0.5" interpolation="1"/>
 			<key row="155" value="0" interpolation="0"/>
-			<key row="156" value="10" interpolation="1"/>
-			<key row="159" value="0" interpolation="0"/>
 		</track>
 	</tracks>
 	<bookmarks/>

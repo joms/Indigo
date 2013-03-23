@@ -212,26 +212,7 @@
         camera.position.x = cPosX.getValue(_row) + (camOffsX * cShakeAmt.getValue(_row));
         camera.position.y = cPosY.getValue(_row) + (camOffsY * cShakeAmt.getValue(_row));
         camera.position.z = cPosZ.getValue(_row) + (camOffsZ * cShakeAmt.getValue(_row));
-/*
-        var i = 0;
-        for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-            for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-                cube = cubes[ i++ ];
-                if (_row <= 88){
-                    cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
-                    if (cube.position.y > 0)
-                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
-                    else
-                        cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
-                } else {
-                    cube.position.y = (Math.sin((ix + (_row * 0.075) * Math.sin(iy)) * 0.3) * 50) + (Math.sin((iy + (_row * 0.075) * Math.sin(ix)) * 0.5) * 50);
-                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
-                }
-                cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
-            }
-        }
-*/
-
+        
         var i = 0;
         for (var ix = 0; ix < AMOUNTX; ix++)
         {
