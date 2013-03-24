@@ -37,7 +37,6 @@
     var cLookX, cLookY, cLookZ;
     var cShakeSpeed, cShakeAmt;
     var demo = false;
-    var textChap = 0;
 
     // Shadervars
     var blinkAmount = .0;
@@ -76,6 +75,75 @@
 
     var directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(1, 1, 1).normalize();
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 1280;
+    canvas.height = 720;
+    var context = canvas.getContext('2d');
+    context.fillStyle = '#fff'; // CHANGED
+    context.font = '34px Arial';
+    context.fillText("an", 0, HEIGHT/2);
+    context.font = '150px Arial';
+    context.fillText("Indigo", 30, HEIGHT/2);
+    context.font = '54px Arial';
+    context.fillText("production", 440, HEIGHT/2);
+    var amap = new THREE.Texture(canvas);
+    amap.needsUpdate = true;
+    var mat = new THREE.SpriteMaterial({
+        map: amap,
+        transparent: false,
+        useScreenCoordinates: false,
+        color: 0xffffff // CHANGED
+    });
+    var textIntro = new THREE.Sprite(mat);
+    textIntro.scale.set( 1, 1, 1 ); // CHANGED
+    textIntro.position.set(90, -12, 378);
+    scene.add(textIntro);
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 1280;
+    canvas.height = 720;
+    var context = canvas.getContext('2d');
+    context.fillStyle = '#fff'; // CHANGED
+    context.font = '50px Arial';
+    context.fillText("Code & Graphics", 0, HEIGHT/2);
+    context.font = '160px Arial';
+    context.fillText("JoMs", 0, HEIGHT/100*68);
+    var amap = new THREE.Texture(canvas);
+    amap.needsUpdate = true;
+    var mat = new THREE.SpriteMaterial({
+        map: amap,
+        transparent: false,
+        useScreenCoordinates: false,
+        color: 0xffffff // CHANGED
+    });
+    var textJoMs = new THREE.Sprite(mat);
+    textJoMs.scale.set( 1, 1, 1 ); // CHANGED
+    textJoMs.position.set(-27, 0, 44);
+    scene.add(textJoMs);
+
+
+    var canvas = document.createElement('canvas');
+    canvas.width = 1280;
+    canvas.height = 720;
+    var context = canvas.getContext('2d');
+    context.fillStyle = '#fff'; // CHANGED
+    context.font = '50px Arial';
+    context.fillText("Music", 0, HEIGHT/100*10);
+    context.font = '160px Arial';
+    context.fillText("Kepler", 0, HEIGHT/100*28);
+    var amap = new THREE.Texture(canvas);
+    amap.needsUpdate = true;
+    var mat = new THREE.SpriteMaterial({
+        map: amap,
+        transparent: false,
+        useScreenCoordinates: false,
+        color: 0xffffff // CHANGED
+    });
+    var textKepler = new THREE.Sprite(mat);
+    textKepler.scale.set( 1, 1, 1 ); // CHANGED
+    textKepler.position.set(-27, 0, 44);
+    scene.add(textKepler);
 
     init();
     function init(){
@@ -122,7 +190,6 @@
     }
 
     function onSyncReady(){
-        textChap = syncDevice.getTrack('textChap');
         clearR = syncDevice.getTrack('clearR');
         clearG = syncDevice.getTrack('clearG');
         clearB = syncDevice.getTrack('clearB');
@@ -193,6 +260,7 @@
         return a + t * (b - a);
     }
 
+
     var particles;
     function createParticles(){
         var geometry = new THREE.Geometry();
@@ -227,8 +295,6 @@
         var color = new THREE.Color()
         color.setRGB((clearR.getValue(_row) || 0) / 255, (clearG.getValue(_row) || 0) / 255, (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
-
-        scene.add(sp[textChap.getValue(_row)]);
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
