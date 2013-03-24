@@ -1,7 +1,7 @@
 import os,sys
 import Image, json
 
-im = Image.open("image.png")
+im = Image.open("joms.png")
 
 width = im.size[0]
 height = im.size[1]

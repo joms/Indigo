@@ -37,6 +37,7 @@
     var cLookX, cLookY, cLookZ;
     var cShakeSpeed, cShakeAmt;
     var demo = false;
+    var textChap = 0;
 
     // Shadervars
     var blinkAmount = .0;
@@ -121,6 +122,7 @@
     }
 
     function onSyncReady(){
+        textChap = syncDevice.getTrack('textChap');
         clearR = syncDevice.getTrack('clearR');
         clearG = syncDevice.getTrack('clearG');
         clearB = syncDevice.getTrack('clearB');
@@ -215,6 +217,7 @@
     }
 
     var particleStarted = false;
+
     function render(){
         if(audio.paused === false) {
             _row = audio.currentTime * RR;
@@ -224,6 +227,8 @@
         var color = new THREE.Color()
         color.setRGB((clearR.getValue(_row) || 0) / 255, (clearG.getValue(_row) || 0) / 255, (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
+
+        scene.add(sp[textChap.getValue(_row)]);
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);

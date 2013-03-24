@@ -347,6 +347,9 @@
 			<key row="152" value="0.5" interpolation="1"/>
 			<key row="155" value="0" interpolation="0"/>
 		</track>
+		<track name="textChap">
+			<key row="0" value="1" interpolation="0"/>
+		</track>
 	</tracks>
 	<bookmarks/>
 </sync>
