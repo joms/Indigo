@@ -10,7 +10,7 @@
 
 <script src="js/three.min.js"></script>
 <script src="js/jsRocket.js"></script>
-<script src="js/image.json"></script>
+<script src="js/image2.json"></script>
 
 <script>
     var BPM = 120,
@@ -106,29 +106,19 @@
     function createParticles(){
         var geometry = new THREE.Geometry();
         var material = new THREE.ParticleBasicMaterial({size: 1});
-        /*for (var a = 0; a < 506; a++)
-         {
-         for (var b = 0; b < 506; b++)
-         {
-         if (image[a][b].length > 0)
-         {
-         var vertex = new THREE.Vector3();
-         vertex.x = image[a][b][0];
-         vertex.y = image[a][b][1];
-         vertex.z = image[a][b][2];
-         geometry.vertices.push(vertex);
-         }
-         }
-         }*/
-        for ( var i = 0; i < 50000; i ++ ) {
-
-            var vertex = new THREE.Vector3();
-            vertex.x = Math.random() * 500;
-            vertex.y = Math.random() * 500;
-            vertex.z = Math.random() * 500;
-
-            geometry.vertices.push( vertex );
-
+        for (var a = 0; a < image.length; a++)
+        {
+            for (var b = 0; b < image[a].length; b++)
+            {
+                if (image[a][b].length > 0)
+                {
+                    var vertex = new THREE.Vector3();
+                    vertex.x = a*5;
+                    //vertex.y = b+(b+1);
+                    vertex.z = b*5;
+                    geometry.vertices.push(vertex);
+                }
+            }
         }
         particles = new THREE.ParticleSystem(geometry, material);
         particles.geometry.verticesNeedUpdate = true;
@@ -147,13 +137,25 @@
             syncDevice.update(_row);
         }
 
-        /*
+
+        var l = 0;
+        for (var a = 0; a < image.length; a++)
+        {
+            for (var b = 0; b < image[a].length; b++)
+            {
+                if (image[a][b].length > 0)
+                {
+                    var p = particles.geometry.vertices[l++];
+                    p.setZ(lerp(_row/100, b*5, 0))
+                }
+            }
+        }
         for (var i = 0; i < particles.geometry.vertices.length; i++)
         {
-            particles.geometry.vertices[i].setX(Math.random() * 500);
+            particles.geometry.vertices[i].setZ(Math.random() * 50);
         }
         particles.geometry.verticesNeedUpdate = true;
-*/
+
         camera.position.x = cPosX.getValue(_row);
         camera.position.y = cPosY.getValue(_row);
         camera.position.z = cPosZ.getValue(_row);
