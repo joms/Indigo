@@ -1,0 +1,170 @@
+<html>
+<head>
+    <style>
+        html, body{
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/three.min.js"></script>
+<script src="js/jsRocket.js"></script>
+<script src="js/image.json"></script>
+
+<script>
+    var BPM = 120,
+            ROWS_PER_BEAT = 8,
+            ROW_RATE = BPM / 60 * ROWS_PER_BEAT;
+
+    var demo = false, //Set to true for preview
+            syncDevice = new JSRocket.SyncDevice(),
+            _row = 0;
+
+    //THREE variables
+    var WIDTH = 1280,
+            HEIGHT = 720,
+            FOV = 50,
+            audio = new Audio(),
+            renderer = new THREE.WebGLRenderer(),
+            camera = new THREE.PerspectiveCamera(FOV, WIDTH / HEIGHT),
+            scene = new THREE.Scene();
+
+    var cPosX, cPosY, cPosZ;
+
+    init()
+    function init() {
+        prepareScene();
+        prepareSync();
+    }
+
+    function prepareScene() {
+        renderer.setSize(WIDTH, HEIGHT);
+        scene.add(camera);
+        document.body.appendChild(renderer.domElement);
+        createParticles();
+    }
+
+    function prepareSync() {
+        if (demo) {
+            syncDevice.setConfig({'rocketXML':'cube.rocket'});
+            syncDevice.init("demo");
+        } else {
+            syncDevice.init();
+        }
+
+        syncDevice.on('ready', onSyncReady);
+        syncDevice.on('update', onSyncUpdate);
+        syncDevice.on('play', onPlay);
+        syncDevice.on('pause', onPause);
+    }
+
+    function onSyncReady() {
+        cPosX = syncDevice.getTrack('cPosX');
+        cPosY = syncDevice.getTrack('cPosY');
+        cPosZ = syncDevice.getTrack('cPosZ');
+        prepareAudio();
+    }
+
+    function prepareAudio() {
+        audio.src = "sound/Kepler - Sursild TG2013 Demo[gå hjem og v.ogg";
+        audio.load();
+        audio.preload = true;
+        audio.addEventListener('canplay', onAudioReady);
+    }
+
+    function onAudioReady() {
+        if(demo) {
+            render();
+            audio.play();
+        } else {
+            audio.pause();
+            audio.currentTime = _row / ROW_RATE;
+        }
+    }
+
+    function onSyncUpdate(row) {
+        if (!isNaN(row)) {
+            _row = row;
+        }
+        render();
+    }
+
+    function onPlay() {
+        audio.currentTime = _row / ROW_RATE;
+        audio.play();
+        render();
+    }
+
+    function onPause() {
+        _row = audio.currentTime * ROW_RATE;
+        window.cancelAnimationFrame(render, document);
+        audio.pause();
+    }
+
+    var particles;
+    function createParticles(){
+        var geometry = new THREE.Geometry();
+        var materials = new THREE.ParticleBasicMaterial({size: 1});
+        /*for (var a = 0; a < 506; a++)
+        {
+            for (var b = 0; b < 506; b++)
+            {
+                if (image[a][b].length > 0)
+                {
+                    var vertex = new THREE.Vector3();
+                    vertex.x = image[a][b][0];
+                    vertex.y = image[a][b][1];
+                    vertex.z = image[a][b][2];
+                    geometry.vertices.push(vertex);
+                }
+            }
+        }*/
+        for ( var i = 0; i < 50000; i ++ ) {
+
+            var vertex = new THREE.Vector3();
+            vertex.x = Math.random() * 500;
+            vertex.y = Math.random() * 500;
+            vertex.z = Math.random() * 500;
+
+            geometry.vertices.push( vertex );
+
+        }
+        particles = new THREE.ParticleSystem(geometry, materials);
+        particles.geometry.verticesNeedUpdate = true;
+        scene.add(particles);
+    }
+
+    function lerp(t, a, b){
+        return a + t * (b - a);
+    }
+
+    var lastLoop = Date.now();
+    function render() {
+
+        if(audio.paused === false) {
+            _row = audio.currentTime * ROW_RATE;
+            syncDevice.update(_row);
+        }
+
+        for (var i = 0; i < particles.geometry.vertices.length; i++)
+        {
+            particles.geometry.vertices[i].setX(Math.random() * 500);
+        }
+        particles.geometry.verticesNeedUpdate = true;
+
+        camera.position.x = cPosX.getValue(_row);
+        camera.position.y = cPosY.getValue(_row);
+        camera.position.z = cPosZ.getValue(_row);
+        camera.lookAt(scene.position);
+
+        renderer.setClearColorHex(0x000000);
+        renderer.render(scene, camera);
+
+        var fps = 1000/(Date.now() - lastLoop);
+        console.log("FPS: "+ fps.toFixed());
+        lastLoop = new Date();
+        if((demo === true)  || (audio.paused === false)) window.requestAnimationFrame(render, document); else window.cancelAnimationFrame(render, document);
+    }
+</script>
+</body>
