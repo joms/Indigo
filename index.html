@@ -9,7 +9,7 @@
 
     <script src="js/three.min.js"></script>
     <script src="js/jsRocket.js"></script>
-    <script src="js/image.json"></script>
+    <script src="js/image2.json"></script>
 
     <script src="js/postprocessing/EffectComposer.js"></script>
     <script src="js/postprocessing/RenderPass.js"></script>
@@ -93,7 +93,6 @@
         ImagedistortPass = new THREE.ShaderPass(THREE.ImagedistortShader);
         overlay = new THREE.ShaderPass(THREE.OverlayShader);
         blink = new THREE.ShaderPass(THREE.BlinkShader);
-
         renderPass = new THREE.RenderPass(scene, camera);
         copyPass = new THREE.ShaderPass(THREE.CopyShader);
         composer = new THREE.EffectComposer(renderer);
@@ -146,7 +145,7 @@
 
     function prepareAudio(){
         audio = new Audio();
-        audio.src = "sound/Tromlebass 160 BPM [struktur klar].mp3";
+        audio.src = "sound/Kepler - Sursild TG2013 Demo[gå hjem og v.ogg";
         audio.load();
         audio.preload = true;
         audio.addEventListener('canplay', onAudioReady);
@@ -192,6 +191,30 @@
         return a + t * (b - a);
     }
 
+    var particles;
+    function createParticles(){
+        var geometry = new THREE.Geometry();
+        var material = new THREE.ParticleBasicMaterial({size: 1});
+        var i = 0;
+        for (var a = 0; a < image.length; a++)
+        {
+            for (var b = 0; b < image[a].length; b++)
+            {
+                if (image[a][b].length > 0)
+                {
+                    var vertex = new THREE.Vector3(0,0,0);
+                    vertex.x = a%50;
+                    vertex.y = b%50;
+                    geometry.vertices.push(vertex);
+                }
+            }
+        }
+        particles = new THREE.ParticleSystem(geometry, material);
+        particles.geometry.verticesNeedUpdate = true;
+        scene.add(particles);
+    }
+
+    var particleStarted = false;
     function render(){
         if(audio.paused === false) {
             _row = audio.currentTime * RR;
@@ -212,26 +235,66 @@
         camera.position.x = cPosX.getValue(_row) + (camOffsX * cShakeAmt.getValue(_row));
         camera.position.y = cPosY.getValue(_row) + (camOffsY * cShakeAmt.getValue(_row));
         camera.position.z = cPosZ.getValue(_row) + (camOffsZ * cShakeAmt.getValue(_row));
-        
-        var i = 0;
-        for (var ix = 0; ix < AMOUNTX; ix++)
+
+        if (_row.toFixed() == 416)
         {
-            for (var iy = 0; iy < AMOUNTY; iy++)
+            var i = 0;
+            for (var ix = 0; ix < AMOUNTX; ix++)
             {
-                cube = cubes[i++];
-                cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
-                if (_row <= 88){
-                    cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
-                    if (cube.position.y > 0)
-                        cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
-                    else
-                        cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
-                } else {
-                    var f = 25;
-                    if (_row > 159) f = 50;
-                    cube.position.y = (Math.sin((ix * iy + (_row * 0.05)) * 0.3) * f)
+                for (var iy = 0; iy < AMOUNTY; iy++)
+                {
+                    cube = cubes[i++];
+                    scene.remove(cube);
                 }
             }
+            if (particleStarted == false)
+            {
+                createParticles();
+                particleStarted = true;
+            }
+        }
+
+        if (_row < 416)
+        {
+            var i = 0;
+            for (var ix = 0; ix < AMOUNTX; ix++)
+            {
+                for (var iy = 0; iy < AMOUNTY; iy++)
+                {
+                    cube = cubes[i++];
+                    cube.rotation.x = cube.rotation.y = cube.rotation.z = rotY.getValue(_row) * Math.PI / 180;
+                    if (_row <= 88){
+                        cube.position.y = (Math.sin((ix + (_row * 0.25)) * 0.4) * 50) + (Math.sin((iy + (_row * 0.25)) * 0.4) * 50);
+                        if (cube.position.y > 0)
+                            cube.scale.x = cube.scale.y = cube.scale.z = Math.abs(cube.position.y / 50);
+                        else
+                            cube.scale.x = cube.scale.y = cube.scale.z =  0.1;
+                    } else {
+                        var f = 25;
+                        if (_row > 159) f = 50;
+                        cube.position.y = (Math.sin((ix * iy + (_row * 0.05)) * 0.3) * f)
+                    }
+                }
+            }
+        }
+
+        else if(_row > 416 && _row < 500)
+        {
+            var l = 0;
+            for (var a = 0; a < image.length; a++)
+            {
+                for (var b = 0; b < image[a].length; b++)
+                {
+                    var f = image[a][b];
+                    if (f.length > 0)
+                    {
+                        var p = particles.geometry.vertices[l++];
+                        p.setX(lerp((_row-416)/(500-416), a%50, a))
+                        p.setY(lerp((_row-416)/(500-416), b%50, b))
+                    }
+                }
+            }
+            particles.geometry.verticesNeedUpdate = true;
         }
 
         overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;

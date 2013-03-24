@@ -10,7 +10,7 @@
 
 <script src="js/three.min.js"></script>
 <script src="js/jsRocket.js"></script>
-<script src="js/image2.json"></script>
+<script src="js/image.json"></script>
 
 <script>
     var BPM = 120,
@@ -106,7 +106,7 @@
     function createParticles(){
         var geometry = new THREE.Geometry();
         var material = new THREE.ParticleBasicMaterial({size: 1});
-        var xy = 0;
+        var i = 0;
         for (var a = 0; a < image.length; a++)
         {
             for (var b = 0; b < image[a].length; b++)
@@ -116,7 +116,6 @@
                     var vertex = new THREE.Vector3(0,0,0);
                     vertex.x = a%50;
                     vertex.y = b%50;
-                    //vertex.z = b;
                     geometry.vertices.push(vertex);
                 }
             }
@@ -146,7 +145,8 @@
             {
                 for (var b = 0; b < image[a].length; b++)
                 {
-                    if (image[a][b].length > 0)
+                    var f = image[a][b];
+                    if (f.length > 0)
                     {
                         var p = particles.geometry.vertices[l++];
                         p.setX(lerp(_row/100, a%50, a))
