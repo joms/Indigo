@@ -106,16 +106,17 @@
     function createParticles(){
         var geometry = new THREE.Geometry();
         var material = new THREE.ParticleBasicMaterial({size: 1});
+        var xy = 0;
         for (var a = 0; a < image.length; a++)
         {
             for (var b = 0; b < image[a].length; b++)
             {
                 if (image[a][b].length > 0)
                 {
-                    var vertex = new THREE.Vector3();
-                    vertex.x = a*5;
-                    //vertex.y = b+(b+1);
-                    vertex.z = b*5;
+                    var vertex = new THREE.Vector3(0,0,0);
+                    vertex.x = a%50;
+                    vertex.y = b%50;
+                    //vertex.z = b;
                     geometry.vertices.push(vertex);
                 }
             }
@@ -138,23 +139,24 @@
         }
 
 
-        var l = 0;
-        for (var a = 0; a < image.length; a++)
+        if (_row < 100)
         {
-            for (var b = 0; b < image[a].length; b++)
+            var l = 0;
+            for (var a = 0; a < image.length; a++)
             {
-                if (image[a][b].length > 0)
+                for (var b = 0; b < image[a].length; b++)
                 {
-                    var p = particles.geometry.vertices[l++];
-                    p.setZ(lerp(_row/100, b*5, 0))
+                    if (image[a][b].length > 0)
+                    {
+                        var p = particles.geometry.vertices[l++];
+                        p.setX(lerp(_row/100, a%50, a))
+                        p.setY(lerp(_row/100, b%50, b))
+                    }
                 }
             }
+            particles.geometry.verticesNeedUpdate = true;
         }
-        for (var i = 0; i < particles.geometry.vertices.length; i++)
-        {
-            particles.geometry.vertices[i].setZ(Math.random() * 50);
-        }
-        particles.geometry.verticesNeedUpdate = true;
+
 
         camera.position.x = cPosX.getValue(_row);
         camera.position.y = cPosY.getValue(_row);
