@@ -105,7 +105,7 @@
     var particles;
     function createParticles(){
         var geometry = new THREE.Geometry();
-        var materials = new THREE.ParticleBasicMaterial({size: 1});
+        var material = new THREE.ParticleBasicMaterial({size: 1});
         /*for (var a = 0; a < 506; a++)
          {
          for (var b = 0; b < 506; b++)
@@ -130,7 +130,7 @@
             geometry.vertices.push( vertex );
 
         }
-        particles = new THREE.ParticleSystem(geometry, materials);
+        particles = new THREE.ParticleSystem(geometry, material);
         particles.geometry.verticesNeedUpdate = true;
         scene.add(particles);
     }
@@ -147,12 +147,13 @@
             syncDevice.update(_row);
         }
 
+        /*
         for (var i = 0; i < particles.geometry.vertices.length; i++)
         {
             particles.geometry.vertices[i].setX(Math.random() * 500);
         }
         particles.geometry.verticesNeedUpdate = true;
-
+*/
         camera.position.x = cPosX.getValue(_row);
         camera.position.y = cPosY.getValue(_row);
         camera.position.z = cPosZ.getValue(_row);
