@@ -216,6 +216,60 @@
         scene.add(particles);
     }
 
+    var sp = new Array();
+    function createSprites(){
+        for (var i = 0; i < 4; i++)
+        {
+            var canvas = document.createElement('canvas');
+            canvas.width = 1280;
+            canvas.height = 720;
+            var context = canvas.getContext('2d');
+            context.fillStyle = '#fff'; // CHANGED
+
+            if (i == 0)
+            {
+                context.font = '34px Arial';
+                context.fillText("", 0, HEIGHT/2);
+            }
+            if (i == 1)
+            {
+                context.font = '34px Arial';
+                context.fillText("an", 0, HEIGHT/2);
+                context.font = '150px Arial';
+                context.fillText("Indigo", 30, HEIGHT/2);
+                context.font = '54px Arial';
+                context.fillText("production", 440, HEIGHT/2);
+            }
+
+            if (i == 2)
+            {
+                context.font = '50px Arial';
+                context.fillText("Code & Graphics", 0, HEIGHT/2);
+                context.font = '160px Arial';
+                context.fillText("JoMs", 0, HEIGHT/100*68);
+            }
+
+            if (i == 3)
+            {
+                context.font = '50px Arial';
+                context.fillText("Music", 0, HEIGHT/100*10);
+                context.font = '160px Arial';
+                context.fillText("Kepler", 0, HEIGHT/100*28);
+            }
+            var amap = new THREE.Texture(canvas);
+            amap.needsUpdate = true;
+            var mat = new THREE.SpriteMaterial({
+                map: amap,
+                transparent: false,
+                useScreenCoordinates: false,
+                color: 0xffffff // CHANGED
+            });
+            var sprite = new THREE.Sprite(mat);
+            sprite.scale.set( 1, 1, 1 ); // CHANGED
+            sp[i] = sprite;
+        }
+    }
+
     var particleStarted = false;
 
     function render(){
@@ -228,7 +282,7 @@
         color.setRGB((clearR.getValue(_row) || 0) / 255, (clearG.getValue(_row) || 0) / 255, (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
-        scene.add(sp[textChap.getValue(_row)]);
+        scene.add()
 
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
