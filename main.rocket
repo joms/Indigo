@@ -243,7 +243,7 @@
 			<key row="154" value="630" interpolation="1"/>
 			<key row="159" value="-28" interpolation="0"/>
 			<key row="416" value="270" interpolation="1"/>
-			<key row="512" value="170" interpolation="0"/>
+			<key row="512" value="1940" interpolation="0"/>
 		</track>
 		<track name="cPosY">
 			<key row="0" value="790" interpolation="1"/>
@@ -268,9 +268,9 @@
 			<key row="92" value="20" interpolation="0"/>
 			<key row="93" value="10" interpolation="1"/>
 			<key row="97" value="379" interpolation="0"/>
-			<key row="159" value="25" interpolation="0"/>
+			<key row="159" value="45" interpolation="0"/>
 			<key row="416" value="100" interpolation="1"/>
-			<key row="512" value="250" interpolation="0"/>
+			<key row="512" value="810" interpolation="0"/>
 		</track>
 		<track name="cLookX">
 			<key row="0" value="0" interpolation="0"/>
@@ -313,6 +313,40 @@
 			<key row="151" value="0" interpolation="0"/>
 			<key row="152" value="1" interpolation="1"/>
 			<key row="155" value="0" interpolation="0"/>
+			<key row="156" value="1" interpolation="1"/>
+			<key row="159" value="0" interpolation="0"/>
+			<key row="160" value="1" interpolation="1"/>
+			<key row="163" value="0" interpolation="0"/>
+			<key row="164" value="1" interpolation="1"/>
+			<key row="167" value="0" interpolation="0"/>
+			<key row="168" value="1" interpolation="1"/>
+			<key row="171" value="0" interpolation="0"/>
+			<key row="172" value="1" interpolation="1"/>
+			<key row="175" value="0" interpolation="0"/>
+			<key row="176" value="1" interpolation="1"/>
+			<key row="179" value="0" interpolation="0"/>
+			<key row="180" value="1" interpolation="1"/>
+			<key row="183" value="0" interpolation="0"/>
+			<key row="184" value="1" interpolation="1"/>
+			<key row="187" value="0" interpolation="0"/>
+			<key row="188" value="1" interpolation="1"/>
+			<key row="191" value="0" interpolation="0"/>
+			<key row="192" value="1" interpolation="1"/>
+			<key row="195" value="0" interpolation="0"/>
+			<key row="196" value="1" interpolation="1"/>
+			<key row="199" value="0" interpolation="0"/>
+			<key row="200" value="1" interpolation="1"/>
+			<key row="203" value="0" interpolation="0"/>
+			<key row="204" value="1" interpolation="1"/>
+			<key row="207" value="0" interpolation="0"/>
+			<key row="208" value="1" interpolation="1"/>
+			<key row="211" value="0" interpolation="0"/>
+			<key row="212" value="1" interpolation="1"/>
+			<key row="215" value="0" interpolation="0"/>
+			<key row="216" value="1" interpolation="1"/>
+			<key row="219" value="0" interpolation="0"/>
+			<key row="220" value="1" interpolation="1"/>
+			<key row="223" value="0" interpolation="0"/>
 		</track>
 		<track name="cShakeSpeed">
 			<key row="0" value="0" interpolation="0"/>
@@ -346,6 +380,40 @@
 			<key row="151" value="0" interpolation="0"/>
 			<key row="152" value="0.5" interpolation="1"/>
 			<key row="155" value="0" interpolation="0"/>
+			<key row="156" value="0.5" interpolation="1"/>
+			<key row="159" value="0" interpolation="0"/>
+			<key row="160" value="0.5" interpolation="1"/>
+			<key row="163" value="0" interpolation="0"/>
+			<key row="164" value="0.5" interpolation="1"/>
+			<key row="167" value="0" interpolation="0"/>
+			<key row="168" value="0.5" interpolation="1"/>
+			<key row="171" value="0" interpolation="0"/>
+			<key row="172" value="0.5" interpolation="1"/>
+			<key row="175" value="0" interpolation="0"/>
+			<key row="176" value="0.5" interpolation="1"/>
+			<key row="179" value="0" interpolation="0"/>
+			<key row="180" value="0.5" interpolation="1"/>
+			<key row="183" value="0" interpolation="0"/>
+			<key row="184" value="0.5" interpolation="1"/>
+			<key row="187" value="0" interpolation="0"/>
+			<key row="188" value="0.5" interpolation="1"/>
+			<key row="191" value="0" interpolation="0"/>
+			<key row="192" value="0.5" interpolation="1"/>
+			<key row="195" value="0" interpolation="0"/>
+			<key row="196" value="0.5" interpolation="1"/>
+			<key row="199" value="0" interpolation="0"/>
+			<key row="200" value="0.5" interpolation="1"/>
+			<key row="203" value="0" interpolation="0"/>
+			<key row="204" value="0.5" interpolation="1"/>
+			<key row="207" value="0" interpolation="0"/>
+			<key row="208" value="0.5" interpolation="1"/>
+			<key row="211" value="0" interpolation="0"/>
+			<key row="212" value="0.5" interpolation="1"/>
+			<key row="215" value="0" interpolation="0"/>
+			<key row="216" value="0.5" interpolation="1"/>
+			<key row="219" value="0" interpolation="0"/>
+			<key row="220" value="0.5" interpolation="1"/>
+			<key row="223" value="0" interpolation="0"/>
 		</track>
 		<track name="textChap">
 			<key row="0" value="1" interpolation="0"/>
