@@ -368,6 +368,15 @@
             particles.geometry.verticesNeedUpdate = true;
         }
 
+        if (_row >= 224)
+        {
+            textKepler.position.set(0, 0, 0);
+            textJoMs.position.set(0, 0, 0);
+        } else {
+            textKepler.position.set(-27, 0, 44);
+            textJoMs.position.set(-27, 0, 44);
+        }
+
         overlay.uniforms["time"].value = ImagedistortPass.uniforms["time"].value = audio.currentTime;
         blink.uniforms["amount"].value = blinkAmount.getValue(_row) / 100.0; RGBdistortPass.uniforms["rgbAmt"].value = rgbDistAmt.getValue(_row) / 100.0;
         ImagedistortPass.uniforms["distortion"].value = imgDistAmt.getValue(_row);
