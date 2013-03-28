@@ -9,7 +9,7 @@
 
     <script src="js/three.min.js"></script>
     <script src="js/jsRocket.js"></script>
-    <script src="js/image2.json"></script>
+    <script src="js/image.json"></script>
 
     <script src="js/postprocessing/EffectComposer.js"></script>
     <script src="js/postprocessing/RenderPass.js"></script>
@@ -350,11 +350,6 @@
         color.setRGB((clearR.getValue(_row) || 0) / 255, (clearG.getValue(_row) || 0) / 255, (clearB.getValue(_row) || 0) / 255);
         renderer.setClearColor(color);
 
-<<<<<<< HEAD
-        scene.add()
-
-=======
->>>>>>> 073a33a13e2bf8f8e30a91ef8fcd61f26ac2486e
         // Thanks kusma!
         var shake_phase = _row * 32 * cShakeSpeed.getValue(_row);
         var camOffsX = Math.sin(shake_phase);
