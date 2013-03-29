@@ -1,0 +1,155 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>three.js - kinect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            font-family: Monospace;
+            background-color: #000000;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<script src="js/three.min.js"></script>
+
+<script id="vs" type="x-shader/x-vertex">
+    uniform sampler2D map;
+
+    uniform float width;
+    uniform float height;
+    uniform float nearClipping, farClipping;
+
+    uniform float pointSize;
+    uniform float zOffset;
+
+    varying vec2 vUv;
+
+    const float XtoZ = 1.11146; // tan( 1.0144686 / 2.0 ) * 2.0;
+    const float YtoZ = 0.83359; // tan( 0.7898090 / 2.0 ) * 2.0;
+
+    void main() {
+        vUv = vec2( position.x / width, position.y / height );
+
+        vec4 color = texture2D( map, vUv );
+        float depth = ( color.r + color.g + color.b ) / 4.0;
+
+        // Projection code by @kcmic
+
+        float z = ( 1.0 - depth ) * (farClipping - nearClipping) + nearClipping;
+
+        vec4 pos = vec4(
+        ( position.x / width - 0.5 ) * z * XtoZ,
+        ( position.y / height - 0.5 ) * z * YtoZ,
+        - z + zOffset,
+        1.0);
+
+        gl_PointSize = pointSize;
+        gl_Position = projectionMatrix * modelViewMatrix * pos;
+    }
+</script>
+
+<script id="fs" type="x-shader/x-fragment">
+    uniform sampler2D map;
+    varying vec2 vUv;
+    void main() {
+    vec4 color = texture2D( map, vUv );
+        //gl_FragColor = vec4( color.r, color.g, color.b, smoothstep( 8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w ) );
+        gl_FragColor = vec4(1., 1., 1., smoothstep( 8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w ));
+    }
+</script>
+
+<script>
+    var container;
+
+    var scene, camera, light, renderer;
+    var vidGeo, vidMesh, vidMat;
+    var mouse, center;
+
+    var video, texture;
+
+    container = document.createElement( 'div' );
+    document.body.appendChild( container );
+
+    camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
+    camera.position.set( 0, 0, 500 );
+
+    scene = new THREE.Scene();
+    center = new THREE.Vector3();
+    center.z = - 1000;
+
+    video = document.createElement( 'video' );
+    video.addEventListener( 'loadedmetadata', function ( event ) {
+        texture = new THREE.Texture(video);
+
+        var vidWidth = 614, vidHeight = 466;
+
+        vidGeo = new THREE.Geometry();
+
+        for ( var i = 0, l = vidWidth * vidHeight; i < l; i ++ ) {
+            var vertex = new THREE.Vector3();
+            vertex.x = ( i % vidWidth );
+            vertex.y = Math.floor( i / vidWidth );
+            vidGeo.vertices.push( vertex );
+        }
+
+        vidMat = new THREE.ShaderMaterial( {
+            uniforms: {
+                "map": { type: "t", value: texture },
+                "width": { type: "f", value: vidWidth },
+                "height": { type: "f", value: vidHeight },
+                "nearClipping": { type: "f", value: 850 },
+                "farClipping": { type: "f", value: 4000 },
+
+                "pointSize": { type: "f", value: 2 },
+                "zOffset": { type: "f", value: 1000 }
+            },
+            vertexShader: document.getElementById( 'vs' ).textContent,
+            fragmentShader: document.getElementById( 'fs' ).textContent,
+            depthTest: false, depthWrite: false,
+            transparent: true
+        } );
+
+        vidMesh = new THREE.ParticleSystem(vidGeo, vidMat);
+        vidMesh.position.x = 0;
+        vidMesh.position.y = 0;
+        scene.add(vidMesh);
+
+        setInterval( function () {
+            if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
+                texture.needsUpdate = true;
+            }
+        }, 1000 / 30 );
+    }, false );
+    video.loop = true;
+    video.src = 'gfx/video/Demo.mp4';
+    video.play();
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.appendChild( renderer.domElement );
+
+    mouse = new THREE.Vector3( 0, 0, 1 );
+    animate();
+
+    function animate() {
+        requestAnimationFrame( animate );
+        render();
+    }
+
+    function render() {
+        camera.position.x += ( mouse.x - camera.position.x ) * 0.05;
+        camera.position.y += ( - mouse.y - camera.position.y ) * 0.05;
+        camera.lookAt( center );
+        renderer.render( scene, camera );
+    }
+</script>
+</body>
+</html>
