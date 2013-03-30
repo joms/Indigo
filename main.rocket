@@ -41,8 +41,6 @@
 			<key row="259" value="20" interpolation="0"/>
 			<key row="272" value="255" interpolation="1"/>
 			<key row="275" value="20" interpolation="0"/>
-			<key row="539" value="255" interpolation="1"/>
-			<key row="544" value="0" interpolation="0"/>
 		</track>
 		<track name="clearG">
 			<key row="0" value="20" interpolation="0"/>
@@ -85,8 +83,6 @@
 			<key row="259" value="20" interpolation="0"/>
 			<key row="272" value="255" interpolation="1"/>
 			<key row="275" value="20" interpolation="0"/>
-			<key row="539" value="255" interpolation="1"/>
-			<key row="544" value="0" interpolation="0"/>
 		</track>
 		<track name="clearB">
 			<key row="0" value="20" interpolation="0"/>
@@ -129,8 +125,6 @@
 			<key row="259" value="20" interpolation="0"/>
 			<key row="272" value="255" interpolation="1"/>
 			<key row="275" value="20" interpolation="0"/>
-			<key row="539" value="255" interpolation="1"/>
-			<key row="544" value="0" interpolation="0"/>
 		</track>
 		<track name="blinkAmt">
 			<key row="0" value="0" interpolation="0"/>
@@ -149,8 +143,6 @@
 			<key row="224" value="0" interpolation="0"/>
 			<key row="288" value="1" interpolation="3"/>
 			<key row="416" value="0" interpolation="0"/>
-			<key row="539" value="1" interpolation="0"/>
-			<key row="543" value="0" interpolation="0"/>
 		</track>
 		<track name="imgDistAmt">
 			<key row="0" value="0" interpolation="0"/>
@@ -251,7 +243,7 @@
 			<key row="154" value="630" interpolation="1"/>
 			<key row="159" value="-28" interpolation="0"/>
 			<key row="416" value="270" interpolation="1"/>
-			<key row="512" value="1940" interpolation="0"/>
+			<key row="538" value="1210" interpolation="0"/>
 		</track>
 		<track name="cPosY">
 			<key row="0" value="790" interpolation="1"/>
@@ -265,7 +257,7 @@
 			<key row="154" value="159" interpolation="1"/>
 			<key row="159" value="0" interpolation="0"/>
 			<key row="416" value="100" interpolation="1"/>
-			<key row="512" value="430" interpolation="0"/>
+			<key row="538" value="140" interpolation="0"/>
 		</track>
 		<track name="cPosZ">
 			<key row="0" value="-72" interpolation="1"/>
@@ -278,7 +270,7 @@
 			<key row="97" value="379" interpolation="0"/>
 			<key row="159" value="45" interpolation="0"/>
 			<key row="416" value="100" interpolation="2"/>
-			<key row="512" value="3467" interpolation="0"/>
+			<key row="538" value="2527" interpolation="0"/>
 		</track>
 		<track name="cLookX">
 			<key row="0" value="0" interpolation="0"/>

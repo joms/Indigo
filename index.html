@@ -4,26 +4,7 @@
     <style>
         html, body{
             margin:0;
-        }
-
-        button{
-            background-color: #4D4D4D;
-            color: #CCCCCC;
-            border: 1px solid #CCCCCC;
-            width: 25%;
-            height: 25%;
-            margin-top: 20%;
-            margin-left: 35%;
-            font: 150px Arial, Helvetica, sans-serif;
-            -webkit-border-radius: .5em;
-            padding-bottom: 2px;
-        }
-
-        b {
-            color: #C0C0C0;
-            font: 25px Arial, Helvetica, sans-serif;
-            margin-top: 50%;
-            margin-left: 35%;
+            background-image: url('gfx/still/pleasewaitforslowstuff.png');
         }
     </style>
 
@@ -75,30 +56,28 @@ void main() {
 
 <script id="fs" type="x-shader/x-fragment">
     uniform sampler2D map;
+    uniform float alpha;
     varying vec2 vUv;
     void main() {
         vec4 color = texture2D(map, vUv);
 
-        gl_FragColor = vec4(color.r, color.g, color.b, smoothstep(8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w));
+        gl_FragColor = vec4(color.r, color.g, color.b, smoothstep(8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w) * alpha);
     }
 </script>
 
 <script type="text/javascript">
-//TODO coloring
-//TODO fog
-//TODO title
     var syncDevice = new JSRocket.SyncDevice();
     var BPM = 160;              // Beats per minute
     var RPB = 4;                // Rows per beat
     var RR = BPM / 60 * RPB;    // Row Rate
-    var _row;
+    var _row = 0;
     var audio;
     var clearR, clearB, clearG;
     var rotX, rotY, rotZ;
     var cPosX, cPosY, cPosZ;
     var cLookX, cLookY, cLookZ;
     var cShakeSpeed, cShakeAmt;
-    var demo = false;
+    var demo = true;
     var vidGeo, vidMesh, vidMat;
 
     // Shadervars
@@ -107,10 +86,6 @@ void main() {
     var imgDistAmt = .0,
         imgDistAmt2 = .0,
         imgRollSpeed = .0;
-
-function play(){
-
-}
 
     //var WIDTH = 1280, HEIGHT = 720;
     var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
@@ -223,6 +198,7 @@ function play(){
         scene.add(camera);
         scene.add(ambientLight);
         scene.add(directionalLight);
+        //scene.fog = new THREE.Fog(0x141414, 1.0, 1000);
         renderer.setSize(WIDTH, HEIGHT);
         document.body.appendChild(renderer.domElement);
 
@@ -328,6 +304,51 @@ function play(){
         return a + t * (b - a);
     }
 
+    video = document.createElement( 'video' );
+    video.addEventListener( 'loadedmetadata', function ( event ) {
+        texture = new THREE.Texture(video);
+
+        var vidWidth = 614, vidHeight = 466;
+
+        vidGeo = new THREE.Geometry();
+
+        for ( var i = 0, l = vidWidth * vidHeight; i < l; i ++ ) {
+            var vertex = new THREE.Vector3();
+            vertex.x = ( i % vidWidth );
+            vertex.y = Math.floor( i / vidWidth );
+            vidGeo.vertices.push( vertex );
+        }
+
+        vidMat = new THREE.ShaderMaterial( {
+            uniforms: {
+                "map": { type: "t", value: texture },
+                "width": { type: "f", value: vidWidth },
+                "height": { type: "f", value: vidHeight },
+                "nearClipping": { type: "f", value: 850 },
+                "farClipping": { type: "f", value: 4000 },
+                "alpha": {type: "f", value: 0},
+
+                "pointSize": { type: "f", value: 4 },
+                "zOffset": { type: "f", value: 1000 }
+            },
+            vertexShader: document.getElementById( 'vs' ).textContent,
+            fragmentShader: document.getElementById( 'fs' ).textContent,
+            depthTest: false, depthWrite: false,
+            transparent: true
+        } );
+
+        vidMesh = new THREE.ParticleSystem(vidGeo, vidMat);
+        vidMesh.position.x = 0;
+        vidMesh.position.y = 0;
+        scene.add(vidMesh);
+
+        setInterval( function () {
+            if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
+                texture.needsUpdate = true;
+            }
+        }, 1000 / 30 );
+    }, false );
+    video.src = 'gfx/video/Demo.mp4';
 
     var particles;
     function createParticles(){
@@ -341,8 +362,8 @@ function play(){
                 if (image[a][b].length > 0)
                 {
                     var vertex = new THREE.Vector3(0,0,0);
-                    vertex.x = a%50;
-                    vertex.y = b%50;
+                    vertex.x = a%10;
+                    vertex.y = b%10;
                     geometry.vertices.push(vertex);
                 }
             }
@@ -405,55 +426,6 @@ function play(){
             sp[i] = sprite;
         }
     }
-
-    function addVid(){
-        video = document.createElement( 'video' );
-        video.addEventListener( 'loadedmetadata', function ( event ) {
-            texture = new THREE.Texture(video);
-
-            var vidWidth = 614, vidHeight = 466;
-
-            vidGeo = new THREE.Geometry();
-
-            for ( var i = 0, l = vidWidth * vidHeight; i < l; i ++ ) {
-                var vertex = new THREE.Vector3();
-                vertex.x = ( i % vidWidth );
-                vertex.y = Math.floor( i / vidWidth );
-                vidGeo.vertices.push( vertex );
-            }
-
-            vidMat = new THREE.ShaderMaterial( {
-                uniforms: {
-                    "map": { type: "t", value: texture },
-                    "width": { type: "f", value: vidWidth },
-                    "height": { type: "f", value: vidHeight },
-                    "nearClipping": { type: "f", value: 850 },
-                    "farClipping": { type: "f", value: 4000 },
-
-                    "pointSize": { type: "f", value: 2 },
-                    "zOffset": { type: "f", value: 1000 }
-                },
-                vertexShader: document.getElementById( 'vs' ).textContent,
-                fragmentShader: document.getElementById( 'fs' ).textContent,
-                depthTest: false, depthWrite: false,
-                transparent: true
-            } );
-
-            vidMesh = new THREE.ParticleSystem(vidGeo, vidMat);
-            vidMesh.position.x = 0;
-            vidMesh.position.y = 0;
-            scene.add(vidMesh);
-
-            setInterval( function () {
-                if ( video.readyState === video.HAVE_ENOUGH_DATA ) {
-                    texture.needsUpdate = true;
-                }
-            }, 1000 / 30 );
-        }, false );
-        video.src = 'gfx/video/Demo.mp4';
-        video.play();
-    }
-
     var particleStarted = false;
 
     function render(){
@@ -494,9 +466,10 @@ function play(){
                 particleStarted = true;
             }
         }
-        if (_row.toFixed() == 540){
+        if (_row.toFixed() == 541){
             scene.remove(particles);
-            addVid();
+            video.play();
+            vidMat.uniforms['alpha'].value = 1;
         }
 
         if (_row < 416)
@@ -534,8 +507,8 @@ function play(){
                     if (f.length > 0)
                     {
                         var p = particles.geometry.vertices[l++];
-                        p.setX(lerp((_row-416)/(500-416), a%50, a));
-                        p.setY(lerp((_row-416)/(500-416), b%50, b));
+                        p.setX(lerp((_row-416)/(500-416), a%10, a*2));
+                        p.setY(lerp((_row-416)/(500-416), b%10, (b*2)-200));
                     }
                 }
             }
