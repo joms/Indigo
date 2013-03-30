@@ -5,6 +5,7 @@
         html, body{
             margin:0;
             background-image: url('gfx/still/pleasewaitforslowstuff.png');
+            cursor: none;
         }
     </style>
 
@@ -258,7 +259,7 @@ void main() {
 
     function prepareAudio(){
         audio = new Audio();
-        audio.src = "sound/Kepler - Sursild TG2013 Demo[gå hjem og v.ogg";
+        audio.src = "sound/demo.ogg";
         audio.load();
         audio.preload = true;
         audio.addEventListener('canplay', onAudioReady);
@@ -507,8 +508,8 @@ void main() {
                     if (f.length > 0)
                     {
                         var p = particles.geometry.vertices[l++];
-                        p.setX(lerp((_row-416)/(500-416), a%10, a*2));
-                        p.setY(lerp((_row-416)/(500-416), b%10, (b*2)-200));
+                        p.setX(lerp((_row-416)/(500-416), a%10, (a*2)-500));
+                        p.setY(lerp((_row-416)/(500-416), b%10, (b*2)-500));
                     }
                 }
             }
