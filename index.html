@@ -5,6 +5,26 @@
         html, body{
             margin:0;
         }
+
+        button{
+            background-color: #4D4D4D;
+            color: #CCCCCC;
+            border: 1px solid #CCCCCC;
+            width: 25%;
+            height: 25%;
+            margin-top: 20%;
+            margin-left: 35%;
+            font: 150px Arial, Helvetica, sans-serif;
+            -webkit-border-radius: .5em;
+            padding-bottom: 2px;
+        }
+
+        b {
+            color: #C0C0C0;
+            font: 25px Arial, Helvetica, sans-serif;
+            margin-top: 50%;
+            margin-left: 35%;
+        }
     </style>
 
     <script src="js/three.min.js"></script>
@@ -57,13 +77,16 @@ void main() {
     uniform sampler2D map;
     varying vec2 vUv;
     void main() {
-    vec4 color = texture2D( map, vUv );
-        //gl_FragColor = vec4( color.r, color.g, color.b, smoothstep( 8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w ) );
-        gl_FragColor = vec4(1., 1., 1., smoothstep( 8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w ));
+        vec4 color = texture2D(map, vUv);
+
+        gl_FragColor = vec4(color.r*5., color.g*5., color.b*5., smoothstep(8000.0, -8000.0, gl_FragCoord.z / gl_FragCoord.w));
     }
 </script>
 
 <script type="text/javascript">
+//TODO coloring
+//TODO fog
+//TODO title
     var syncDevice = new JSRocket.SyncDevice();
     var BPM = 160;              // Beats per minute
     var RPB = 4;                // Rows per beat
@@ -85,7 +108,12 @@ void main() {
         imgDistAmt2 = .0,
         imgRollSpeed = .0;
 
-    var WIDTH = 1280, HEIGHT = 720;
+function play(){
+
+}
+
+    //var WIDTH = 1280, HEIGHT = 720;
+    var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
     var VIEW_ANGLE = 45, ASPECT = WIDTH / HEIGHT, NEAR = 0.1, FAR = 10000;
 
     var renderer = new THREE.WebGLRenderer({antialias:true});
@@ -506,8 +534,8 @@ void main() {
                     if (f.length > 0)
                     {
                         var p = particles.geometry.vertices[l++];
-                        p.setX(lerp((_row-416)/(500-416), a%50, a))
-                        p.setY(lerp((_row-416)/(500-416), b%50, b))
+                        p.setX(lerp((_row-416)/(500-416), a%50, a));
+                        p.setY(lerp((_row-416)/(500-416), b%50, b));
                     }
                 }
             }
@@ -532,6 +560,8 @@ void main() {
         composer.render(0.1);
 
         if((demo === true)||(audio.paused === false)) window.requestAnimationFrame(render, document); else window.cancelAnimationFrame(render, document);
+        WIDTH = window.innerWidth, HEIGHT = window.innerHeight
+        renderer.setSize(WIDTH, HEIGHT);
     }
 </script>
 
