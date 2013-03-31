@@ -8,6 +8,8 @@ Remember to start chrome with
 chrome.exe --allow-file-access-from-files
 ```
 
+---
+
 The demo was delivered in the demo compoetition at The Gathering 2013, where it got a 3rd place! Really happy about it! :D
 
 Thanks to everyone who voted, all participants, the crew and everybody else that made it an awesome TG13! I have a lot of fun, and I think this is the best The Gathering I've attended so  far! 
