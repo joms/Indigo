@@ -1,17 +1,11 @@
-Indigo - Cubedance - TG13
+Indigo - The Gathering 2014 Invite
 ====================
 
-Powered by <a href="https://github.com/mog/jsRocket">jsRocket</a>, wich is built on <a href="https://github.com/kusma/rocket">GNU Rocket</a>
+The official invite for The Gathering 2014
 
-Remember to start chrome with
-```
-chrome.exe --allow-file-access-from-files
-```
+- Code by JoMs and petterroea
+- Music by Kepler
+- Graphics by JoMs, mulm
 
----
-
-The demo was delivered in the demo compoetition at The Gathering 2013, where it got a 3rd place! Really happy about it! :D
-
-Thanks to everyone who voted, all participants, the crew and everybody else that made it an awesome TG13!
-
-It was a lot of fun, and probably the best The Gathering I've attended so far!
+Soundtrack can be downloaded for free at
+www.soundcloud.com/keplermusic
