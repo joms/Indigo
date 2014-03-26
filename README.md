@@ -1,17 +1,10 @@
-Indigo - Cubedance - TG13
+Indigo
 ====================
 
-Powered by <a href="https://github.com/mog/jsRocket">jsRocket</a>, wich is built on <a href="https://github.com/kusma/rocket">GNU Rocket</a>
+Welcome to the Indigo open source demo repo!
 
-Remember to start chrome with
-```
-chrome.exe --allow-file-access-from-files
-```
+Do as you want with the code, but we claim all rights to the resources like Music, Models and Textures.
 
 ---
 
-The demo was delivered in the demo compoetition at The Gathering 2013, where it got a 3rd place! Really happy about it! :D
-
-Thanks to everyone who voted, all participants, the crew and everybody else that made it an awesome TG13!
-
-It was a lot of fun, and probably the best The Gathering I've attended so far!
+You'll find the productions separated into branches. If there's a prod you don't find here, please take contact and it'll either be put up, or you'll get a reason for why it's not here :)
