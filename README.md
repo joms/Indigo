@@ -7,5 +7,5 @@ The official invite for The Gathering 2014
 - Music by Kepler
 - Graphics by JoMs, mulm
 
-Soundtrack can be downloaded for free at
+Soundtrack can be downloaded for free at   
 www.soundcloud.com/keplermusic
