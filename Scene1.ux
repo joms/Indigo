@@ -1,0 +1,2071 @@
+<Scene xmlns:ux="http://schemas.outracks.com/ux" xmlns:ct="CubeTree" xmlns:e="Everythingspawner" xmlns:owf="Outracks.WowFactory" xmlns:usp="Uno.Scenes.Primitives" xmlns:es="EverythingSpawner" ux:ClassName="Scene1" AlwaysUseOwnCamera="false" ClearColor="0.3019608, 0.3019608, 0.3019608, 1" xmlns="Uno.Scenes, Uno.Styling, Uno.UI, Uno">
+  <Animation Length="172" PlayOnStartup="true" ux:Field="Animation" ux:Length="172" ux:Zoom="0.604" ux:IsRecordEnabled="false">
+    <ux:NodeTrack Name="Camera1">
+      <ux:NodeTrack Name="Camera1Transform">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="0" Value="30.5027866363525" />
+            <ux:Keyframe Time="9" Value="-10" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="-10" LeftValue="-10" />
+            <ux:Keyframe Time="48" Value="-167.874720573425" />
+            <ux:Keyframe Time="53.6853556259921" Value="-222.399993896484" />
+            <ux:Keyframe Time="56" RightValue="-825" LeftValue="-222.399993896484" />
+            <ux:Keyframe Time="58.4573019495204" Value="-825" />
+            <ux:Keyframe Time="62.125" RightValue="-200.768508911133" LeftValue="-772.915512084961" />
+            <ux:Keyframe Time="70" RightValue="-389.180206298828" LeftValue="-671.543823242188" />
+            <ux:Keyframe Time="85" RightValue="-1023.09362792969" LeftValue="-271.982147216797" />
+            <ux:Keyframe Time="92.5" RightValue="20.9688949584961" LeftValue="-271.982148587704" />
+            <ux:Keyframe Time="107" RightValue="-60.0653762817383" LeftValue="-113.27921295166" />
+            <ux:Keyframe Time="109" RightValue="12.4720344543457" LeftValue="-60.0653762817383" />
+            <ux:Keyframe Time="109.5" RightValue="-123.240135192871" LeftValue="0.382465638034489" />
+            <ux:Keyframe Time="110.25" RightValue="-76.7153244018555" LeftValue="-104.287706766429" />
+            <ux:Keyframe Time="114" Value="128.013397216797" />
+            <ux:Keyframe Time="117.7220337" RightValue="75.8087997436523" LeftValue="128.013397216797" />
+            <ux:Keyframe Time="122" RightValue="794.31787109375" LeftValue="103.494453430176" />
+            <ux:Keyframe Time="128.820447963387" Value="926.085876464844" />
+            <ux:Keyframe Time="129.445987493174" RightValue="715" LeftValue="946.401062011719" />
+            <ux:Keyframe Time="140" RightValue="408" LeftValue="438" />
+            <ux:Keyframe Time="141.5" Value="408" Easing="RampIn" />
+            <ux:Keyframe Time="145.5" RightValue="397" LeftValue="366" />
+            <ux:Keyframe Time="152" RightValue="377" LeftValue="377" />
+            <ux:Keyframe Time="154.754152239829" RightValue="349.794342041016" LeftValue="518" />
+            <ux:Keyframe Time="163" RightValue="403.904998779297" LeftValue="502.332641601563" />
+            <ux:Keyframe Time="167.5" Value="386.738037109375" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="0" Value="372.543273925781" />
+            <ux:Keyframe Time="9" Value="368" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="368" LeftValue="368" />
+            <ux:Keyframe Time="48" Value="-247.109329223633" />
+            <ux:Keyframe Time="53.6853556259921" Value="-459.549987792969" />
+            <ux:Keyframe Time="56" RightValue="-373" LeftValue="-459.549987792969" />
+            <ux:Keyframe Time="58.4573019495204" Value="-373" />
+            <ux:Keyframe Time="62.125" RightValue="-646.388061523438" LeftValue="-405.67936706543" />
+            <ux:Keyframe Time="70" RightValue="-506.384826660156" LeftValue="-469.283111572266" />
+            <ux:Keyframe Time="85" RightValue="-828.720886230469" LeftValue="-454.552185058594" />
+            <ux:Keyframe Time="92.5" RightValue="-162.497039794922" LeftValue="-454.55217063427" />
+            <ux:Keyframe Time="107" RightValue="-148.139999389648" LeftValue="-102.301139831543" />
+            <ux:Keyframe Time="109" RightValue="-113.430374145508" LeftValue="-148.139999389648" />
+            <ux:Keyframe Time="109.5" RightValue="-90.8543548583984" LeftValue="-119.215311858602" />
+            <ux:Keyframe Time="110.25" RightValue="70.1416625976563" LeftValue="-108.040048900672" />
+            <ux:Keyframe Time="117.7220337" RightValue="-96.1770629882813" LeftValue="-96.1770629882813" />
+            <ux:Keyframe Time="119.256193899874" Value="-41.1669654846191" />
+            <ux:Keyframe Time="122" RightValue="751" LeftValue="2213.22094726563" />
+            <ux:Keyframe Time="129.445987493174" RightValue="415" LeftValue="936.366577148438" />
+            <ux:Keyframe Time="140" RightValue="562" LeftValue="286" />
+            <ux:Keyframe Time="141.5" Value="562" Easing="RampIn" />
+            <ux:Keyframe Time="145.5" RightValue="536" LeftValue="476" />
+            <ux:Keyframe Time="152" RightValue="415" LeftValue="525" />
+            <ux:Keyframe Time="154.754152239829" RightValue="522.960998535156" LeftValue="449" />
+            <ux:Keyframe Time="163" RightValue="439.050964355469" LeftValue="495.024627685547" />
+            <ux:Keyframe Time="167.5" Value="468.047882080078" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="0" Value="104.940521240234" />
+            <ux:Keyframe Time="9" Value="107.480003356934" />
+            <ux:Keyframe Time="12" Value="107.480003356934" />
+            <ux:Keyframe Time="16" Value="143.683197021484" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="127.723754882813" LeftValue="110" />
+            <ux:Keyframe Time="48" Value="117.396675109863" />
+            <ux:Keyframe Time="53.6853556259921" Value="113.830001831055" />
+            <ux:Keyframe Time="56" RightValue="166" LeftValue="113.830001831055" />
+            <ux:Keyframe Time="62.125" RightValue="127.708969116211" LeftValue="153.700038909912" />
+            <ux:Keyframe Time="70" RightValue="138.988327026367" LeftValue="138.988327026367" />
+            <ux:Keyframe Time="85" RightValue="-401.566284179688" LeftValue="124" />
+            <ux:Keyframe Time="92.5" RightValue="128.517959594727" LeftValue="124" />
+            <ux:Keyframe Time="107" RightValue="102.715171813965" LeftValue="49.3569717407227" />
+            <ux:Keyframe Time="109" RightValue="106.096290588379" LeftValue="70.419002814648" />
+            <ux:Keyframe Time="109.5" RightValue="-18.1885032653809" LeftValue="92.0760334922794" />
+            <ux:Keyframe Time="110.25" RightValue="-6.14257431030273" LeftValue="-6.13952665134366" />
+            <ux:Keyframe Time="117.7220337" RightValue="-61.7245140075684" LeftValue="83.5587692260742" />
+            <ux:Keyframe Time="122" RightValue="210" LeftValue="-66.8717803955078" />
+            <ux:Keyframe Time="129.445987493174" RightValue="174" LeftValue="318.453552246094" />
+            <ux:Keyframe Time="140" RightValue="215" LeftValue="238" />
+            <ux:Keyframe Time="141.5" Value="215" />
+            <ux:Keyframe Time="145.5" RightValue="199" LeftValue="231" />
+            <ux:Keyframe Time="152" RightValue="227" LeftValue="219" />
+            <ux:Keyframe Time="154.754152239829" RightValue="204.459426879883" LeftValue="215" />
+            <ux:Keyframe Time="163" RightValue="198.071487426758" LeftValue="220.699508666992" />
+            <ux:Keyframe Time="167.5" Value="195.41357421875" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="RotationDegrees">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="0" Value="352.3544921875" />
+            <ux:Keyframe Time="16" Value="320.666015625" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="322" LeftValue="322" />
+            <ux:Keyframe Time="50" Value="321.591541290283" />
+            <ux:Keyframe Time="54.3344446388397" Value="329.989990234375" />
+            <ux:Keyframe Time="56" RightValue="323" LeftValue="329.989990234375" />
+            <ux:Keyframe Time="62.125" RightValue="298.974945068359" LeftValue="328.126655578613" />
+            <ux:Keyframe Time="70" RightValue="322" LeftValue="338.104675292969" />
+            <ux:Keyframe Time="92.5" RightValue="-676.90771484375" LeftValue="322" />
+            <ux:Keyframe Time="107" RightValue="-651.828430175781" LeftValue="-666.727355957031" />
+            <ux:Keyframe Time="109" RightValue="-681.103393554688" LeftValue="-664.93707294924" />
+            <ux:Keyframe Time="109.5" RightValue="-679.466674804688" LeftValue="-681.686167416457" />
+            <ux:Keyframe Time="110.25" RightValue="-759.846130371094" LeftValue="-681.006683410804" />
+            <ux:Keyframe Time="117.7220337" RightValue="-662.6748046875" LeftValue="-684.600036621094" />
+            <ux:Keyframe Time="122" RightValue="326" LeftValue="-662.6748046875" />
+            <ux:Keyframe Time="129.445987493174" RightValue="322.882720947266" LeftValue="322.882720947266" />
+            <ux:Keyframe Time="140" RightValue="331" LeftValue="62" />
+            <ux:Keyframe Time="142.279661907213" Value="331" />
+            <ux:Keyframe Time="142.5" RightValue="331" LeftValue="331" Easing="RampIn" />
+            <ux:Keyframe Time="145.5" RightValue="302" LeftValue="389.619995117188" />
+            <ux:Keyframe Time="146.942055427535" RightValue="302" LeftValue="302" Easing="RampIn" />
+            <ux:Keyframe Time="152" RightValue="34" LeftValue="259.140258789063" />
+            <ux:Keyframe Time="154.754152239829" RightValue="350.884094238281" LeftValue="67" Easing="RampOut" />
+            <ux:Keyframe Time="158.764452044879" Value="363.640014648438" />
+            <ux:Keyframe Time="159.910943193428" Value="363.640014648438" Easing="RampIn" />
+            <ux:Keyframe Time="163" RightValue="47.7745132446289" LeftValue="328.328247070313" />
+            <ux:Keyframe Time="167.5" Value="47" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="0" Value="-332.533843994141" />
+            <ux:Keyframe Time="16" Value="-328.592132568359" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="-299" LeftValue="-299" />
+            <ux:Keyframe Time="50" Value="-302.20100402832" />
+            <ux:Keyframe Time="54.3344446388397" Value="-302.839996337891" />
+            <ux:Keyframe Time="56" RightValue="279" LeftValue="-302.839996337891" />
+            <ux:Keyframe Time="62.125" RightValue="303.157653808594" LeftValue="278.999992370605" />
+            <ux:Keyframe Time="70" RightValue="-299" LeftValue="279" />
+            <ux:Keyframe Time="92.5" RightValue="0" LeftValue="-299" />
+            <ux:Keyframe Time="107" RightValue="0" LeftValue="-91.810791015625" />
+            <ux:Keyframe Time="109" RightValue="-4.07992362976074" LeftValue="-19.6089419425866" />
+            <ux:Keyframe Time="109.5" RightValue="-92.8793716430664" LeftValue="-11.5703289356948" />
+            <ux:Keyframe Time="110.25" RightValue="-79.7222658651231" LeftValue="-79.7222658651231" />
+            <ux:Keyframe Time="114" Value="57.6836090087891" />
+            <ux:Keyframe Time="117.7220337" RightValue="38.3440856933594" LeftValue="57.6836090087891" />
+            <ux:Keyframe Time="122" RightValue="53" LeftValue="232.939575195313" />
+            <ux:Keyframe Time="129.445987493174" RightValue="85" LeftValue="62.2835502624512" />
+            <ux:Keyframe Time="140" RightValue="286" LeftValue="323" />
+            <ux:Keyframe Time="142.279661907213" Value="283.80712890625" />
+            <ux:Keyframe Time="142.5" RightValue="283.80712890625" LeftValue="283.80712890625" Easing="RampIn" />
+            <ux:Keyframe Time="145.5" RightValue="95" LeftValue="301.996276855469" />
+            <ux:Keyframe Time="146.942055427535" RightValue="95" LeftValue="95" Easing="RampIn" />
+            <ux:Keyframe Time="152" RightValue="291.744812011719" LeftValue="55.4451599121094" />
+            <ux:Keyframe Time="154.754152239829" RightValue="277.933227539063" LeftValue="315" Easing="RampOut" />
+            <ux:Keyframe Time="158.764452044879" Value="290.459991455078" />
+            <ux:Keyframe Time="159.910943193428" Value="290.459991455078" Easing="RampIn" />
+            <ux:Keyframe Time="163" RightValue="132.430816650391" LeftValue="280.701019287109" />
+            <ux:Keyframe Time="167.5" Value="186.010345458984" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="0" Value="-224.771270751953" />
+            <ux:Keyframe Time="9" RightValue="143.157409667969" LeftValue="224" />
+            <ux:Keyframe Time="16" RightValue="-226.595092773438" LeftValue="-226.595092773438" />
+            <ux:Keyframe Time="31.5383870827007" RightValue="-246" LeftValue="-246" />
+            <ux:Keyframe Time="50" Value="-244.107727050781" />
+            <ux:Keyframe Time="54.3344446388397" Value="-251.399993896484" />
+            <ux:Keyframe Time="56" RightValue="267.209991455078" LeftValue="-251.399993896484" />
+            <ux:Keyframe Time="62.125" RightValue="242.296035766602" LeftValue="267.209991455078" />
+            <ux:Keyframe Time="70" RightValue="-246" LeftValue="267.209991455078" />
+            <ux:Keyframe Time="92.5" RightValue="0" LeftValue="-246" />
+            <ux:Keyframe Time="107" RightValue="0" LeftValue="-57.9674606323242" />
+            <ux:Keyframe Time="109" RightValue="-3.71875977516174" LeftValue="-12.8425386435172" />
+            <ux:Keyframe Time="109.5" RightValue="-93.5811080932617" LeftValue="-8.4500243086993" />
+            <ux:Keyframe Time="110.25" RightValue="-75.1386787715583" LeftValue="-75.1386787715583" />
+            <ux:Keyframe Time="114" Value="35.6078987121582" />
+            <ux:Keyframe Time="117.7220337" RightValue="32.3962516784668" LeftValue="35.6078987121582" />
+            <ux:Keyframe Time="122" RightValue="113" LeftValue="32.3962516784668" />
+            <ux:Keyframe Time="129.445987493174" RightValue="98" LeftValue="113.701721191406" />
+            <ux:Keyframe Time="140" RightValue="267" LeftValue="325" />
+            <ux:Keyframe Time="142.279661907213" Value="257.817993164063" />
+            <ux:Keyframe Time="142.5" RightValue="257.817993164063" LeftValue="257.817993164063" Easing="RampIn" />
+            <ux:Keyframe Time="145.5" RightValue="83" LeftValue="285.446563720703" />
+            <ux:Keyframe Time="146.942055427535" RightValue="83" LeftValue="83" Easing="RampIn" />
+            <ux:Keyframe Time="152" RightValue="279" LeftValue="131.939117431641" />
+            <ux:Keyframe Time="154.754152239829" RightValue="266.088439941406" LeftValue="311" Easing="RampOut" />
+            <ux:Keyframe Time="158.764452044879" Value="266" />
+            <ux:Keyframe Time="159.910943193428" Value="266" Easing="RampIn" />
+            <ux:Keyframe Time="163" RightValue="109.06861114502" LeftValue="269.552581787109" />
+            <ux:Keyframe Time="167.5" Value="321.502685546875" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="Camera1Camera">
+        <ux:FloatTrack Name="FovDegrees">
+          <ux:Keyframe Time="119.256193899874" Value="45" />
+          <ux:Keyframe Time="121.5" Value="110.004447937012" />
+          <ux:Keyframe Time="122" Value="45" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="ZNear">
+          <ux:Keyframe Time="0" Value="1" />
+          <ux:Keyframe Time="31.5383870827007" RightValue="50" LeftValue="1" />
+          <ux:Keyframe Time="92.5" RightValue="1" LeftValue="50" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="ZFar">
+          <ux:Keyframe Time="0" Value="1500" />
+          <ux:Keyframe Time="92.5" Value="10000" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Scenographyparticles1">
+      <ux:NodeTrack Name="Transform39">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="31.7143643629861" Value="-601.346069335938" />
+            <ux:Keyframe Time="56" RightValue="-730.941345214844" LeftValue="-870.75" />
+            <ux:Keyframe Time="62.125" RightValue="-350.276733398438" LeftValue="-730.941345214844" />
+            <ux:Keyframe Time="70" Value="-821.740051269531" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="31.7143643629861" Value="-290.647155761719" />
+            <ux:Keyframe Time="56" RightValue="-798.364196777344" LeftValue="-885.590026855469" />
+            <ux:Keyframe Time="62.125" RightValue="-1130.99975585938" LeftValue="-798.364196777344" />
+            <ux:Keyframe Time="70" Value="-797.265441894531" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="31.7143643629861" Value="-28.2036895751953" />
+            <ux:Keyframe Time="56" RightValue="156.262176513672" LeftValue="-28.2000007629395" />
+            <ux:Keyframe Time="62.125" RightValue="156.262176513672" LeftValue="156.262176513672" />
+            <ux:Keyframe Time="70" Value="156.262176513672" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="RotationDegrees">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="31.5383870827007" Value="0" />
+            <ux:Keyframe Time="60.328434585248" Value="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="31.5383870827007" Value="0" />
+            <ux:Keyframe Time="60.328434585248" Value="-9.5" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="31.5383870827007" Value="0" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+      <ux:FloatTrack Name="AnimTime">
+        <ux:Keyframe Time="31.5383870827007" Value="0" />
+        <ux:Keyframe Time="70" Value="38" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="ParticleEngine2k1">
+      <ux:FloatTrack Name="AnimTime">
+        <ux:Keyframe Time="70" Value="10.7700004577637" />
+        <ux:Keyframe Time="70.375" Value="10.7700004577637" />
+        <ux:Keyframe Time="85" Value="40.1016664959734" />
+        <ux:Keyframe Time="88.0419605458767" Value="41.1708494515423" />
+        <ux:Keyframe Time="92.105139421086" Value="43.061336517334" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="ball">
+        <ux:Keyframe Time="70" RightValue="2" LeftValue="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Threshold">
+        <ux:Keyframe Time="70" Value="0.404494285583496" />
+        <ux:Keyframe Time="70.375" RightValue="0.964494287967682" LeftValue="0.400000005960464" />
+        <ux:Keyframe Time="88.0419605458767" Value="0.964494287967682" />
+        <ux:Keyframe Time="92.105139421086" Value="0.999000012874603" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Spacing">
+        <ux:Keyframe Time="70" Value="45.4232711791992" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="amp">
+        <ux:Keyframe Time="70" Value="1" />
+        <ux:Keyframe Time="70.375" Value="2.03999996185303" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="SpotLight12">
+      <ux:NodeTrack Name="Transform44">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="31.5383870827007" Value="-36.8587303161621" />
+            <ux:Keyframe Time="54" Value="-100" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="31.5383870827007" Value="299.757202148438" />
+            <ux:Keyframe Time="54" Value="-200" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="31.5383870827007" Value="275.095611572266" />
+            <ux:Keyframe Time="54" Value="275.095611572266" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="TextPart1">
+      <ux:FloatTrack Name="AnimTime">
+        <ux:Keyframe Time="92.5" Value="0" />
+        <ux:Keyframe Time="116" Value="38" />
+        <ux:Keyframe Time="117.855638224811" Value="42" />
+        <ux:Keyframe Time="122" Value="70" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="timePerText">
+        <ux:Keyframe Time="92.5" Value="7.23381042480469" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="GridController1">
+      <ux:FloatTrack Name="AnimationTime">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="16" Value="0" />
+        <ux:Keyframe Time="24" RightValue="0.25" LeftValue="0" />
+        <ux:Keyframe Time="27.25" RightValue="0.389999985694885" LeftValue="0.370000004768372" />
+        <ux:Keyframe Time="28" Value="0.385593220591545" />
+        <ux:Keyframe Time="31" Value="0.5" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="RingOffsetter">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="12" Value="0" />
+        <ux:Keyframe Time="16" Value="19.6782417297363" />
+        <ux:Keyframe Time="29.5" Value="19.6782417297363" />
+        <ux:Keyframe Time="31" Value="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Speed">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="16" Value="0" />
+        <ux:Keyframe Time="24" RightValue="0" LeftValue="0" />
+        <ux:Keyframe Time="28" RightValue="0" LeftValue="0" />
+        <ux:Keyframe Time="29.5" Value="12.3595504760742" />
+        <ux:Keyframe Time="31" Value="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Offset">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="9" Value="157" />
+        <ux:Keyframe Time="11" Value="0" />
+        <ux:Keyframe Time="24" RightValue="50" LeftValue="0" />
+        <ux:Keyframe Time="25.25" RightValue="20" LeftValue="50" />
+        <ux:Keyframe Time="26.25" RightValue="10" LeftValue="20" />
+        <ux:Keyframe Time="27.25" RightValue="20" LeftValue="10" />
+        <ux:Keyframe Time="27.5" RightValue="50" LeftValue="20" />
+        <ux:Keyframe Time="29.5" Value="50" />
+        <ux:Keyframe Time="31" Value="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="OffsetOffsetter">
+        <ux:Keyframe Time="0" Value="-5" />
+        <ux:Keyframe Time="16" Value="-5" />
+        <ux:Keyframe Time="24" RightValue="-0.168539330363274" LeftValue="-5" />
+        <ux:Keyframe Time="29.5" Value="-0.168539330363274" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="GridController Copy">
+      <ux:FloatTrack Name="AnimationTime">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="12" Value="11.5520176291466" />
+        <ux:Keyframe Time="31.1633870827007" Value="30" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Speed">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="12" RightValue="-0.259999990463257" LeftValue="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Offset">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="12" RightValue="20.3262996673584" LeftValue="0" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="CubeSpline1">
+      <ux:FloatTrack Name="animationtime">
+        <ux:Keyframe Time="129.445987493174" RightValue="0.720000028610229" LeftValue="0" />
+        <ux:Keyframe Time="166.366954001647" Value="17" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Postproc">
+      <ux:FloatTrack Name="Index">
+        <ux:Keyframe Time="11" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="24" RightValue="2" LeftValue="1" />
+        <ux:Keyframe Time="70" RightValue="3.5" LeftValue="2" />
+        <ux:Keyframe Time="92.5" RightValue="4" LeftValue="3.5" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Alpha">
+        <ux:Keyframe Time="0" Value="0.5" />
+        <ux:Keyframe Time="10" Value="0.5" />
+        <ux:Keyframe Time="11" Value="0" />
+        <ux:Keyframe Time="15" Value="0.49999999627471" />
+        <ux:Keyframe Time="31" RightValue="0.839999973773956" LeftValue="0.5" />
+        <ux:Keyframe Time="31.7143643629861" RightValue="0" LeftValue="1" />
+        <ux:Keyframe Time="70" RightValue="0.899999976158142" LeftValue="0" />
+        <ux:Keyframe Time="85" RightValue="0" LeftValue="0.899999976158142" />
+        <ux:Keyframe Time="167.212232418509" Value="0" />
+        <ux:Keyframe Time="167.5" Value="1" />
+        <ux:Keyframe Time="171.5" Value="1" />
+        <ux:Keyframe Time="172" Value="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="AnimTime">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="170" Value="170" />
+      </ux:FloatTrack>
+      <ux:VectorTrack Name="OverlayColor">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="0" Value="0.680000007152557" />
+          <ux:Keyframe Time="56" Value="0" />
+          <ux:Keyframe Time="69.5558859675668" RightValue="1" LeftValue="0.0500000007450581" />
+          <ux:Keyframe Time="70" Value="1" />
+          <ux:Keyframe Time="92" RightValue="0" LeftValue="0.6864253282547" />
+          <ux:Keyframe Time="92.5" Value="0" />
+          <ux:Keyframe Time="122" Value="0.258823543787003" />
+          <ux:Keyframe Time="166.366954001647" Value="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="0" Value="0.431372553110123" />
+          <ux:Keyframe Time="56" Value="0.0799999982118607" />
+          <ux:Keyframe Time="69.5558859675668" RightValue="1" LeftValue="0.192700922489166" />
+          <ux:Keyframe Time="70" Value="0.996778713539243" />
+          <ux:Keyframe Time="92" RightValue="0" LeftValue="0.837206482887268" />
+          <ux:Keyframe Time="92.5" Value="0" />
+          <ux:Keyframe Time="122" Value="0.619607865810394" />
+          <ux:Keyframe Time="166.366954001647" Value="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="0" Value="0.0666666701436043" />
+          <ux:Keyframe Time="56" Value="0.0823529437184334" />
+          <ux:Keyframe Time="69.5558859675668" RightValue="1" LeftValue="0.222502917051315" />
+          <ux:Keyframe Time="70" Value="0.998007451184094" />
+          <ux:Keyframe Time="92" RightValue="0" LeftValue="0.899302959442139" />
+          <ux:Keyframe Time="92.5" Value="0" />
+          <ux:Keyframe Time="122" Value="0.764705896377563" />
+          <ux:Keyframe Time="166.366954001647" Value="0" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+      <ux:FloatTrack Name="OverlayAlpha">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="69.5558859675668" Value="0" />
+        <ux:Keyframe Time="70" Value="1" />
+        <ux:Keyframe Time="70.375" Value="0" />
+        <ux:Keyframe Time="92" Value="0" />
+        <ux:Keyframe Time="92.5" RightValue="0" LeftValue="1" />
+        <ux:Keyframe Time="166.366954001647" Value="0" />
+        <ux:Keyframe Time="167.5" Value="1" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="SnowAlpha">
+        <ux:Keyframe Time="122" RightValue="0.292134821414948" LeftValue="0" />
+        <ux:Keyframe Time="140" Value="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="OverlayOverlayAlpha">
+        <ux:Keyframe Time="30" Value="0" />
+        <ux:Keyframe Time="31" Value="1" />
+        <ux:Keyframe Time="31.7143643629861" Value="1" />
+        <ux:Keyframe Time="32.5350620931852" Value="0" />
+      </ux:FloatTrack>
+      <ux:VectorTrack Name="OverlayOverlayColor">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="30" Value="1" />
+          <ux:Keyframe Time="31" Value="1" />
+          <ux:Keyframe Time="31.7143643629861" Value="0.403921574354172" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="30" Value="0.396078437566757" />
+          <ux:Keyframe Time="31" Value="0.400000005960464" />
+          <ux:Keyframe Time="31.7143643629861" Value="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="30" Value="0" />
+          <ux:Keyframe Time="31" Value="0" />
+          <ux:Keyframe Time="31.7143643629861" Value="0.580392181873322" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+      <ux:VectorTrack Name="OverlayCutoff">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="24" RightValue="1" LeftValue="0.113725490868092" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="24" RightValue="1" LeftValue="0.113725490868092" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="24" RightValue="1" LeftValue="0.113725490868092" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+      <ux:FloatTrack Name="RadialBlur">
+        <ux:Keyframe Time="31.5383870827007" RightValue="0" LeftValue="1" />
+        <ux:Keyframe Time="70" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="92.5" RightValue="0" LeftValue="1" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="CenterX">
+        <ux:Keyframe Time="70" RightValue="0.224943801760674" LeftValue="-0.0125842839479446" />
+        <ux:Keyframe Time="85" RightValue="0.214943796396255" LeftValue="0.224943801760674" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="CenterY">
+        <ux:Keyframe Time="70" RightValue="-0.312696635723114" LeftValue="-0.887528121471405" />
+        <ux:Keyframe Time="85" RightValue="-0.00269663333892822" LeftValue="-0.312696635723114" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Zoom">
+        <ux:Keyframe Time="70" RightValue="0.980112314224243" LeftValue="0.986179828643799" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Blend">
+        <ux:Keyframe Time="70" RightValue="0.876404523849487" LeftValue="0.851685404777527" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Resolution">
+        <ux:Keyframe Time="70" RightValue="0.5" LeftValue="0.5" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Brightness">
+        <ux:Keyframe Time="70" RightValue="2.27865195274353" LeftValue="1.90786600112915" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Inverted">
+        <ux:Keyframe Time="70" RightValue="1" LeftValue="0" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="TerrainPart1">
+      <ux:VectorTrack Name="OffsetGroundColor">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="122" Value="0.47843137383461" />
+          <ux:Keyframe Time="144" Value="0.38473067432642" />
+          <ux:Keyframe Time="160" Value="0.396078437566757" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="122" Value="0.862745106220245" />
+          <ux:Keyframe Time="144" Value="0.885180503129959" />
+          <ux:Keyframe Time="160" Value="0.929411768913269" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="122" Value="0.862745106220245" />
+          <ux:Keyframe Time="144" Value="0.610677037388086" />
+          <ux:Keyframe Time="160" Value="0.447058826684952" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+      <ux:FloatTrack Name="DarkestColor">
+        <ux:Keyframe Time="122" Value="0.730337202548981" />
+        <ux:Keyframe Time="144" Value="0.325842827558517" />
+      </ux:FloatTrack>
+      <ux:VectorTrack Name="VikingskipetColor">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="122" Value="0.370000004768372" />
+          <ux:Keyframe Time="137.150186793395" Value="0.370000004768372" />
+          <ux:Keyframe Time="144" Value="0.713725507259369" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="122" Value="0.839999973773956" />
+          <ux:Keyframe Time="137.150186793395" Value="0.839999973773956" />
+          <ux:Keyframe Time="144" Value="0.713725507259369" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="122" Value="0.949999988079071" />
+          <ux:Keyframe Time="137.150186793395" Value="0.949999988079071" />
+          <ux:Keyframe Time="144" Value="0.713725507259369" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Robot">
+      <ux:NodeTrack Name="Headcontroller">
+        <ux:NodeTrack Name="Transform2">
+          <ux:VectorTrack Name="RotationDegrees">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="48" Value="0" />
+              <ux:Keyframe Time="51.7693649536986" Value="-19.3265151977539" />
+              <ux:Keyframe Time="54" Value="-26.5387191772461" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="48" Value="0" />
+              <ux:Keyframe Time="51.7693649536986" Value="-7.50956869125366" />
+              <ux:Keyframe Time="54" Value="-23.919506072998" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="48" Value="0" />
+              <ux:Keyframe Time="51.7693649536986" Value="0.478538066148758" />
+              <ux:Keyframe Time="54" Value="0.478538066148758" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="48" Value="0.000213623046875" />
+              <ux:Keyframe Time="51.7693649536986" Value="-1.71263122558594" />
+              <ux:Keyframe Time="54" Value="-17.0258331298828" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="48" Value="0" />
+              <ux:Keyframe Time="51.7693649536986" Value="4.05805206298828" />
+              <ux:Keyframe Time="54" Value="16.1587448120117" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="48" Value="0.00048828125" />
+              <ux:Keyframe Time="51.7693649536986" Value="30.919921875" />
+              <ux:Keyframe Time="54" Value="46.181640625" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="ArmController">
+        <ux:NodeTrack Name="Transform4">
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="54" Value="-0.64068603515625" />
+              <ux:Keyframe Time="54.3344446388397" Value="-0.615478515625" />
+              <ux:Keyframe Time="54.6816071224292" Value="-0.907867431640625" />
+              <ux:Keyframe Time="55" Value="-0.578094482421875" />
+              <ux:Keyframe Time="55.7979856193975" Value="0.359771728515625" />
+              <ux:Keyframe Time="62.125" RightValue="0" LeftValue="0.359771728515625" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="54" Value="1.27168273925781" />
+              <ux:Keyframe Time="54.3344446388397" Value="7.82971954345703" />
+              <ux:Keyframe Time="54.6816071224292" Value="15.6974792480469" />
+              <ux:Keyframe Time="55" Value="24.8986968994141" />
+              <ux:Keyframe Time="55.7979856193975" Value="64.5771026611328" />
+              <ux:Keyframe Time="62.125" RightValue="0" LeftValue="64.5771026611328" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="54" Value="15.4622802734375" />
+              <ux:Keyframe Time="54.3344446388397" Value="29.8734130859375" />
+              <ux:Keyframe Time="54.6816071224292" Value="45.609130859375" />
+              <ux:Keyframe Time="55" Value="53.5364990234375" />
+              <ux:Keyframe Time="55.7979856193975" Value="70.0987548828125" />
+              <ux:Keyframe Time="62.125" RightValue="0" LeftValue="70.0987548828125" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="RotationDegrees">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="55.7979856193975" Value="-79.6217498779297" />
+              <ux:Keyframe Time="62.125" RightValue="0" LeftValue="-79.6217498779297" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="55.7979856193975" Value="0" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="53.6853556259921" Value="0" />
+              <ux:Keyframe Time="55.7979856193975" Value="0" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="Transform180">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" RightValue="-354.780303955078" LeftValue="-349.608703613281" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" RightValue="-519.12890625" LeftValue="-515.015869140625" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" RightValue="7.25580024719238" LeftValue="2.3171489238739" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="RotationDegrees">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" RightValue="1.25531995296478" LeftValue="1.25531995296478" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" RightValue="357.076812744141" LeftValue="357.076812744141" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" RightValue="106.887344360352" LeftValue="135.072402954102" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Vikingskipet">
+      <ux:NodeTrack Name="Transform19">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" Value="26.3529052734375" />
+            <ux:Keyframe Time="75" Value="26.2999992370605" />
+            <ux:Keyframe Time="122" Value="475.070404052734" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" Value="-706.440002441406" />
+            <ux:Keyframe Time="75" Value="-706.440002441406" />
+            <ux:Keyframe Time="122" Value="463.704803466797" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" Value="67.4599990844727" />
+            <ux:Keyframe Time="75" Value="67" />
+            <ux:Keyframe Time="122" Value="187.151000976563" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="Scaling">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" Value="80" />
+            <ux:Keyframe Time="75" Value="80" />
+            <ux:Keyframe Time="122" RightValue="10" LeftValue="10" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" Value="80" />
+            <ux:Keyframe Time="75" Value="80" />
+            <ux:Keyframe Time="122" RightValue="10" LeftValue="10" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" Value="80" />
+            <ux:Keyframe Time="75" Value="80" />
+            <ux:Keyframe Time="122" RightValue="10" LeftValue="10" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="RotationDegrees">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" Value="0" />
+            <ux:Keyframe Time="122" RightValue="0" LeftValue="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" Value="0" />
+            <ux:Keyframe Time="122" RightValue="0" LeftValue="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" Value="0" />
+            <ux:Keyframe Time="122" RightValue="90" LeftValue="0" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="DefaultMaterial3">
+        <ux:VectorTrack Name="DiffuseColor">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="145.144397217973" Value="0.474509805440903" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="145.144397217973" Value="0.474509805440903" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="145.144397217973" Value="0.474509805440903" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Ground">
+      <ux:NodeTrack Name="Transform41">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" RightValue="684.439208984375" LeftValue="-267.316497802734" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" RightValue="-691.391662597656" LeftValue="-215.947998046875" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" RightValue="2.28881908697076E-05" LeftValue="2.28881908697076E-05" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="FloatNode1">
+      <ux:FloatTrack Name="Input">
+        <ux:Keyframe Time="56" RightValue="2000" LeftValue="1000" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="FlickerNode1">
+      <ux:FloatTrack Name="Flicker">
+        <ux:Keyframe Time="62.625" RightValue="0.376404494047165" LeftValue="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="Intensity">
+        <ux:Keyframe Time="56" Value="0.303370803594589" />
+      </ux:FloatTrack>
+      <ux:VectorTrack Name="Color">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="56" Value="1" />
+          <ux:Keyframe Time="62.625" RightValue="1" LeftValue="1" />
+          <ux:Keyframe Time="65" Value="0" />
+          <ux:Keyframe Time="67.1521398729285" Value="1" />
+          <ux:Keyframe Time="69.3141071784268" Value="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="56" Value="0" />
+          <ux:Keyframe Time="62.625" RightValue="0" LeftValue="0" />
+          <ux:Keyframe Time="65" Value="1" />
+          <ux:Keyframe Time="67.1521398729285" Value="0.890196084976196" />
+          <ux:Keyframe Time="69.3141071784268" Value="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="56" Value="0" />
+          <ux:Keyframe Time="62.625" RightValue="0" LeftValue="0" />
+          <ux:Keyframe Time="65" Value="0" />
+          <ux:Keyframe Time="67.1521398729285" Value="0" />
+          <ux:Keyframe Time="69.3141071784268" Value="0.890196084976196" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+      <ux:FloatTrack Name="Opacity">
+        <ux:Keyframe Time="61" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="61.25" Value="0" />
+        <ux:Keyframe Time="61.375" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="61.625" Value="0" />
+        <ux:Keyframe Time="61.75" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="62" Value="0" />
+        <ux:Keyframe Time="62.125" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="62.375" Value="0" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="NewNodeSwitcher1">
+      <ux:FloatTrack Name="CurrentNodeIndex">
+        <ux:Keyframe Time="0" Value="0" />
+        <ux:Keyframe Time="31.5383870827007" RightValue="1" LeftValue="0" />
+        <ux:Keyframe Time="70" RightValue="2" LeftValue="1" />
+        <ux:Keyframe Time="92.5" RightValue="4" LeftValue="2" />
+        <ux:Keyframe Time="122" RightValue="3.5" LeftValue="4" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Tree1">
+      <ux:FloatTrack Name="TLength">
+        <ux:Keyframe Time="32.5350620931852" Value="0" />
+        <ux:Keyframe Time="38.5447964620147" Value="162.299621582031" />
+        <ux:Keyframe Time="44.7460097729382" RightValue="0" LeftValue="93.3258438110352" />
+        <ux:Keyframe Time="52.4063320981966" Value="52.7309761047363" />
+        <ux:Keyframe Time="56" RightValue="96.3376007080078" LeftValue="52.7309761047363" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BRecAngle">
+        <ux:Keyframe Time="32.5350620931852" Value="-6.41940784454346" />
+        <ux:Keyframe Time="44.7460097729382" RightValue="0" LeftValue="57" />
+        <ux:Keyframe Time="50.5690157486518" Value="57" />
+        <ux:Keyframe Time="56" RightValue="29.8564224243164" LeftValue="57" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BDist">
+        <ux:Keyframe Time="32.5350620931852" Value="0.183143377304077" />
+        <ux:Keyframe Time="44.7460097729382" RightValue="0" LeftValue="10.3258399963379" />
+        <ux:Keyframe Time="52.4063320981966" Value="10" />
+      </ux:FloatTrack>
+      <ux:NodeTrack Name="Transform37">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="32.5350620931852" Value="-118.14949798584" />
+            <ux:Keyframe Time="44.7460097729382" RightValue="-434" LeftValue="-118.14949798584" />
+            <ux:Keyframe Time="56" RightValue="-308.474273681641" LeftValue="-434" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="32.5350620931852" Value="-104.605697631836" />
+            <ux:Keyframe Time="44.7460097729382" RightValue="-491" LeftValue="-104.605697631836" />
+            <ux:Keyframe Time="56" RightValue="-415.121612548828" LeftValue="-491" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="32.5350620931852" Value="-2.56304597854614" />
+            <ux:Keyframe Time="44.7460097729382" RightValue="-2.56304597854614" LeftValue="-2.56304597854614" />
+            <ux:Keyframe Time="56" RightValue="-5.25668334960938" LeftValue="-2.56304597854614" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="RotationDegrees">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="56" RightValue="0" LeftValue="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="56" RightValue="0" LeftValue="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="56" RightValue="111.677726745605" LeftValue="-5.48426008224487" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Tree Copy">
+      <ux:FloatTrack Name="TLength">
+        <ux:Keyframe Time="32.5350620931852" Value="52.1373023986816" />
+        <ux:Keyframe Time="37.0856874476797" Value="173.101089477539" />
+        <ux:Keyframe Time="40" RightValue="0" LeftValue="173.101089477539" />
+        <ux:Keyframe Time="42.8857174009172" Value="125.029663085938" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BRecAngle">
+        <ux:Keyframe Time="32.5350620931852" Value="10" />
+        <ux:Keyframe Time="40" RightValue="0" LeftValue="45" />
+        <ux:Keyframe Time="44" RightValue="23.4950923919678" LeftValue="23.4950923919678" />
+        <ux:Keyframe Time="50" Value="45.8086166381836" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BDist">
+        <ux:Keyframe Time="32.5350620931852" Value="0.166234970092773" />
+        <ux:Keyframe Time="40" RightValue="10.7011575698853" LeftValue="10.7011575698853" />
+      </ux:FloatTrack>
+      <ux:NodeTrack Name="Transform372">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="32.5350620931852" Value="-466.746612548828" />
+            <ux:Keyframe Time="40" RightValue="-478.250274658203" LeftValue="-466.746612548828" />
+            <ux:Keyframe Time="48" RightValue="-478.250274658203" LeftValue="-478.250274658203" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="32.5350620931852" Value="50.7890472412109" />
+            <ux:Keyframe Time="40" RightValue="-747.727294921875" LeftValue="50.7890472412109" />
+            <ux:Keyframe Time="48" RightValue="-747.727294921875" LeftValue="-747.727294921875" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="32.5350620931852" Value="-18.5248565673828" />
+            <ux:Keyframe Time="40" RightValue="-18.5248870849609" LeftValue="-18.5248565673828" />
+            <ux:Keyframe Time="48" RightValue="-18.5248870849609" LeftValue="-18.5248870849609" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Tree Copy 2">
+      <ux:FloatTrack Name="TLength">
+        <ux:Keyframe Time="34.4106542547324" Value="1" />
+        <ux:Keyframe Time="40" Value="180.056182861328" />
+        <ux:Keyframe Time="48" RightValue="0" LeftValue="180.056182861328" />
+        <ux:Keyframe Time="52.4063320981966" Value="187.816864013672" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BRecAngle">
+        <ux:Keyframe Time="34.4106542547324" Value="5" />
+        <ux:Keyframe Time="40" Value="81" />
+        <ux:Keyframe Time="48" RightValue="0" LeftValue="81" />
+        <ux:Keyframe Time="52.4063320981966" Value="18.9099998474121" />
+        <ux:Keyframe Time="53.6853556259921" Value="81" />
+        <ux:Keyframe Time="56" RightValue="61.1293601989746" LeftValue="81" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BDist">
+        <ux:Keyframe Time="34.4106542547324" Value="2" />
+        <ux:Keyframe Time="48" RightValue="10.6516799926758" LeftValue="10.6516799926758" />
+      </ux:FloatTrack>
+      <ux:NodeTrack Name="Transform3722">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="34.4106542547324" Value="-301.928314208984" />
+            <ux:Keyframe Time="48" RightValue="-385.447662353516" LeftValue="-301.928314208984" />
+            <ux:Keyframe Time="56" RightValue="-385.447662353516" LeftValue="-385.447662353516" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="34.4106542547324" Value="-169.469802856445" />
+            <ux:Keyframe Time="48" RightValue="-934.172485351563" LeftValue="-169.469802856445" />
+            <ux:Keyframe Time="56" RightValue="-934.169982910156" LeftValue="-934.169982910156" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="34.4106542547324" Value="-13.7537698745728" />
+            <ux:Keyframe Time="48" RightValue="-13.7537546157837" LeftValue="-13.7537698745728" />
+            <ux:Keyframe Time="56" RightValue="-13.7537546157837" LeftValue="-13.7537546157837" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Tree Copy 3">
+      <ux:FloatTrack Name="TLength">
+        <ux:Keyframe Time="37.0856874476797" Value="10" />
+        <ux:Keyframe Time="41.3414220728233" Value="66.7197036743164" />
+        <ux:Keyframe Time="48" RightValue="0" LeftValue="66.7197036743164" />
+        <ux:Keyframe Time="56" RightValue="100" LeftValue="0" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BRecAngle">
+        <ux:Keyframe Time="37.0856874476797" Value="0" />
+        <ux:Keyframe Time="41.3414220728233" Value="46.2179145812988" />
+        <ux:Keyframe Time="48" RightValue="10" LeftValue="46.2179145812988" />
+        <ux:Keyframe Time="52" Value="10" />
+        <ux:Keyframe Time="54" Value="45" />
+      </ux:FloatTrack>
+      <ux:NodeTrack Name="Transform37222">
+        <ux:VectorTrack Name="Position">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="48" RightValue="-885.80126953125" LeftValue="-593.197875976563" />
+            <ux:Keyframe Time="56" RightValue="13.7278900146484" LeftValue="-885.80126953125" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="48" RightValue="-769.971374511719" LeftValue="-212.069793701172" />
+            <ux:Keyframe Time="56" RightValue="-1111.78833007813" LeftValue="-769.971374511719" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="48" RightValue="0" LeftValue="-14.9336700439453" />
+            <ux:Keyframe Time="56" RightValue="9.1552734375E-05" LeftValue="0" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="Tree Copy 4">
+      <ux:FloatTrack Name="TLength">
+        <ux:Keyframe Time="40" Value="1" />
+        <ux:Keyframe Time="44.7460097729382" Value="65.3483123779297" />
+        <ux:Keyframe Time="56" RightValue="117.061653137207" LeftValue="65.3483123779297" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BDepth">
+        <ux:Keyframe Time="40" Value="10" />
+        <ux:Keyframe Time="44.7460097729382" Value="8.38202285766602" />
+        <ux:Keyframe Time="56" RightValue="5.49277210235596" LeftValue="8.38202285766602" />
+      </ux:FloatTrack>
+      <ux:FloatTrack Name="BRecAngle">
+        <ux:Keyframe Time="40" Value="44" />
+      </ux:FloatTrack>
+    </ux:NodeTrack>
+    <ux:NodeTrack Name="VikingskipetGlass">
+      <ux:VectorTrack Name="DiffuseColor">
+        <ux:FloatTrack Name="X">
+          <ux:Keyframe Time="122" RightValue="0.278431385755539" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Y">
+          <ux:Keyframe Time="122" RightValue="0.298039227724075" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Z">
+          <ux:Keyframe Time="122" RightValue="0.482352942228317" LeftValue="1" />
+        </ux:FloatTrack>
+      </ux:VectorTrack>
+    </ux:NodeTrack>
+  </Animation>
+  <es:TextStuff Debugging="false" Index="2" OverlayAlpha="0" OverlayColor="0.4235294, 0.1803922, 0.1803922" Alpha="0.2471909" Flicker="0.02247191" OverlayCutoff="1, 1, 1" CutoffAlpha="0.7865168" Inverted="0" InvertColor="0, 0, 0" SnowAlpha="0" NoiseAlpha="0" Vignette="true" OverlayOverlayAlpha="0" OverlayOverlayColor="0.5803922, 0.1686275, 0" RadialBlur="1" Zoom="1.011798" Blend="0.9280899" Passes="3" Resolution="0.5" Brightness="2.042697" CenterX="0.2449438" CenterY="-0.1426966" ux:Field="Postproc">
+    <e:NewNodeSwitcher CurrentNodeIndex="1" ux:Field="NewNodeSwitcher1">
+      <owf:WowFactory Enabled="true" AOColor="0.2745098, 0.2745098, 0.2745098" LEnabled="false" LShadows="false" AOEnabled="true" DOFEnabled="false" DOFFocusRange="0" DOFFocusOffset="-100" GEnabled="true" ux:Name="WowFactory2">
+        <Entity ux:Name="Tilegridscene">
+          <e:GridController Width="25" Length="25" Spacing="10" Scaling="1, 1, 1" Speed="12.35955" Offset="50" OffsetOffsetter="-0.17" Rings="true" RingOffsetter="0" AnimationTime="0" ux:Field="GridController1">
+            <Transform Position="0, 0, 0" ux:Name="Transform49" />
+            <Entity ux:Binding="Tile" ux:AutoBind="false" ux:Name="Box1">
+              <usp:CubeRenderer ux:Name="Box1Box2">
+                <DefaultMaterial IsEmissive="true" EmissiveColor="0.3764706, 0.2156863, 0" ux:Name="EmissiveMaterial2">
+                  <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="stoneTex.jpg" ux:Path="Assets/stoneTex.jpg" />
+                  <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="stoneTex_NRM.png" ux:Path="Assets/stoneTex_NRM.png" />
+                  <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="stoneTex_specular.jpg" ux:Path="Assets/stoneTex_specular.jpg" />
+                  <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="stoneTexEmissive.jpg" ux:Path="Assets/stoneTexEmissive.jpg" />
+                </DefaultMaterial>
+                <DefaultMaterial ux:AutoBind="false" ux:Name="ColoredMaterial6" />
+              </usp:CubeRenderer>
+              <Transform Scaling="1, 1, 0.25" ux:Name="Transform48" />
+            </Entity>
+          </e:GridController>
+          <e:GridController Width="25" Length="25" Spacing="10" Scaling="1, 1, 1" Speed="0" Offset="19.66292" OffsetOffsetter="-0.1685393" AnimationTime="0" ux:Field="GridController Copy">
+            <Transform Position="0, 0, -5.222893" ux:Name="Transform492" />
+            <Entity ux:Binding="Tile" ux:AutoBind="false" ux:Name="Box Copy">
+              <usp:CubeRenderer ux:Name="Box1Box22">
+                <DefaultMaterial IsEmissive="true" EmissiveColor="0.9411765, 0.4862745, 0.07843138" ux:Name="EmissiveMaterial22">
+                  <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="stoneTex.jpg2" ux:Path="Assets/stoneTex.jpg" />
+                  <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="stoneTex_NRM.png2" ux:Path="Assets/stoneTex_NRM.png" />
+                  <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="stoneTex_specular.jpg2" ux:Path="Assets/stoneTex_specular.jpg" />
+                  <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png6" ux:Path="Assets/white.png" />
+                  <texture2D ux:AutoBind="false" ux:Name="stoneTexEmissive.jpg2" ux:Path="Assets/stoneTexEmissive.jpg" />
+                </DefaultMaterial>
+                <DefaultMaterial ux:AutoBind="false" ux:Name="ColoredMaterial62" />
+              </usp:CubeRenderer>
+              <Transform Scaling="1, 1, 0.25" ux:Name="Transform482" />
+            </Entity>
+          </e:GridController>
+          <e:GridController Width="25" Length="25" Spacing="10" Scaling="1, 1, 1" Speed="0" Offset="19.66292" OffsetOffsetter="-0.1685393" AnimationTime="0" ux:Name="GridController Copy 2">
+            <Transform Position="-11.50668, -3.885391, -12.52524" ux:Name="Transform4922" />
+            <Entity ux:Binding="Tile" ux:AutoBind="false" ux:Name="Box Copy 2">
+              <usp:CubeRenderer ux:Name="Box1Box222">
+                <DefaultMaterial IsEmissive="true" EmissiveColor="0.8235294, 0.4156863, 0.04313726" ux:Name="EmissiveMaterial222">
+                  <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="stoneTex.jpg22" ux:Path="Assets/stoneTex.jpg" />
+                  <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="stoneTex_NRM.png22" ux:Path="Assets/stoneTex_NRM.png" />
+                  <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="stoneTex_specular.jpg22" ux:Path="Assets/stoneTex_specular.jpg" />
+                  <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png62" ux:Path="Assets/white.png" />
+                  <texture2D ux:AutoBind="false" ux:Name="stoneTexEmissive.jpg22" ux:Path="Assets/stoneTexEmissive.jpg" />
+                </DefaultMaterial>
+                <DefaultMaterial ux:AutoBind="false" ux:Name="ColoredMaterial622" />
+              </usp:CubeRenderer>
+              <Transform Scaling="1, 1, 0.25" ux:Name="Transform4822" />
+            </Entity>
+          </e:GridController>
+          <Transform Position="-210.2129, 158.3306, 98.08482" ux:Name="Transform46" />
+        </Entity>
+      </owf:WowFactory>
+      <owf:WowFactory Enabled="true" AOColor="0.2235294, 0.2235294, 0.2235294" AOEnabled="true" AOMultiplier="8.370787" AOExponent="9.865169" AORadius="1.460674" AOBias="0.001" AOEps="13.37079" BBEnabled="false" BBDepthEffect="1.011236" AOMaxScreenRadius="0.3146068" DOFPasses="4" DOFEnabled="true" DOFFocusRange="1000" DOFFocusOffset="100" GEnabled="true" ux:Field="WowFactory Copy">
+        <ux:PropertyBinding Destination="DOFFocusRange" SourceRef="FloatNode1" SourceProperty="Output" />
+        <Entity ux:Field="Treescene">
+          <e:Scenographyparticles AnimTime="0" Width="19" Length="12" Spacing="50" zOffset="100" AnimSpeed="0.3370791" ux:Field="Scenographyparticles1">
+            <Transform Position="-848.066, -806.7222, 156.2622" RotationDegrees="0, -1.055646, 0" ux:Field="Transform39" />
+            <Entity ux:Binding="Particle" ux:AutoBind="false" ux:Name="Particle Copy 4">
+              <ct:Particle ux:Name="Particle1Particle2222">
+                <DefaultMaterial IsEmissive="true" EmissiveColor="0.372549, 0.8705882, 0.9764706" ux:Name="EmissiveMaterial12222">
+                  <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png52222" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png42222" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png32222" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png22222" ux:Path="Assets/white.png" />
+                </DefaultMaterial>
+              </ct:Particle>
+              <Transform Position="0, 0, 0" Scaling="0.1, 0.1, 0.1" ux:Name="Transform122222" />
+            </Entity>
+          </e:Scenographyparticles>
+          <Entity ux:Field="Ground">
+            <Entity ux:Name="Entity4">
+              <Entity ux:Name="Entity5">
+                <Transform Position="-45.51056, -40.58711, -3.814697E-06" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform43" />
+                <MeshRenderer ux:Name="MeshRenderer4">
+                  <Mesh ux:Name="Mesh2" ux:MeshIndex="0" ux:Path="Assets/terrain.FBX" />
+                </MeshRenderer>
+              </Entity>
+            </Entity>
+            <MeshRenderer ux:Name="MeshRenderer3">
+              <DefaultMaterial DiffuseColor="0.2784314, 0.1254902, 0.5568628" ux:Name="ColoredMaterial5" />
+            </MeshRenderer>
+            <Transform Position="-267.3165, -215.948, 2.288819E-05" RotationDegrees="0, 0, 0" Scaling="10, 10, 8" ux:Field="Transform41" />
+          </Entity>
+          <Entity ux:Field="SpotLight12">
+            <SpotLight Range="1511.236" Color="0.8980392, 0.627451, 0.627451" Multiplier="1.112358" CastShadow="true" ShadowMapNearPlane="1" ShadowMapResolution="1024" ShadowMapDepthBias="10" ShowDesignerSprite="true" ux:Name="SpotLight2SpotLight" />
+            <Transform Position="-36.85873, 299.7572, 275" RotationDegrees="326.8225, 29.87299, 350.7763" ux:Field="Transform44" />
+          </Entity>
+          <Entity ux:Name="Trees">
+            <ct:Tree AnimationTime="0" Seed="30" TLength="93.32584" TDens="4.550562" TTScale="5.913484" TBScale="9.49663" BDepth="3.730337" BDensity="3" BRecAngle="57" BDist="3.483143" TTrunk="true" _lAng="0" _lOrigOff="0" ux:Field="Tree1">
+              <ux:PropertyBinding Destination="_lEndPos" SourceRef="Transform52" SourceProperty="Position" />
+              <Transform Position="-308.4743, -415.1216, -5.256683" RotationDegrees="0, 0, -5.48426" Scaling="0.25, 0.25, 0.25" ux:Field="Transform37" />
+              <Entity ux:Binding="TCube" ux:AutoBind="false" ux:Name="CubeRenderer12">
+                <usp:CubeRenderer ux:Name="CubeRenderer2CubeRenderer">
+                  <DefaultMaterial DiffuseColor="0.2784314, 0.12, 0.5" SpecularColor="1, 1, 1" IsEmissive="false" ux:Name="Treemat" />
+                  <DefaultMaterial ux:AutoBind="false" ux:Name="DefaultMaterial1" />
+                </usp:CubeRenderer>
+                <Transform ux:Name="Transform45" />
+              </Entity>
+              <Entity ux:Binding="LLeafp" ux:AutoBind="false" ux:Name="Particle1">
+                <ct:Particle ux:Name="Particle1Particle">
+                  <DefaultMaterial Shininess="6" IsEmissive="true" EmissiveColor="0.04313726, 0.7294118, 1" ux:Name="EmissiveMaterial1">
+                    <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png5" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png4" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png3" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png2" ux:Path="Assets/white.png" />
+                  </DefaultMaterial>
+                </ct:Particle>
+                <Transform Position="0, 0, 0" ux:Name="Transform12" />
+              </Entity>
+            </ct:Tree>
+            <ct:Tree AnimationTime="0" TLength="173.1011" TDens="6" TTScale="5.248314" TBScale="9.49663" BDepth="5.550562" BDensity="2" BRecAngle="15" BDist="8.696627" ux:Field="Tree Copy">
+              <ux:PropertyBinding Destination="_lEndPos" SourceRef="Transform52" SourceProperty="Position" />
+              <Transform Position="-478.2503, -747.7273, -18.52489" RotationDegrees="-5, 12, 279.1517" Scaling="0.25, 0.25, 0.25" ux:Field="Transform372" />
+              <Entity ux:Binding="TCube" ux:AutoBind="false" ux:Name="CubeRenderer Copy">
+                <usp:CubeRenderer ux:Name="CubeRenderer2CubeRenderer2">
+                  <DefaultMaterial ux:Ref="Treemat" />
+                  <DefaultMaterial ux:AutoBind="false" ux:Name="DefaultMaterial12" />
+                </usp:CubeRenderer>
+                <Transform ux:Name="Transform452" />
+              </Entity>
+              <Entity ux:Binding="LLeafp" ux:AutoBind="false" ux:Name="Particle Copy">
+                <ct:Particle ux:Name="Particle1Particle2">
+                  <DefaultMaterial IsEmissive="true" EmissiveColor="0.04313726, 0.6117647, 1" ux:Name="EmissiveMaterial12">
+                    <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png52" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png42" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png32" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png22" ux:Path="Assets/white.png" />
+                  </DefaultMaterial>
+                </ct:Particle>
+                <Transform Position="0, 0, 0" ux:Name="Transform122" />
+              </Entity>
+            </ct:Tree>
+            <ct:Tree AnimationTime="0" Seed="2" TLength="180.0562" TTScale="5.248314" TBScale="9.49663" BDepth="7.269663" BDensity="3" BRecAngle="81" BDist="10.65168" ux:Field="Tree Copy 2">
+              <ux:PropertyBinding Destination="_lEndPos" SourceRef="Transform52" SourceProperty="Position" />
+              <Transform Position="-385.4477, -820.7477, -13.75375" RotationDegrees="0, -11, -230.46" Scaling="0.25, 0.25, 0.25" ux:Field="Transform3722" />
+              <Entity ux:Binding="TCube" ux:AutoBind="false" ux:Name="CubeRenderer Copy 2">
+                <usp:CubeRenderer ux:Name="CubeRenderer2CubeRenderer3">
+                  <DefaultMaterial ux:Ref="Treemat" />
+                  <DefaultMaterial ux:AutoBind="false" ux:Name="DefaultMaterial13" />
+                </usp:CubeRenderer>
+                <Transform ux:Name="Transform453" />
+              </Entity>
+              <Entity ux:Binding="LLeafp" ux:AutoBind="false" ux:Name="Particle Copy 2">
+                <ct:Particle ux:Name="Particle1Particle22">
+                  <DefaultMaterial IsEmissive="true" EmissiveColor="0.04313726, 0.6117647, 1" ux:Name="EmissiveMaterial122">
+                    <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png522" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png422" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png322" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png222" ux:Path="Assets/white.png" />
+                  </DefaultMaterial>
+                </ct:Particle>
+                <Transform Position="0, 0, 0" ux:Name="Transform1222" />
+              </Entity>
+            </ct:Tree>
+            <ct:Tree AnimationTime="0" TLength="41.6067" TTScale="5.248314" TBScale="9.49663" BDepth="10" BDensity="3" BRecAngle="60" BDist="7.393253" ux:Field="Tree Copy 3">
+              <ux:PropertyBinding Destination="_lEndPos" SourceRef="Transform52" SourceProperty="Position" />
+              <Transform Position="13.72789, -1111.788, 9.155273E-05" RotationDegrees="0, 14, 125" Scaling="0.25, 0.25, 0.25" ux:Field="Transform37222" />
+              <Entity ux:Binding="TCube" ux:AutoBind="false" ux:Name="CubeRenderer Copy 3">
+                <usp:CubeRenderer ux:Name="CubeRenderer2CubeRenderer4">
+                  <DefaultMaterial ux:Ref="Treemat" />
+                  <DefaultMaterial ux:AutoBind="false" ux:Name="DefaultMaterial14" />
+                </usp:CubeRenderer>
+                <Transform ux:Name="Transform454" />
+              </Entity>
+              <Entity ux:Binding="LLeafp" ux:AutoBind="false" ux:Name="Particle Copy 3">
+                <ct:Particle ux:Name="Particle1Particle222">
+                  <DefaultMaterial IsEmissive="true" EmissiveColor="0.04313726, 0.6117647, 1" ux:Name="EmissiveMaterial1222">
+                    <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png5222" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png4222" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png3222" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png2222" ux:Path="Assets/white.png" />
+                  </DefaultMaterial>
+                </ct:Particle>
+                <Transform Position="0, 0, 0" ux:Name="Transform12222" />
+              </Entity>
+            </ct:Tree>
+            <ct:Tree AnimationTime="0" Seed="123452" TLength="65.34831" TDens="2" TTScale="8.155056" TBScale="9.273034" BDepth="8.382023" BDensity="2" BRecAngle="44" BDist="7.393253" ux:Field="Tree Copy 4">
+              <ux:PropertyBinding Destination="_lEndPos" SourceRef="Transform52" SourceProperty="Position" />
+              <Transform Position="-206.0661, -641.6138, -9.3153" RotationDegrees="0, 0, 290.8182" Scaling="0.25, 0.25, 0.25" ux:Field="Transform372222" />
+              <Entity ux:Binding="TCube" ux:AutoBind="false" ux:Name="CubeRenderer Copy 4">
+                <usp:CubeRenderer ux:Name="CubeRenderer2CubeRenderer5">
+                  <DefaultMaterial ux:Ref="Treemat" />
+                  <DefaultMaterial ux:AutoBind="false" ux:Name="DefaultMaterial15" />
+                </usp:CubeRenderer>
+                <Transform ux:Name="Transform455" />
+              </Entity>
+              <Entity ux:Binding="LLeafp" ux:AutoBind="false" ux:Name="Particle Copy 5">
+                <ct:Particle ux:Name="Particle1Particle2223">
+                  <DefaultMaterial IsEmissive="true" EmissiveColor="0.04313726, 0.6117647, 1" ux:Name="EmissiveMaterial12223">
+                    <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png52223" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png42223" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png32223" ux:Path="Assets/white.png" />
+                    <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png22223" ux:Path="Assets/white.png" />
+                  </DefaultMaterial>
+                </ct:Particle>
+                <Transform Position="0, 0, 0" ux:Name="Transform122223" />
+              </Entity>
+            </ct:Tree>
+            <Transform ux:Name="Transform47" />
+          </Entity>
+          <Transform Position="-38.38388, 5.303619, 0" ux:Field="Transform11" />
+        </Entity>
+        <Entity ux:Field="Robot">
+          <Entity ux:Name="Entity211">
+            <Entity ux:Name="Entity214">
+              <Entity ux:Name="Entity242">
+                <Transform Position="-0.04075623, 47.5197, -1.908301" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform196" />
+              </Entity>
+              <Entity ux:Name="Entity243">
+                <Transform Position="8.022279, 6.319515, -2.016" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform200" />
+              </Entity>
+              <Entity ux:Name="Entity253">
+                <Transform Position="-8.103792, 6.319515, -2.015778" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform205" />
+              </Entity>
+              <Entity ux:Name="Entity255">
+                <Transform Position="29.37544, 28.27953, 2.145767E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform210" />
+              </Entity>
+              <Entity ux:Name="Entity256">
+                <Transform Position="-30.60763, 30.40415, 0.5453057" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform212" />
+              </Entity>
+              <Entity ux:Name="Entity261">
+                <Transform Position="8.022279, 26.90709, 1.044441" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform214" />
+              </Entity>
+              <Entity ux:Name="Entity264">
+                <Transform Position="-8.103792, 26.90709, 1.044664" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform218" />
+              </Entity>
+              <Entity ux:Name="Entity266">
+                <Transform Position="19.80806, 56.68481, 7.152557E-07" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform222" />
+              </Entity>
+              <Entity ux:Name="Entity291">
+                <Transform Position="-20.05593, 57.27612, 0.1802149" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform238" />
+              </Entity>
+              <Entity ux:Name="Entity315">
+                <Transform Position="0, 54.24738, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform241" />
+              </Entity>
+              <Entity ux:Name="Entity325">
+                <Transform Position="0.3377038, 74.09425, 0.0901072" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform258" />
+              </Entity>
+              <Entity ux:Name="Entity328">
+                <Transform Position="8.022284, 1.77351, 13.95943" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform262" />
+              </Entity>
+              <Entity ux:Name="Entity337">
+                <Transform Position="-8.104342, 1.77351, 13.95967" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform268" />
+              </Entity>
+              <Entity ux:Name="Entity338">
+                <Transform Position="14.76396, 74.1502, -4.440892E-16" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform271" />
+              </Entity>
+              <Entity ux:Name="Entity342">
+                <Transform Position="-14.08855, 74.0383, 0.1802142" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform273" />
+              </Entity>
+              <Entity ux:Name="Entity344">
+                <Transform Position="0, 125.8933, 0" RotationDegrees="1.022503E-15, 355.4049, 1.272222E-14" Scaling="1, 1, 1" ux:Name="Transform277" />
+              </Entity>
+              <Entity ux:Name="Entity349">
+                <Transform Position="8.022279, 47.5197, -1.908301" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform282" />
+              </Entity>
+              <Entity ux:Name="Entity351">
+                <Transform Position="-8.10379, 47.5197, -1.908301" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform283" />
+              </Entity>
+              <Entity ux:Name="Entity352">
+                <Transform Position="27.86684, 33.55408, 0.6614571" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform284" />
+              </Entity>
+              <Entity ux:Name="Entity356">
+                <Transform Position="-28.06862, 37.69456, 1.207153" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform285" />
+              </Entity>
+              <Entity ux:Name="Entity353">
+                <Transform Position="34.16809, 10.88501, 10.54271" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform286" />
+              </Entity>
+              <Entity ux:Name="Entity354">
+                <Transform Position="32.53353, 7.386527, 5.309066" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform287" />
+              </Entity>
+              <Entity ux:Name="Entity357">
+                <Transform Position="32.83167, 6.979769, 1.410753" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform288" />
+              </Entity>
+              <Entity ux:Name="Entity358">
+                <Transform Position="32.56787, 7.570906, -3.567481" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform289" />
+              </Entity>
+              <Entity ux:Name="Entity359">
+                <Transform Position="-33.80441, 12.87837, 9.710325" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform290" />
+              </Entity>
+              <Entity ux:Name="Entity360">
+                <Transform Position="-36.00341, 12.18762, 5.276031" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform291" />
+              </Entity>
+              <Entity ux:Name="Entity361">
+                <Transform Position="-36.73243, 10.72137, 0.09946346" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform292" />
+              </Entity>
+              <Entity ux:Name="Entity363">
+                <Transform Position="-35.84385, 12.85527, -5.45478" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform293" />
+              </Entity>
+              <Entity ux:Name="Entity231">
+                <Entity ux:Name="Entity367">
+                  <Entity ux:Name="Entity372">
+                    <Entity ux:Name="Entity376">
+                      <Entity ux:Name="Entity382">
+                        <Transform Position="4.768372E-06, -4.546006, 15.97544" RotationDegrees="360, 1.272222E-14, 6.066426E-21" Scaling="1, 1, 1" ux:Name="Transform313" />
+                      </Entity>
+                      <Transform Position="0, -20.58757, -3.060441" RotationDegrees="9.297804E-09, 1.011631E-15, 6.907606E-14" Scaling="1, 1, 1" ux:Name="Transform309" />
+                    </Entity>
+                    <Transform Position="0, -20.61261, 2.952742" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform303" />
+                  </Entity>
+                  <Transform Position="8.022279, -3.178791, -1.908301" RotationDegrees="0, 360, 360" Scaling="1, 1, 1" ux:Name="Transform296" />
+                </Entity>
+                <Entity ux:Name="Entity365">
+                  <Entity ux:Name="Entity368">
+                    <Entity ux:Name="Entity373">
+                      <Entity ux:Name="Entity378">
+                        <Transform Position="-0.0005507469, -4.546006, 15.97545" RotationDegrees="0, 6.447029E-14, 0" Scaling="1, 1, 1" ux:Name="Transform308" />
+                      </Entity>
+                      <Transform Position="1.430511E-06, -20.58757, -3.060441" RotationDegrees="360, 6.444695E-14, 360" Scaling="1, 1, 1" ux:Name="Transform304" />
+                    </Entity>
+                    <Transform Position="-1.907349E-06, -20.61261, 2.952965" RotationDegrees="5.186649E-07, 1.585039E-13, 1.475725E-21" Scaling="1, 1, 1" ux:Name="Transform299" />
+                  </Entity>
+                  <Transform Position="-8.10379, -3.178791, -1.908301" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform297" />
+                </Entity>
+                <Entity ux:Name="Entity364">
+                  <Entity ux:Name="Entity369">
+                    <Entity ux:Name="Entity374">
+                      <Entity ux:Name="Entity379">
+                        <Entity ux:Name="Entity383">
+                          <Entity ux:Name="Entity389">
+                            <Entity ux:Name="Entity396">
+                              <Entity ux:Name="Entity403">
+                                <Transform Position="6.272675, -5.133324, -0.3473647" RotationDegrees="1.895758E-22, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform332" />
+                              </Entity>
+                              <Transform Position="7.187149, 1.355957, 0.350595" RotationDegrees="9.478791E-23, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform327" />
+                            </Entity>
+                            <Transform Position="12.82847, -0.1526871, 4.644377" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform319" />
+                          </Entity>
+                          <Entity ux:Name="Entity390">
+                            <Entity ux:Name="Entity395">
+                              <Entity ux:Name="Entity402">
+                                <Transform Position="6.566474, -5.133316, 8.690357E-05" RotationDegrees="1.895758E-22, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform334" />
+                              </Entity>
+                              <Transform Position="6.841652, 1.355972, 0.0001534224" RotationDegrees="9.478791E-23, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform326" />
+                            </Entity>
+                            <Transform Position="13.36081, 0, 0.7490549" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform321" />
+                          </Entity>
+                          <Entity ux:Name="Entity388">
+                            <Entity ux:Name="Entity394">
+                              <Entity ux:Name="Entity401">
+                                <Transform Position="6.056931, -5.133308, -4.768372E-07" RotationDegrees="1.895758E-22, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform333" />
+                              </Entity>
+                              <Transform Position="7.386261, 1.355976, -0.6702061" RotationDegrees="9.478791E-23, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform325" />
+                            </Entity>
+                            <Transform Position="12.68132, -0.0613327, -3.558731" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform320" />
+                          </Entity>
+                          <Transform Position="-5.480183, 0.2539444, 0.6614552" RotationDegrees="1.41245E-29, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform315" />
+                        </Entity>
+                        <Entity ux:Name="Entity384">
+                          <Entity ux:Name="Entity387">
+                            <Entity ux:Name="Entity393">
+                              <Transform Position="7.439478, -1.525879E-05, -0.6702023" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform323" />
+                            </Entity>
+                            <Transform Position="7.029737, -0.2717896, 3.67028" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform318" />
+                          </Entity>
+                          <Transform Position="3.545175, -0.7385483, 7.542629" RotationDegrees="1.41245E-29, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform314" />
+                        </Entity>
+                        <Transform Position="29.97324, 0, 0" RotationDegrees="360, 2.035555E-13, 360" Scaling="1, 1, 0.9999999" ux:Name="Transform310" />
+                      </Entity>
+                      <Transform Position="5.044106, -17.46537, 9.536743E-07" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform305" />
+                    </Entity>
+                    <Transform Position="14.76396, 19.90282, 0" RotationDegrees="360, 8.351593E-17, 360" Scaling="1, 1, 1" ux:Name="Transform301" />
+                  </Entity>
+                  <Entity ux:Name="Entity371">
+                    <Entity ux:Name="Entity377">
+                      <Entity ux:Name="Entity381">
+                        <Entity ux:Name="Entity386">
+                          <Entity ux:Name="Entity397">
+                            <Entity ux:Name="Entity404">
+                              <Entity ux:Name="Entity407">
+                                <Transform Position="-6.486311, -3.671417, 0.1124952" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform338" />
+                              </Entity>
+                              <Transform Position="-6.376641, 2.050705, 0.1580296" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform335" />
+                            </Entity>
+                            <Transform Position="-13.79075, -0.1526871, 3.798351" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform324" />
+                          </Entity>
+                          <Entity ux:Name="Entity398">
+                            <Entity ux:Name="Entity405">
+                              <Entity ux:Name="Entity408">
+                                <Transform Position="-7.706384, -3.671425, -0.2769561" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform339" />
+                              </Entity>
+                              <Transform Position="-6.746412, 2.050701, -0.08598423" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform336" />
+                            </Entity>
+                            <Transform Position="-13.83125, 0, -0.7447509" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform328" />
+                          </Entity>
+                          <Entity ux:Name="Entity392">
+                            <Entity ux:Name="Entity400">
+                              <Entity ux:Name="Entity406">
+                                <Transform Position="-6.262725, -3.671429, -1.096175" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform337" />
+                              </Entity>
+                              <Transform Position="-6.209115, 2.050709, -0.8715277" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform331" />
+                            </Entity>
+                            <Transform Position="-13.5015, -0.06133652, -4.694231" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform329" />
+                          </Entity>
+                          <Transform Position="7.715704, 0.2539482, 0.6618477" RotationDegrees="360, 360, 1.683772E-37" Scaling="1, 1, 1" ux:Name="Transform316" />
+                        </Entity>
+                        <Entity ux:Name="Entity385">
+                          <Entity ux:Name="Entity391">
+                            <Entity ux:Name="Entity399">
+                              <Transform Position="-7.572387, 1.525879E-05, -0.5600796" RotationDegrees="2.8249E-30, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform330" />
+                            </Entity>
+                            <Transform Position="-6.719802, -1.826363, 2.593035" RotationDegrees="1.017777E-13, 360, 1.590277E-15" Scaling="1, 1, 1" ux:Name="Transform322" />
+                          </Entity>
+                          <Transform Position="-3.210157, -1.496319, 7.132064" RotationDegrees="360, 360, 1.683772E-37" Scaling="1, 1, 1" ux:Name="Transform317" />
+                        </Entity>
+                        <Transform Position="-28.86883, 0.1771736, 0.3650899" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform312" />
+                      </Entity>
+                      <Transform Position="-5.967369, -16.76218, 7.152557E-07" RotationDegrees="1.899249E-13, 360, 68.91339" Scaling="1, 1, 1" ux:Name="Transform307" />
+                    </Entity>
+                    <Transform Position="-14.08855, 19.79092, 0.1802142" RotationDegrees="360, 2.097552E-16, 360" Scaling="1, 1, 1" ux:Name="Transform300" />
+                  </Entity>
+                  <Entity ux:Name="Entity370">
+                    <Entity ux:Name="Entity375">
+                      <Entity ux:Name="Entity380">
+                        <Transform Position="-7.450581E-09, 30.99271, -2.384186E-07" RotationDegrees="360, 358.4682, 360" Scaling="1, 1, 1" ux:Name="Transform311" />
+                      </Entity>
+                      <Transform Position="1.490116E-08, 12.96316, 2.384186E-07" RotationDegrees="2.029479E-13, 358.4684, 360" Scaling="1, 1, 1" ux:Name="Transform306" />
+                    </Entity>
+                    <Transform Position="0, 27.68961, -4.440892E-16" RotationDegrees="360, 358.4684, 360" Scaling="1, 1, 1" ux:Name="Transform302" />
+                  </Entity>
+                  <Transform Position="0, 3.548893, 0" RotationDegrees="360, 360, 360" Scaling="1, 1, 1" ux:Name="Transform298" />
+                </Entity>
+                <Transform Position="0, 50.69848, -4.440892E-16" RotationDegrees="3.791516E-22, 360, 360" Scaling="1, 1, 1" ux:Name="Transform294" />
+              </Entity>
+              <Transform Position="0.09649202, 1.09619, 0" RotationDegrees="90, 0, 0" Scaling="0.3937008, 0.3937008, 0.3937008" ux:Name="Transform186" />
+            </Entity>
+            <Entity ux:Name="Entity213">
+              <Entity ux:Name="Entity218">
+                <Entity ux:Name="Entity228">
+                  <MeshRenderer ux:Name="MeshRenderer67">
+                    <Mesh ux:Name="Mesh63" ux:MeshIndex="0" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform184" />
+              </Entity>
+              <Entity ux:Name="Entity219">
+                <Entity ux:Name="Entity220">
+                  <MeshRenderer ux:Name="MeshRenderer58">
+                    <Mesh ux:Name="Mesh55" ux:MeshIndex="1" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform185" />
+              </Entity>
+              <Entity ux:Name="Entity223">
+                <Entity ux:Name="Entity224">
+                  <MeshRenderer ux:Name="MeshRenderer59">
+                    <Mesh ux:Name="Mesh54" ux:MeshIndex="3" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform188" />
+              </Entity>
+              <Entity ux:Name="Entity225">
+                <Entity ux:Name="Entity230">
+                  <MeshRenderer ux:Name="MeshRenderer63">
+                    <Mesh ux:Name="Mesh59" ux:MeshIndex="4" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform189" />
+              </Entity>
+              <Entity ux:Name="Entity227">
+                <Entity ux:Name="Entity234">
+                  <MeshRenderer ux:Name="MeshRenderer62">
+                    <Mesh ux:Name="Mesh58" ux:MeshIndex="5" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform191" />
+              </Entity>
+              <Entity ux:Name="Entity229">
+                <Entity ux:Name="Entity232">
+                  <MeshRenderer ux:Name="MeshRenderer60">
+                    <Mesh ux:Name="Mesh56" ux:MeshIndex="6" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform192" />
+              </Entity>
+              <Entity ux:Name="Entity233">
+                <Entity ux:Name="Entity236">
+                  <MeshRenderer ux:Name="MeshRenderer61">
+                    <Mesh ux:Name="Mesh57" ux:MeshIndex="7" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform193" />
+              </Entity>
+              <Entity ux:Name="Entity240">
+                <Entity ux:Name="Entity241">
+                  <MeshRenderer ux:Name="MeshRenderer64">
+                    <Mesh ux:Name="Mesh60" ux:MeshIndex="8" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform197" />
+              </Entity>
+              <Entity ux:Name="Entity250">
+                <Entity ux:Name="Entity251">
+                  <MeshRenderer ux:Name="MeshRenderer66">
+                    <Mesh ux:Name="Mesh62" ux:MeshIndex="9" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform204" />
+              </Entity>
+              <Entity ux:Name="Entity252">
+                <Entity ux:Name="Entity254">
+                  <MeshRenderer ux:Name="MeshRenderer65">
+                    <Mesh ux:Name="Mesh61" ux:MeshIndex="10" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform207" />
+              </Entity>
+              <Entity ux:Name="Entity281">
+                <Entity ux:Name="Entity304">
+                  <MeshRenderer ux:Name="MeshRenderer73">
+                    <Mesh ux:Name="Mesh71" ux:MeshIndex="17" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform229" />
+              </Entity>
+              <Entity ux:Name="Entity284">
+                <Entity ux:Name="Entity308">
+                  <MeshRenderer ux:Name="MeshRenderer79">
+                    <Mesh ux:Name="Mesh76" ux:MeshIndex="18" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform234" />
+              </Entity>
+              <Entity ux:Name="Entity287">
+                <Entity ux:Name="Entity293">
+                  <MeshRenderer ux:Name="MeshRenderer74">
+                    <Mesh ux:Name="Mesh70" ux:MeshIndex="19" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform235" />
+              </Entity>
+              <Entity ux:Name="Entity289">
+                <Entity ux:Name="Entity312">
+                  <MeshRenderer ux:Name="MeshRenderer81">
+                    <Mesh ux:Name="Mesh77" ux:MeshIndex="20" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform236" />
+              </Entity>
+              <Entity ux:Name="Entity290">
+                <Entity ux:Name="Entity300">
+                  <MeshRenderer ux:Name="MeshRenderer80">
+                    <Mesh ux:Name="Mesh74" ux:MeshIndex="21" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform239" />
+              </Entity>
+              <Entity ux:Name="Entity295">
+                <Entity ux:Name="Entity297">
+                  <MeshRenderer ux:Name="MeshRenderer71">
+                    <Mesh ux:Name="Mesh67" ux:MeshIndex="22" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform240" />
+              </Entity>
+              <Entity ux:Name="Entity299">
+                <Entity ux:Name="Entity306">
+                  <MeshRenderer ux:Name="MeshRenderer76">
+                    <Mesh ux:Name="Mesh72" ux:MeshIndex="23" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform243" />
+              </Entity>
+              <Entity ux:Name="Entity302">
+                <Entity ux:Name="Entity321">
+                  <MeshRenderer ux:Name="MeshRenderer83">
+                    <Mesh ux:Name="Mesh79" ux:MeshIndex="24" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform244" />
+              </Entity>
+              <Entity ux:Name="Entity303">
+                <Entity ux:Name="Entity309">
+                  <MeshRenderer ux:Name="MeshRenderer78">
+                    <Mesh ux:Name="Mesh75" ux:MeshIndex="25" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform245" />
+              </Entity>
+              <Entity ux:Name="Entity216">
+                <Entity ux:Name="Entity350">
+                  <MeshRenderer ux:Name="MeshRenderer92">
+                    <Mesh ux:Name="Mesh88" ux:MeshIndex="37" ux:Path="Assets/robot.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Transform Position="-61.67397, 65.7742, -2.801418E-06" RotationDegrees="2.091507E-13, 1.674766E-14, 288.6144" Scaling="0.9999999, 0.9999999, 1" ux:Name="Transform279" />
+              </Entity>
+              <Entity ux:Field="Headcontroller">
+                <Entity ux:Name="Entity221">
+                  <Entity ux:Name="Entity222">
+                    <MeshRenderer ux:Name="MeshRenderer57">
+                      <Mesh ux:Name="Mesh53" ux:MeshIndex="2" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                    <Transform Position="0, 0, 0" RotationDegrees="0, 0, 0" ux:Name="Transform340" />
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform187" />
+                </Entity>
+                <Entity ux:Name="Entity257">
+                  <Entity ux:Name="Entity260">
+                    <MeshRenderer ux:Name="MeshRenderer68">
+                      <Mesh ux:Name="Mesh64" ux:MeshIndex="11" ux:Path="Assets/robot.FBX" />
+                      <DefaultMaterial DiffuseColor="0.4745098, 0.4745098, 0.4745098" IsEmissive="false" EmissiveColor="0.5294118, 0.5294118, 0.5294118" ux:Field="DefaultMaterial3" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform209" />
+                </Entity>
+                <Entity ux:Name="Entity272">
+                  <Entity ux:Name="Entity280">
+                    <MeshRenderer ux:Name="MeshRenderer70">
+                      <Mesh ux:Name="Mesh66" ux:MeshIndex="13" ux:Path="Assets/robot.FBX" />
+                      <DefaultMaterial ux:Ref="DefaultMaterial3" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform221" />
+                </Entity>
+                <Entity ux:Name="Entity275">
+                  <Entity ux:Name="Entity282">
+                    <MeshRenderer ux:Name="MeshRenderer85">
+                      <Mesh ux:Name="Mesh81" ux:MeshIndex="15" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform227" />
+                </Entity>
+                <Entity ux:Name="Entity274">
+                  <Entity ux:Name="Entity286">
+                    <MeshRenderer ux:Name="MeshRenderer75">
+                      <Mesh ux:Name="Mesh69" ux:MeshIndex="16" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform228" />
+                </Entity>
+                <Entity ux:Name="Entity273">
+                  <Entity ux:Name="Entity283">
+                    <MeshRenderer ux:Name="MeshRenderer69">
+                      <Mesh ux:Name="Mesh65" ux:MeshIndex="14" ux:Path="Assets/robot.FBX" />
+                      <DefaultMaterial DiffuseColor="0.772549, 0.03137255, 0.4352941" SpecularColor="1, 1, 1" IsEmissive="true" EmissiveColor="0.7137255, 0.6039216, 0.1333333" ux:Name="DefaultMaterial2" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform225" />
+                </Entity>
+                <Entity ux:Name="Entity265">
+                  <Entity ux:Name="Entity269">
+                    <MeshRenderer ux:Name="MeshRenderer72">
+                      <Mesh ux:Name="Mesh68" ux:MeshIndex="12" ux:Path="Assets/robot.FBX" />
+                      <DefaultMaterial ux:Ref="DefaultMaterial2" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform215" />
+                </Entity>
+                <Transform Position="-17.02583, 16.15874, 46.18164" RotationDegrees="-9.669291, -3.757129, 0.2394184" ux:Field="Transform2" />
+              </Entity>
+              <Entity ux:Field="ArmController">
+                <Entity ux:Name="Entity310">
+                  <Entity ux:Name="Entity314">
+                    <MeshRenderer ux:Name="MeshRenderer77">
+                      <Mesh ux:Name="Mesh73" ux:MeshIndex="26" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform247" />
+                </Entity>
+                <Entity ux:Name="Entity313">
+                  <Entity ux:Name="Entity322">
+                    <MeshRenderer ux:Name="MeshRenderer88">
+                      <Mesh ux:Name="Mesh84" ux:MeshIndex="27" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform253" />
+                </Entity>
+                <Entity ux:Name="Entity317">
+                  <Entity ux:Name="Entity319">
+                    <MeshRenderer ux:Name="MeshRenderer82">
+                      <Mesh ux:Name="Mesh78" ux:MeshIndex="28" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform256" />
+                </Entity>
+                <Entity ux:Name="Entity327">
+                  <Entity ux:Name="Entity331">
+                    <MeshRenderer ux:Name="MeshRenderer86">
+                      <Mesh ux:Name="Mesh82" ux:MeshIndex="29" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform260" />
+                </Entity>
+                <Entity ux:Name="Entity330">
+                  <Entity ux:Name="Entity348">
+                    <MeshRenderer ux:Name="MeshRenderer91">
+                      <Mesh ux:Name="Mesh87" ux:MeshIndex="30" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform266" />
+                </Entity>
+                <Entity ux:Name="Entity332">
+                  <Entity ux:Name="Entity333">
+                    <MeshRenderer ux:Name="MeshRenderer87">
+                      <Mesh ux:Name="Mesh83" ux:MeshIndex="31" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform269" />
+                </Entity>
+                <Entity ux:Name="Entity334">
+                  <Entity ux:Name="Entity335">
+                    <MeshRenderer ux:Name="MeshRenderer84">
+                      <Mesh ux:Name="Mesh80" ux:MeshIndex="32" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform270" />
+                </Entity>
+                <Entity ux:Name="Entity339">
+                  <Entity ux:Name="Entity340">
+                    <MeshRenderer ux:Name="MeshRenderer89">
+                      <Mesh ux:Name="Mesh85" ux:MeshIndex="33" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform272" />
+                </Entity>
+                <Entity ux:Name="Entity341">
+                  <Entity ux:Name="Entity345">
+                    <MeshRenderer ux:Name="MeshRenderer90">
+                      <Mesh ux:Name="Mesh86" ux:MeshIndex="34" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform274" />
+                </Entity>
+                <Entity ux:Name="Entity343">
+                  <Entity ux:Name="Entity355">
+                    <MeshRenderer ux:Name="MeshRenderer93">
+                      <Mesh ux:Name="Mesh89" ux:MeshIndex="35" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform276" />
+                </Entity>
+                <Entity ux:Name="Entity346">
+                  <Entity ux:Name="Entity366">
+                    <MeshRenderer ux:Name="MeshRenderer94">
+                      <Mesh ux:Name="Mesh90" ux:MeshIndex="36" ux:Path="Assets/robot.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Transform Position="61.54567, 62.82436, -2.741814E-06" RotationDegrees="2.265424E-13, 2.172753E-14, 68.91339" Scaling="1, 1, 1" ux:Name="Transform278" />
+                </Entity>
+                <Transform Position="-0.6154785, 7.82972, 29.87341" RotationDegrees="312.2911, 109.2217, 205.6764" ux:Field="Transform4" />
+              </Entity>
+              <Transform Position="0.09649202, -0.2557995, 0" RotationDegrees="90, 0, 0" Scaling="0.3937008, 0.3937008, 0.3937008" ux:Name="Transform181" />
+            </Entity>
+            <Entity ux:Name="Entity212">
+              <Entity ux:Name="Entity215">
+                <Entity ux:Name="Entity226">
+                  <Entity ux:Name="Entity235">
+                    <Entity ux:Name="Entity237">
+                      <Entity ux:Name="Entity244">
+                        <Transform Position="4.768372E-06, -4.546006, 15.97544" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform206" />
+                      </Entity>
+                      <Transform Position="0, -20.58757, -3.060441" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform199" />
+                    </Entity>
+                    <Transform Position="0, -20.61261, 2.952742" RotationDegrees="360, 0, 0" Scaling="1, 1, 1" ux:Name="Transform194" />
+                  </Entity>
+                  <Transform Position="8.022279, -3.178791, -1.908301" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform190" />
+                </Entity>
+                <Entity ux:Name="Entity238">
+                  <Entity ux:Name="Entity239">
+                    <Entity ux:Name="Entity263">
+                      <Entity ux:Name="Entity270">
+                        <Transform Position="-0.0005502701, -4.546006, 15.97545" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform226" />
+                      </Entity>
+                      <Transform Position="9.536743E-07, -20.58757, -3.060441" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform220" />
+                    </Entity>
+                    <Transform Position="-1.907349E-06, -20.61261, 2.952965" RotationDegrees="360, 0, 0" Scaling="1, 1, 1" ux:Name="Transform216" />
+                  </Entity>
+                  <Transform Position="-8.10379, -3.178791, -1.908301" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform195" />
+                </Entity>
+                <Entity ux:Name="Entity217">
+                  <Entity ux:Name="Entity246">
+                    <Entity ux:Name="Entity248">
+                      <Entity ux:Name="Entity262">
+                        <Entity ux:Name="Entity298">
+                          <Entity ux:Name="Entity307">
+                            <Entity ux:Name="Entity316">
+                              <Entity ux:Name="Entity326">
+                                <Transform Position="-6.48629, -3.671417, 0.1134608" RotationDegrees="360, 0.04630334, 9.939232E-17" Scaling="1, 1, 1" ux:Name="Transform263" />
+                              </Entity>
+                              <Transform Position="-6.376633, 2.050705, 0.1579614" RotationDegrees="360, 359.9909, 360" Scaling="1, 1, 1" ux:Name="Transform257" />
+                            </Entity>
+                            <Transform Position="-13.79075, -0.1526871, 3.798351" RotationDegrees="1.651388E-23, 0.0006092545, 360" Scaling="1, 1, 1" ux:Name="Transform248" />
+                          </Entity>
+                          <Entity ux:Name="Entity320">
+                            <Entity ux:Name="Entity323">
+                              <Entity ux:Name="Entity329">
+                                <Transform Position="-7.706421, -3.671425, -0.275809" RotationDegrees="360, 0.04630334, 9.939232E-17" Scaling="1, 1, 1" ux:Name="Transform267" />
+                              </Entity>
+                              <Transform Position="-6.746414, 2.050705, -0.08605576" RotationDegrees="360, 359.9909, 360" Scaling="1, 1, 1" ux:Name="Transform264" />
+                            </Entity>
+                            <Transform Position="-13.83126, 0, -0.744751" RotationDegrees="1.651388E-23, 0.0006092545, 360" Scaling="1, 1, 1" ux:Name="Transform250" />
+                          </Entity>
+                          <Entity ux:Name="Entity301">
+                            <Entity ux:Name="Entity324">
+                              <Entity ux:Name="Entity336">
+                                <Transform Position="-6.262894, -3.671425, -1.095243" RotationDegrees="360, 0.04630334, 9.939232E-17" Scaling="1, 1, 1" ux:Name="Transform275" />
+                              </Entity>
+                              <Transform Position="-6.209106, 2.050705, -0.871593" RotationDegrees="360, 359.9909, 360" Scaling="1, 1, 1" ux:Name="Transform265" />
+                            </Entity>
+                            <Transform Position="-13.50151, -0.0613327, -4.694232" RotationDegrees="1.651388E-23, 0.0006092545, 360" Scaling="1, 1, 1" ux:Name="Transform259" />
+                          </Entity>
+                          <Transform Position="7.715702, 0.2539444, 0.6618478" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform233" />
+                        </Entity>
+                        <Entity ux:Name="Entity268">
+                          <Entity ux:Name="Entity347">
+                            <Entity ux:Name="Entity362">
+                              <Transform Position="-7.572388, 1.525879E-05, -0.5600801" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform295" />
+                            </Entity>
+                            <Transform Position="-6.719803, -1.826363, 2.593033" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform281" />
+                          </Entity>
+                          <Transform Position="-3.210152, -1.496323, 7.132064" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform280" />
+                        </Entity>
+                        <Transform Position="-28.86884, 0.1771774, 0.3650899" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform219" />
+                      </Entity>
+                      <Transform Position="-20.44666, 0.1029205, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform211" />
+                    </Entity>
+                    <Transform Position="-14.08855, 19.79092, 0.1802142" RotationDegrees="360, 0, 0" Scaling="1, 1, 1" ux:Name="Transform202" />
+                  </Entity>
+                  <Entity ux:Name="Entity247">
+                    <Entity ux:Name="Entity258">
+                      <Entity ux:Name="Entity259">
+                        <Entity ux:Name="Entity271">
+                          <Entity ux:Name="Entity276">
+                            <Entity ux:Name="Entity292">
+                              <Entity ux:Name="Entity305">
+                                <Transform Position="6.566475, -5.133316, 8.714199E-05" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform254" />
+                              </Entity>
+                              <Transform Position="6.841652, 1.355972, 0.0001533031" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform246" />
+                            </Entity>
+                            <Transform Position="13.36081, 0, 0.7490551" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform230" />
+                          </Entity>
+                          <Entity ux:Name="Entity278">
+                            <Entity ux:Name="Entity285">
+                              <Entity ux:Name="Entity294">
+                                <Transform Position="6.272682, -5.133324, -0.3472986" RotationDegrees="360, 359.9732, 360" Scaling="1, 1, 1" ux:Name="Transform249" />
+                              </Entity>
+                              <Transform Position="7.187149, 1.355957, 0.3505952" RotationDegrees="1.895758E-22, 0.0006092348, 1.007895E-27" Scaling="1, 1, 1" ux:Name="Transform237" />
+                            </Entity>
+                            <Transform Position="12.82847, -0.1526871, 4.644378" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform231" />
+                          </Entity>
+                          <Entity ux:Name="Entity277">
+                            <Entity ux:Name="Entity296">
+                              <Entity ux:Name="Entity318">
+                                <Transform Position="6.056931, -5.133308, 4.768372E-07" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform261" />
+                              </Entity>
+                              <Transform Position="7.386261, 1.355972, -0.6702061" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform255" />
+                            </Entity>
+                            <Transform Position="12.68132, -0.0613327, -3.558731" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform232" />
+                          </Entity>
+                          <Transform Position="-5.480183, 0.2539444, 0.6614552" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform223" />
+                        </Entity>
+                        <Entity ux:Name="Entity267">
+                          <Entity ux:Name="Entity288">
+                            <Entity ux:Name="Entity311">
+                              <Transform Position="7.439476, -1.525879E-05, -0.6702032" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform252" />
+                            </Entity>
+                            <Transform Position="7.029739, -0.2717896, 3.67028" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform251" />
+                          </Entity>
+                          <Transform Position="3.545181, -0.7385483, 7.542629" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform224" />
+                        </Entity>
+                        <Transform Position="29.97324, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform217" />
+                      </Entity>
+                      <Transform Position="19.8588, 0.1680527, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform213" />
+                    </Entity>
+                    <Transform Position="14.76396, 19.90282, 0" RotationDegrees="360, 0, 0" Scaling="1, 1, 1" ux:Name="Transform201" />
+                  </Entity>
+                  <Entity ux:Name="Entity245">
+                    <Entity ux:Name="Entity249">
+                      <Entity ux:Name="Entity279">
+                        <Transform Position="7.450581E-09, 30.9931, -2.384186E-07" RotationDegrees="2.036283E-13, 358.4682, 360" Scaling="0.9999998, 0.9999998, 0.9999998" ux:Name="Transform242" />
+                      </Entity>
+                      <Transform Position="1.490116E-08, 12.96323, 0" RotationDegrees="4.072566E-13, 358.4684, 360" Scaling="0.9999999, 0.9999998, 0.9999999" ux:Name="Transform208" />
+                    </Entity>
+                    <Transform Position="0, 27.68961, -4.440892E-16" RotationDegrees="360, 358.4684, 360" Scaling="1, 1, 1" ux:Name="Transform203" />
+                  </Entity>
+                  <Transform Position="0, 3.548893, 0" RotationDegrees="0, 0, 0" Scaling="1, 1, 1" ux:Name="Transform198" />
+                </Entity>
+                <Transform Position="0, 50.69848, -4.440892E-16" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform183" />
+              </Entity>
+              <Transform Position="0.09649202, 1.09619, 0" RotationDegrees="90, 0, 0" Scaling="0.3937008, 0.3937008, 0.3937008" ux:Name="Transform182" />
+            </Entity>
+          </Entity>
+          <MeshRenderer ux:Name="MeshRenderer56">
+            <DefaultMaterial ux:Ref="DefaultMaterial3" />
+          </MeshRenderer>
+          <Transform Position="-349.6087, -515.0159, 2.317149" RotationDegrees="1.25532, 357.0768, 135.0724" ux:Field="Transform180" />
+          <DefaultMaterial ux:AutoBind="false" DiffuseColor="1, 0.05882353, 0.05882353" IsEmissive="true" EmissiveColor="1, 0.2431373, 0.2431373" ux:Name="DefaultMaterial6" />
+        </Entity>
+        <Entity ux:Field="Vikingskipet">
+          <Entity ux:Name="Entity27">
+            <Entity ux:Name="Entity28">
+              <Entity ux:Name="Entity29">
+                <Entity ux:Name="Entity31">
+                  <Transform Position="-5.860561, -1.054803, 0.9505545" RotationDegrees="270, 0, 0" Scaling="0.05981549, 0.05677248, 0.1930265" ux:Name="Transform22" />
+                  <MeshRenderer ux:Name="MeshRenderer18">
+                    <Mesh ux:Name="Mesh1" ux:MeshIndex="0" ux:Path="Assets/vikingskipet.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Entity ux:Name="Entity32">
+                  <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform23" />
+                  <MeshRenderer ux:Name="MeshRenderer20">
+                    <Mesh ux:Name="Mesh3" ux:MeshIndex="1" ux:Path="Assets/vikingskipet.FBX" />
+                  </MeshRenderer>
+                </Entity>
+                <Entity ux:Name="Entity33">
+                  <Entity ux:Name="Entity42">
+                    <Transform Position="0.04037738, 0.1129392, -0.1510313" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform26" />
+                    <MeshRenderer ux:Name="MeshRenderer29">
+                      <Mesh ux:Name="Mesh13" ux:MeshIndex="2" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity43">
+                    <Transform Position="0.04037738, 0.1129392, -0.1510313" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform27" />
+                    <MeshRenderer ux:Name="MeshRenderer19">
+                      <Mesh ux:Name="Mesh5" ux:MeshIndex="3" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity44">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform29" />
+                    <MeshRenderer ux:Name="MeshRenderer24">
+                      <Mesh ux:Name="Mesh9" ux:MeshIndex="4" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity39">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform28" />
+                    <MeshRenderer ux:Name="MeshRenderer26">
+                      <Mesh ux:Name="Mesh10" ux:MeshIndex="5" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity40">
+                    <Transform Position="0.04037738, 0.1129392, -0.1510313" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform31" />
+                    <MeshRenderer ux:Name="MeshRenderer23">
+                      <Mesh ux:Name="Mesh8" ux:MeshIndex="6" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                </Entity>
+                <Entity ux:Name="Entity34">
+                  <Entity ux:Name="Entity45">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform30" />
+                    <MeshRenderer ux:Name="MeshRenderer25">
+                      <Mesh ux:Name="Mesh4" ux:MeshIndex="7" ux:Path="Assets/vikingskipet.FBX" />
+                      <DefaultMaterial DiffuseColor="0.3647059, 0.3647059, 0.3647059" Shininess="42.40449" ux:Name="VikingskipetWall" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity47">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform32" />
+                    <MeshRenderer ux:Name="MeshRenderer28">
+                      <Mesh ux:Name="Mesh12" ux:MeshIndex="8" ux:Path="Assets/vikingskipet.FBX" />
+                      <DefaultMaterial ux:Ref="DefaultMaterial3" />
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity41">
+                    <Transform Position="0.03671503, -1.152282, 12.69848" RotationDegrees="360, 0, 0" Scaling="0.6902273, 0.6551132, 0.6551132" ux:Name="Transform34" />
+                    <MeshRenderer ux:Name="MeshRenderer30">
+                      <Mesh ux:Name="Mesh14" ux:MeshIndex="9" ux:Path="Assets/vikingskipet.FBX" />
+                      <DefaultMaterial ux:Ref="VikingskipetWall" />
+                    </MeshRenderer>
+                  </Entity>
+                </Entity>
+                <Entity ux:Name="Entity35" />
+                <Entity ux:Name="Entity36">
+                  <Entity ux:Name="Entity46">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform33" />
+                    <MeshRenderer ux:Name="MeshRenderer22">
+                      <Mesh ux:Name="Mesh7" ux:MeshIndex="10" ux:Path="Assets/vikingskipet.FBX" />
+                      <DefaultMaterial ux:Ref="VikingskipetWall" />
+                    </MeshRenderer>
+                  </Entity>
+                </Entity>
+                <Entity ux:Name="Entity30">
+                  <Entity ux:Name="Entity37">
+                    <Transform Position="0.03671503, 0.1129392, -0.1779432" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform24" />
+                    <MeshRenderer ux:Name="MeshRenderer21">
+                      <Mesh ux:Name="Mesh6" ux:MeshIndex="11" ux:Path="Assets/vikingskipet.FBX" />
+                      <DefaultMaterial DiffuseColor="0.2784314, 0.2980392, 0.4823529" IsEmissive="true" EmissiveColor="0, 0.9568627, 0.9176471" ux:Field="VikingskipetGlass">
+                        <ux:PropertyBinding Destination="EmissiveColor" SourceRef="FlickerNode1" SourceProperty="Result" />
+                      </DefaultMaterial>
+                    </MeshRenderer>
+                  </Entity>
+                  <Entity ux:Name="Entity38">
+                    <Transform Position="0.04037738, 0.1129392, -0.1510313" RotationDegrees="270, 0, 0" Scaling="1.19631, 1.13545, 1.13545" ux:Name="Transform25" />
+                    <MeshRenderer ux:Name="MeshRenderer27">
+                      <Mesh ux:Name="Mesh11" ux:MeshIndex="12" ux:Path="Assets/vikingskipet.FBX" />
+                    </MeshRenderer>
+                  </Entity>
+                </Entity>
+                <Transform Position="0, 0, 0" RotationDegrees="3.791516E-22, 0, 0" Scaling="1, 1, 1" ux:Name="Transform21" />
+              </Entity>
+              <Transform Position="0.8568212, 0.8746083, 8.940697E-08" RotationDegrees="90, 0, 0" Scaling="0.3937008, 0.3937008, 0.3937008" ux:Name="Transform20" />
+            </Entity>
+          </Entity>
+          <MeshRenderer ux:Name="MeshRenderer17">
+            <DefaultMaterial ux:Ref="DefaultMaterial3" />
+          </MeshRenderer>
+          <Transform Position="26.35291, -706.44, 76.31608" RotationDegrees="0, 0, 0" Scaling="70, 70, 70" ux:Field="Transform19" />
+        </Entity>
+        <Entity ux:Name="Entity7">
+          <Entity ux:Name="Entity8">
+            <Entity ux:Name="Entity9">
+              <Transform Position="0, 0, 0" RotationDegrees="270, 0, 0" Scaling="1, 1, 1" ux:Name="Transform6" />
+              <MeshRenderer ux:Name="MeshRenderer6">
+                <Mesh ux:Name="Mesh15" ux:MeshIndex="0" ux:Path="Assets/skybox.DAE" />
+              </MeshRenderer>
+            </Entity>
+          </Entity>
+          <MeshRenderer ux:Name="MeshRenderer5">
+            <DefaultMaterial DiffuseColor="0.3116468, 0.3415853, 0.5255432" IsEmissive="true" EmissiveColor="0.172549, 0.172549, 0.172549" ux:Name="DefaultMaterial5">
+              <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="blurrycubemap.jpg" ux:Path="Assets/blurrycubemap.jpg" />
+              <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="skybox_original_fixed.jpg" ux:Path="Assets/skybox_original_fixed.jpg" />
+              <texture2D ux:AutoBind="false" ux:Name="blurrycubemap.jpg" ux:Path="Assets/blurrycubemap.jpg" />
+              <texture2D ux:AutoBind="false" ux:Name="blurrycubemap.jpg2" ux:Path="Assets/blurrycubemap.jpg" />
+            </DefaultMaterial>
+          </MeshRenderer>
+          <Transform Position="-493.0593, -557.1995, 145.6983" Scaling="40, 40, 40" AbsolutePosition="-493.0593, -557.1995, 0" ux:Field="Transform5">
+            <ux:PropertyBinding Destination="Position" SourceRef="Camera1Transform" SourceProperty="Position" />
+          </Transform>
+        </Entity>
+      </owf:WowFactory>
+      <owf:WowFactory AOColor="0.08235294, 0.08235294, 0.08235294" LEnabled="false" LShadows="false" AOEnabled="false" BBEnabled="false" DOFEnabled="false" DOFFocusRange="0" DOFFocusOffset="0" GEnabled="true" ux:Name="WowFactory Copy 2">
+        <Entity ux:Name="Shapes">
+          <e:ParticleEngine2k AnimTime="0" ball="0" Width="25" Length="25" Height="25" Spacing="47.19101" Threshold="0.4044943" amp="1" ux:Field="ParticleEngine2k1">
+            <Entity ux:Name="Particle Copy 7">
+              <ct:Particle ux:Name="Particle1Particle22242">
+                <DefaultMaterial IsEmissive="true" EmissiveColor="0.04313726, 0.6117647, 1" ux:Name="EmissiveMaterial122242">
+                  <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="white.png522242" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="NormalMap" ux:AutoBind="false" ux:Name="white.png422242" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="SpecularMap" ux:AutoBind="false" ux:Name="white.png322242" ux:Path="Assets/white.png" />
+                  <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="white.png222242" ux:Path="Assets/white.png" />
+                </DefaultMaterial>
+              </ct:Particle>
+              <Transform Position="0, 0, 0" ux:Name="Transform1222242" />
+            </Entity>
+            <Transform Position="-2040.324, -1704.236, -1556.573" RotationDegrees="0, 0, 1" ux:Field="Transform51" />
+          </e:ParticleEngine2k>
+          <Transform Position="0, 0, 470" ux:Name="Transform50" />
+        </Entity>
+        <e:ParticleEngine2k ux:Binding="Focus" ux:AutoBind="false" ux:Ref="ParticleEngine2k1" />
+      </owf:WowFactory>
+      <owf:WowFactory AOColor="1, 0.9019608, 0.9019608" AOEnabled="true" AOMultiplier="5.224719" AOExponent="2" AORadius="2.134831" DOFEnabled="true" GEnabled="true" ux:Name="WowFactory1">
+        <Entity ux:Name="Splinepart">
+          <e:CubeSpline stepSize="4" animationtime="0" CubeSize="0.6853933" ColorSeed="0" OffsetColor="0, 0.5058824, 1" OffsetOpacity="0.8314607" RandMin="0.258427" RandMax="1" ux:Field="CubeSpline1" />
+          <e:CubeScenery ux:Name="CubeScenery1">
+            <texture2D ux:Binding="cubeTex" ux:AutoBind="false" ux:Name="cube.png2" ux:Path="Assets/cube.png" />
+          </e:CubeScenery>
+          <e:TerrainPart ColorSeed="3.570789" OffsetGroundColor="0.3960784, 0.9294118, 0.4470588" OffsetOpacity="0.3258427" DarkestColor="0.3932585" VikingskipetColor="0.7137255, 0.7137255, 0.7137255" ux:Field="TerrainPart1" />
+          <Entity ux:Ref="Vikingskipet" />
+          <Entity ux:Name="Entity Copy">
+            <Entity ux:Name="Entity8">
+              <Entity ux:Name="Entity9">
+                <Transform Position="0, 0, 0" RotationDegrees="270, 0, 0" Scaling="1, 1, 1" ux:Name="Transform6" />
+                <MeshRenderer ux:Name="MeshRenderer6">
+                  <Mesh ux:Name="Mesh15" ux:MeshIndex="0" ux:Path="Assets/skybox.DAE" />
+                </MeshRenderer>
+              </Entity>
+            </Entity>
+            <MeshRenderer ux:Name="MeshRenderer5">
+              <DefaultMaterial DiffuseColor="0.4941176, 0.4941176, 0.4941176" IsEmissive="true" EmissiveColor="0.8470588, 0.8470588, 0.8470588" ux:Name="DefaultMaterial5">
+                <texture2D ux:Binding="DiffuseMap" ux:AutoBind="false" ux:Name="skybox_original_fixed.jpg" ux:Path="Assets/skybox_original_fixed.jpg" />
+                <texture2D ux:Binding="EmissiveMap" ux:AutoBind="false" ux:Name="skybox_original_fixed.jpg" ux:Path="Assets/skybox_original_fixed.jpg" />
+                <texture2D ux:AutoBind="false" ux:Name="blurrycubemap.jpg" ux:Path="Assets/blurrycubemap.jpg" />
+              </DefaultMaterial>
+            </MeshRenderer>
+            <Transform Position="-493.0593, -557.1995, 135.9978" Scaling="25, 25, 25" ux:Field="Transform5">
+              <ux:PropertyBinding Destination="Position" SourceRef="Camera1Transform" SourceProperty="Position" />
+            </Transform>
+          </Entity>
+          <Entity ux:Name="PointLight1">
+            <Entity ux:Name="PointLight2">
+              <PointLight Range="132.5843" Color="1, 1, 1" Multiplier="1.898876" ux:Name="PointLight2PointLight" />
+              <Transform Position="-54.54709, 2.461304, 1.525879E-05" ux:Name="Transform3" />
+            </Entity>
+            <PointLight Range="110.1124" Color="1, 1, 1" Multiplier="5.044944" ux:Name="PointLight1PointLight" />
+            <Transform Position="488.1647, 470.421, 187.2915" ux:Name="Transform1" />
+          </Entity>
+          <Transform Position="0, 0, -2.288803" ux:Name="Transform53" />
+        </Entity>
+      </owf:WowFactory>
+      <owf:WowFactory AOColor="0.972549, 0.972549, 0.972549" LEnabled="true" LShadows="true" AOMultiplier="3.988764" AOExponent="3.595506" AORadius="14.7191" DOFEnabled="true" DOFFocusRange="1000" DOFFocusOffset="8.988764" GEnabled="false" ux:Name="WowFactory3">
+        <e:TextPart surroundingCircleBatches="4" cubeSpacing="4.994382" cubeLength="1.073034" textColor="1, 1, 1" wallColor1="0.9529412, 0.4627451, 0.09803922" wallColor2="0.1568628, 0.6392157, 1" wallColor3="0.5372549, 0.1176471, 0.1176471" wallColor4="0.1372549, 0.227451, 0.6509804" cubeScale="8.685393" textCubeScale="4.129213" textCubeSpacing="3.148316" positionRandomScale="0.6539315" timePerText="3.432584" scaleRandomScale="3.162921" circleSize="200" textYOffset="-5" speed="221.5056" ux:Field="TextPart1">
+          <texture2D ux:Binding="DiffuseTex" ux:AutoBind="false" ux:Name="cube.png" ux:Path="Assets/cube.png" />
+        </e:TextPart>
+        <Entity ux:Field="PointLight3">
+          <PointLight Range="516.8539" Color="0.5058824, 0.5058824, 0.5058824" Multiplier="3.258426" CastShadow="false" ShadowMapNearPlane="1" ux:Field="PointLight3PointLight" />
+          <Transform Position="-20.41498, -104.0811, 44.79215" ux:Name="Transform7" />
+        </Entity>
+      </owf:WowFactory>
+    </e:NewNodeSwitcher>
+  </es:TextStuff>
+  <e:FlickerNode Flicker="0.2808989" Intensity="0.5617978" Opacity="0.5617977" Color="1, 0, 0.9058824" ux:Field="FlickerNode1" />
+  <e:FloatNode Input="2500" ux:Field="FloatNode1" />
+  <Entity ux:Binding="Camera" ux:AutoBind="false" ux:Field="Camera1">
+    <Transform Position="-499.1807, -534.597, 487.5748" RotationQuaternion="-0.189769, 0.2985377, 0.7621875, -0.5421561" RotationDegrees="345.563, 320.73, 256.0243" Scaling="1, 1, 1" AbsolutePosition="-503.5175, -532.8331, 492.8791" ux:Field="Camera1Transform" />
+    <Frustum FovDegrees="45" Aspect="1.778808" ZNear="1" ZFar="2671.09" ux:Field="Camera1Camera" />
+  </Entity>
+  <Entity ux:AutoBind="false" ux:Name="Entity1">
+    <Transform Position="-230, -63, 571.2396" ux:Field="Transform52" />
+  </Entity>
+  <e:MusicPlayer ux:AutoBind="false" ux:Name="MusicPlayer1">
+    <Animation ux:Binding="Animation" ux:AutoBind="false" ux:Ref="Animation" />
+  </e:MusicPlayer>
+</Scene>

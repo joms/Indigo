@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project>
+  <Settings Title="Indigo - The Gathering 2014 Invite">
+    <Web>
+      <Title>Indigo - The Gathering 2014 Invite</Title>
+    </Web>
+  </Settings>
+  <References>
+    <PackageReference Name="Experimental.Audio" Version="0.1.0.0" />
+    <PackageReference Name="Outracks.WowFactory" Version="0.1.0.0" />
+    <PackageReference Name="Uno.Content.Utilities" Version="0.1.0.0" />
+    <PackageReference Name="Uno.Designer" Version="0.1.0.0" />
+    <PackageReference Name="Uno.Scenes" Version="0.2.0.0" />
+    <PackageReference Name="Uno.Styling" Version="0.1.0.0" />
+    <PackageReference Name="Uno.Tweening" Version="0.1.0.0" />
+    <PackageReference Name="Uno.UI" />
+  </References>
+  <Files>
+    <UxFile Path="Scene1.ux" />
+    <SourceFile Path="CameraSwitcher.uno" />
+    <SourceFile Path="CubeScenery.uno" />
+    <SourceFile Path="CubeSpline.uno" />
+    <SourceFile Path="Filter_Fader.uno" />
+    <SourceFile Path="FlickerNode.uno" />
+    <SourceFile Path="FloatNode.uno" />
+    <SourceFile Path="GridController.uno" />
+    <SourceFile Path="MusicPlayer.uno" />
+    <SourceFile Path="NewNodeSwitcher.uno" />
+    <SourceFile Path="NodeSwitcher.uno" />
+    <SourceFile Path="Particle.uno" />
+    <SourceFile Path="ParticleEngine2k.uno" />
+    <SourceFile Path="Perlin.uno" />
+    <SourceFile Path="Scenographyparticles.uno" />
+    <SourceFile Path="Spawner.uno" />
+    <SourceFile Path="TerrainPart.uno" />
+    <SourceFile Path="TextPart.uno" />
+    <SourceFile Path="TextStuff.uno" />
+    <SourceFile Path="Tree.uno" />
+    <ExtraFile Path="Assets/blurrycubemap.jpg" />
+    <ExtraFile Path="Assets/come_to.png" />
+    <ExtraFile Path="Assets/compoer.png" />
+    <ExtraFile Path="Assets/credits.png" />
+    <ExtraFile Path="Assets/cube.png" />
+    <ExtraFile Path="Assets/Indigo_invites.png" />
+    <ExtraFile Path="Assets/InviteBETA.mp3" />
+    <ExtraFile Path="Assets/noise.png" />
+    <ExtraFile Path="Assets/Perlin.png" />
+    <ExtraFile Path="Assets/robot.FBX" />
+    <ExtraFile Path="Assets/skybox.DAE" />
+    <ExtraFile Path="Assets/skybox_original_fixed.jpg" />
+    <ExtraFile Path="Assets/stoneTex.jpg" />
+    <ExtraFile Path="Assets/stoneTex_NRM.png" />
+    <ExtraFile Path="Assets/stoneTex_specular.jpg" />
+    <ExtraFile Path="Assets/stoneTexEmissive.jpg" />
+    <ExtraFile Path="Assets/terrain.FBX" />
+    <ExtraFile Path="Assets/tg-robot.fbx" />
+    <ExtraFile Path="Assets/vignette.jpg" />
+    <ExtraFile Path="Assets/vignette_snow.jpg" />
+    <ExtraFile Path="Assets/vikingskipet.FBX" />
+    <ExtraFile Path="Assets/white.png" />
+    <StartupFile Path="Scene1.ux" />
+  </Files>
+</Project>
