@@ -11,6 +11,6 @@ namespace Untitled
 	public class Fuck4
 	{
 		[Color]
-		public float4 fuck4 { get; set; }
+		public float4 fuck4 { get; set; } // Named this because of bugs and late night coding :)
 	}
 }
