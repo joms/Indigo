@@ -1,0 +1,83 @@
+<Layouts>
+  <ViewportLayout Name="CustomLayout1">
+    <Window>
+      <FixedAspectViewport AspectX="16" AspectY="9" />
+    </Window>
+  </ViewportLayout>
+  <Node RefId="this" PanX="444.764910983399" PanY="40.0730937945943" RootX="-89" RootY="3">
+    <Node RefId="Camera1" X="369" Y="117" />
+    <Node RefId="Style1" X="128" Y="74" />
+    <Node RefId="CameraControl1" X="228" Y="25" />
+    <Node RefId="DistortMaterial1" X="750" Y="82" />
+    <Node RefId="Postproc1" X="175" Y="-57" />
+    <Node RefId="Box" X="634" Y="58">
+      <Node RefId="DefaultMaterial1" />
+      <Node RefId="Entity3">
+        <Node RefId="Mesh1" />
+      </Node>
+    </Node>
+    <Node RefId="WowFactory1" X="431" Y="32.9999999999999" />
+    <Node RefId="SpotLight1" X="634" Y="31.9999999999999">
+      <Node RefId="SpotLight1SpotLight" X="486" Y="31.9999999999999" />
+      <Node RefId="Transform5" X="486" Y="31.9999999999999" />
+    </Node>
+    <Node RefId="Squid" X="638" Y="82">
+      <Node RefId="Entity13">
+        <Node RefId="Mesh2" />
+      </Node>
+    </Node>
+    <Node RefId="GroupController1" X="808.354957478041" Y="-140.290690003321" />
+    <Node RefId="GreetPanel1" X="463.084687207771" Y="-123.047446760078" />
+    <Node RefId="NewNodeSwitcher1" X="262.406302778081" Y="1.86276908502896" />
+    <Node RefId="TunnelBatch1" X="462.985250146502" Y="-80.2627369878455">
+      <Node RefId="Transform2" X="434.985250146502" Y="-18.2627369878455" />
+    </Node>
+    <Node RefId="Frustum1" X="369.985250146502" Y="86.7372630121545">
+      <Node RefId="Frustum1Frustum" X="374.985250146502" Y="93.7372630121545" />
+      <Node RefId="Transform4" X="374.985250146502" Y="93.7372630121545" />
+    </Node>
+    <Node RefId="AtomNumber" X="613.985250146502" Y="-261.262736987845" />
+    <Node RefId="ChemicalSymbol" X="614.132308970032" Y="-204.674501693727" />
+    <Node RefId="Name" X="616.450645939483" Y="-147.034800185745" />
+    <Node RefId="Density" X="616.450645939483" Y="-86.034800185745">
+      <Node RefId="Brush1" />
+    </Node>
+    <Node RefId="WowFactory2" X="370.462490914007" Y="-41.379175413893" />
+    <Node RefId="PointLight2" X="488.462490914007" Y="-30.379175413893">
+      <Node RefId="PointLight2PointLight" X="500.462490914007" Y="-37.379175413893" />
+      <Node RefId="Transform10" X="500.462490914007" Y="-37.379175413893" />
+    </Node>
+    <Node RefId="uxid0" X="178" Y="-83" />
+    <Node RefId="MusicPlayer1" X="50.0469920043262" Y="-123.413674364226" />
+    <Node RefId="GlowBatch1" X="543.940451033092" Y="134.902654885655">
+      <Node RefId="Transform6" X="628.940451033092" Y="144.902654885655" />
+    </Node>
+    <Node RefId="WowFactory3" X="430.940451033092" Y="64.9026548856551" />
+    <Node RefId="WowFactory4" X="507.940451033092" Y="175.902654885655" />
+    <Node RefId="ModelBatcher1" X="738.940451033092" Y="184.902654885655" />
+    <Node RefId="ModelBatcher2" X="770.940451033092" Y="153.902654885655" />
+    <Node RefId="ModelBatcher Copy" X="871.940451033092" Y="193.402654885655" Default="ModelBatcher Copy.Children" />
+    <Node RefId="ModelBatcher Copy 2" X="903.940451033092" Y="162.402654885655" Default="ModelBatcher Copy 2.Children" />
+    <Node RefId="PointLight1" X="735.940451033092" Y="237.902654885655">
+      <Node RefId="PointLight1PointLight" X="674.940451033092" Y="285.902654885655" />
+      <Node RefId="Transform11" X="674.940451033092" Y="285.902654885655" />
+    </Node>
+    <Node RefId="ModelBatcher Copy 3" X="1112.03426209486" Y="155.749544900505" Default="ModelBatcher Copy 3.Children" />
+    <Node RefId="ModelBatcher Copy 4" X="1080.03426209486" Y="186.749544900505" Default="ModelBatcher Copy 4.Children" />
+    <Node RefId="ModelBatcher Copy 5" X="1377.42711923772" Y="154.499544900505" Default="ModelBatcher Copy 5.Children">
+      <Node RefId="Transform9" X="150" />
+      <Node RefId="Transform92" X="866.940451033092" Y="153.902654885655" />
+    </Node>
+    <Node RefId="ModelBatcher Copy 6" X="1345.42711923772" Y="185.499544900505" Default="ModelBatcher Copy 6.Children" />
+    <Node RefId="ModelBatcher Copy 7" X="1539.85569066629" Y="148.249544900505" Default="ModelBatcher Copy 7.Children">
+      <Node RefId="Transform8" X="150" />
+      <Node RefId="Transform82" X="738.940451033092" Y="184.902654885655" />
+    </Node>
+    <Node RefId="CubeRenderer1" X="856.784262094862" Y="243.320973471934">
+      <Node RefId="CubeRenderer1CubeRenderer" X="896.784262094862" Y="253.320973471934">
+        <Node RefId="DefaultMaterial2" X="896.784262094862" Y="253.320973471934" />
+      </Node>
+      <Node RefId="Transform12" X="896.784262094862" Y="253.320973471934" />
+    </Node>
+  </Node>
+</Layouts>

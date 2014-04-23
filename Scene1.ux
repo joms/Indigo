@@ -1,0 +1,824 @@
+<Scene xmlns:ux="http://schemas.outracks.com/ux" xmlns:u="Untitled" xmlns:owf="Outracks.WowFactory" xmlns:g="Glowbatch" xmlns:mb="ModelBatch" xmlns:usp="Uno.Scenes.Primitives" ux:ClassName="Scene1" AlwaysUseOwnCamera="true" ClearColor="0.3294118, 0.3294118, 0.3294118, 1" xmlns="Uno.Scenes, Uno.Styling, Uno.UI, Uno">
+  <ux:PropertyBinding Destination="Camera" SourceRef="CameraControl1" SourceProperty="Camera" />
+  <u:MusicPlayer ux:Name="MusicPlayer1">
+    <Animation ux:Binding="Animation" ux:AutoBind="false" Length="126.5" Loop="true" PlayOnStartup="true" ux:Name="uxid0" ux:Length="126.5" ux:Zoom="0.776863309352517" ux:IsRecordEnabled="false">
+      <ux:NodeTrack Name="PointLight2">
+        <ux:NodeTrack Name="Transform10">
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="5.5" Value="0" />
+              <ux:Keyframe Time="6" Value="0" />
+              <ux:Keyframe Time="6.5" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="9" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="10.2572549739686" RightValue="0" LeftValue="0" Easing="RampOut" />
+              <ux:Keyframe Time="13.5" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="13.875" RightValue="0" LeftValue="0" Easing="RampOut" />
+              <ux:Keyframe Time="17.3822549739686" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="17.8822549739686" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="20.8822549739686" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="21.3822549739686" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="24.5926905494317" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="25.1986442847801" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="28.3822549739686" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="28.8822549739686" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="32.1322549739686" RightValue="0" LeftValue="3000" />
+              <ux:Keyframe Time="32.6322549739686" Value="0" Easing="RampOut" />
+              <ux:Keyframe Time="34.6322549739686" Value="3000" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+        <ux:NodeTrack Name="PointLight2PointLight">
+          <ux:VectorTrack Name="Color">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="4.75" Value="0" />
+              <ux:Keyframe Time="6" Value="0.800000011920929" />
+              <ux:Keyframe Time="9" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="10.2572549739686" Value="0.800000011920929" />
+              <ux:Keyframe Time="13.5" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="13.875" Value="0.800000011920929" />
+              <ux:Keyframe Time="17.3822549739686" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="17.8822549739686" Value="0.800000011920929" />
+              <ux:Keyframe Time="20.8822549739686" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="21.3822549739686" Value="0.800000011920929" />
+              <ux:Keyframe Time="24.5926905494317" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="25.1986442847801" Value="0.800000011920929" />
+              <ux:Keyframe Time="28.3822549739686" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="28.8822549739686" Value="0.800000011920929" />
+              <ux:Keyframe Time="32.3822549739686" RightValue="0" LeftValue="0.800000011920929" />
+              <ux:Keyframe Time="32.6322549739686" Value="0.800000011920929" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="4.75" Value="0" />
+              <ux:Keyframe Time="6" Value="0.159999996423721" />
+              <ux:Keyframe Time="9" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="10.2572549739686" Value="0.159999996423721" />
+              <ux:Keyframe Time="13.5" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="13.875" Value="0.159999996423721" />
+              <ux:Keyframe Time="17.3822549739686" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="17.8822549739686" Value="0.159999996423721" />
+              <ux:Keyframe Time="20.8822549739686" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="21.3822549739686" Value="0.159999996423721" />
+              <ux:Keyframe Time="24.5926905494317" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="25.1986442847801" Value="0.159999996423721" />
+              <ux:Keyframe Time="28.3822549739686" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="28.8822549739686" Value="0.159999996423721" />
+              <ux:Keyframe Time="32.3822549739686" RightValue="0" LeftValue="0.159999996423721" />
+              <ux:Keyframe Time="32.6322549739686" Value="0.159999996423721" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:FloatTrack Name="Multiplier">
+            <ux:Keyframe Time="4.75" Value="3" />
+            <ux:Keyframe Time="6.25" Value="3" />
+            <ux:Keyframe Time="9" RightValue="3" LeftValue="3" />
+            <ux:Keyframe Time="10.2572549739686" Value="13" />
+            <ux:Keyframe Time="13.5" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="13.875" Value="13" />
+            <ux:Keyframe Time="17.3822549739686" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="17.8822549739686" Value="13" />
+            <ux:Keyframe Time="20.8822549739686" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="21.3822549739686" Value="13" />
+            <ux:Keyframe Time="24.5926905494317" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="25.1986442847801" Value="13" />
+            <ux:Keyframe Time="28.3822549739686" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="28.8822549739686" Value="13" />
+            <ux:Keyframe Time="32.3822549739686" RightValue="3" LeftValue="13" />
+            <ux:Keyframe Time="32.6322549739686" Value="13" />
+          </ux:FloatTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="Postproc1">
+        <ux:FloatTrack Name="SinAmp">
+          <ux:Keyframe Time="10.2572549739686" RightValue="0.219999998807907" LeftValue="0" />
+          <ux:Keyframe Time="10.7603047684361" Value="0" />
+          <ux:Keyframe Time="13.875" RightValue="0.5" LeftValue="0" />
+          <ux:Keyframe Time="14.3822549739686" Value="0" />
+          <ux:Keyframe Time="17.8822549739686" RightValue="0.490000009536743" LeftValue="0" />
+          <ux:Keyframe Time="19.8822549739686" Value="0" />
+          <ux:Keyframe Time="21.3822549739686" Value="0.490000009536743" />
+          <ux:Keyframe Time="23.3822549739686" Value="0" />
+          <ux:Keyframe Time="25.1986442847801" RightValue="-0.490000009536743" LeftValue="0" />
+          <ux:Keyframe Time="26.8822549739686" Value="0" />
+          <ux:Keyframe Time="28.8822549739686" RightValue="1" LeftValue="-0.0499999821186066" />
+          <ux:Keyframe Time="30.3822549739686" Value="0" />
+          <ux:Keyframe Time="32.6322549739686" RightValue="4.69188261032104" LeftValue="0" />
+          <ux:Keyframe Time="34.6322549739686" Value="0" />
+          <ux:Keyframe Time="46.9275044515942" Value="0" />
+          <ux:Keyframe Time="46.9922376048345" Value="2.59999990463257" />
+          <ux:Keyframe Time="47.6118263572781" Value="0" />
+          <ux:Keyframe Time="77.75" RightValue="-3.72635579109192" LeftValue="0" />
+          <ux:Keyframe Time="80" Value="0" />
+          <ux:Keyframe Time="81.5" RightValue="1.20999991893768" LeftValue="0" />
+          <ux:Keyframe Time="83.5" Value="0" />
+          <ux:Keyframe Time="85" RightValue="0" LeftValue="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="SinFreq">
+          <ux:Keyframe Time="13.8822549739686" RightValue="2.42067456245422" LeftValue="1.46000003814697" />
+          <ux:Keyframe Time="14.3822549739686" Value="1.46000003814697" />
+          <ux:Keyframe Time="17.8822549739686" Value="2.42000007629395" />
+          <ux:Keyframe Time="19.8822549739686" Value="1.46000003814697" />
+          <ux:Keyframe Time="21.3822549739686" RightValue="2.42000007629395" LeftValue="1.45999997854233" />
+          <ux:Keyframe Time="23.3822549739686" Value="1.46000003814697" />
+          <ux:Keyframe Time="25.1986442847801" RightValue="1.46000003814697" LeftValue="1.46000003814697" />
+          <ux:Keyframe Time="26.8822549739686" Value="2.42000007629395" />
+          <ux:Keyframe Time="28.8822549739686" RightValue="1.96000003814697" LeftValue="2.09000015258789" />
+          <ux:Keyframe Time="30.3822549739686" Value="2.61999988555908" />
+          <ux:Keyframe Time="32.6322549739686" RightValue="1.61999988555908" LeftValue="2.61999988555908" />
+          <ux:Keyframe Time="34.6322549739686" Value="2.58999991416931" />
+          <ux:Keyframe Time="77.75" RightValue="2.58999991416931" LeftValue="2.58999991416931" />
+          <ux:Keyframe Time="85" RightValue="2.63336396217346" LeftValue="2.58999991416931" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="SinNoise">
+          <ux:Keyframe Time="13.8822549739686" RightValue="2.22797775268555" LeftValue="5.61999988555908" />
+          <ux:Keyframe Time="14.3822549739686" Value="5.61999988555908" />
+          <ux:Keyframe Time="17.8822549739686" Value="2.23000001907349" />
+          <ux:Keyframe Time="19.8822549739686" Value="5.61999988555908" />
+          <ux:Keyframe Time="21.3822549739686" RightValue="2.23000001907349" LeftValue="5.61999988555908" />
+          <ux:Keyframe Time="23.3822549739686" Value="5.61999988555908" />
+          <ux:Keyframe Time="25.1986442847801" RightValue="5.61999988555908" LeftValue="5.61999988555908" />
+          <ux:Keyframe Time="26.8822549739686" Value="10" />
+          <ux:Keyframe Time="28.8822549739686" RightValue="5.82338762283325" LeftValue="10" />
+          <ux:Keyframe Time="30.3822549739686" Value="0.103387832641602" />
+          <ux:Keyframe Time="32.6322549739686" RightValue="0.223387822508812" LeftValue="0.103387832641602" />
+          <ux:Keyframe Time="34.6322549739686" Value="0.223387822508812" />
+          <ux:Keyframe Time="77.75" RightValue="0.223387822508812" LeftValue="0.223387822508812" />
+          <ux:Keyframe Time="85" RightValue="1.513387799263" LeftValue="0.223387822508812" />
+        </ux:FloatTrack>
+        <ux:VectorTrack Name="OverlayColor">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="18.6322549739686" Value="1" />
+            <ux:Keyframe Time="61.8946353741904" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="63.75" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="76.75" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="81.5" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="103.403868565971" RightValue="0.359999984502792" LeftValue="1" />
+            <ux:Keyframe Time="111.5" Value="0" />
+            <ux:Keyframe Time="121.953529729735" Value="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="18.6322549739686" Value="1" />
+            <ux:Keyframe Time="61.8946353741904" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="63.75" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="76.75" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="81.5" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="103.403868565971" RightValue="1" LeftValue="1" />
+            <ux:Keyframe Time="111.5" Value="0" />
+            <ux:Keyframe Time="121.953529729735" Value="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="18.6322549739686" Value="1" />
+            <ux:Keyframe Time="61.8946353741904" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="63.75" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="76.75" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="81.5" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="103.403868565971" RightValue="1.27999997138977" LeftValue="1" />
+            <ux:Keyframe Time="111.5" Value="0" />
+            <ux:Keyframe Time="121.953529729735" Value="0" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="W">
+            <ux:Keyframe Time="18.6322549739686" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="18.8822549739686" Value="0" />
+            <ux:Keyframe Time="20.6322549739686" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="20.8822549739686" Value="0" />
+            <ux:Keyframe Time="22.3822549739686" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="22.6322549739686" Value="0" />
+            <ux:Keyframe Time="24.2600517961781" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="24.5100517961781" Value="0" />
+            <ux:Keyframe Time="26.1322549739686" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="26.3822549739686" Value="0" />
+            <ux:Keyframe Time="28.0011702262517" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="28.2769423162829" Value="0" />
+            <ux:Keyframe Time="29.8822549739686" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="30.1322549739686" Value="0" />
+            <ux:Keyframe Time="31.75" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="31.9980244631448" Value="0" />
+            <ux:Keyframe Time="45.8335433202391" RightValue="1.71999990940094" LeftValue="0" />
+            <ux:Keyframe Time="47" RightValue="0" LeftValue="0" />
+            <ux:Keyframe Time="47.2974081843963" Value="1" />
+            <ux:Keyframe Time="47.6118263572781" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="50.6188236928758" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="51" Value="0" />
+            <ux:Keyframe Time="52.5" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="52.75" Value="0" />
+            <ux:Keyframe Time="54.25" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="54.5" Value="0" />
+            <ux:Keyframe Time="56.25" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="56.5" Value="0" />
+            <ux:Keyframe Time="58" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="58.25" Value="0" />
+            <ux:Keyframe Time="60" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="60.25" Value="0" />
+            <ux:Keyframe Time="61.8946353741904" RightValue="0" LeftValue="0" />
+            <ux:Keyframe Time="62.3333708862655" Value="1" />
+            <ux:Keyframe Time="63" RightValue="0" LeftValue="1" />
+            <ux:Keyframe Time="63.75" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="64" Value="0" />
+            <ux:Keyframe Time="65.5" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="65.75" Value="0" />
+            <ux:Keyframe Time="67.5" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="67.75" Value="0" />
+            <ux:Keyframe Time="69.400519861975" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="69.6249646151847" Value="0" />
+            <ux:Keyframe Time="71.25" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="71.5" Value="0" />
+            <ux:Keyframe Time="73" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="73.25" Value="0" />
+            <ux:Keyframe Time="75" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="75.25" Value="0" />
+            <ux:Keyframe Time="76.75" RightValue="0" LeftValue="0" />
+            <ux:Keyframe Time="76.854970108832" Value="1" />
+            <ux:Keyframe Time="77.75" RightValue="1" LeftValue="1" />
+            <ux:Keyframe Time="77.8957030572857" Value="0" />
+            <ux:Keyframe Time="81.5" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="82" Value="0" />
+            <ux:Keyframe Time="85" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="86" Value="0" />
+            <ux:Keyframe Time="103.403868565971" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="106.167232688023" Value="0" />
+            <ux:Keyframe Time="111.5" RightValue="0.5" LeftValue="0" />
+            <ux:Keyframe Time="111.75" Value="0" />
+            <ux:Keyframe Time="115.25" RightValue="0.75" LeftValue="0" />
+            <ux:Keyframe Time="115.75" Value="0" />
+            <ux:Keyframe Time="119" RightValue="0.899999976158142" LeftValue="0" />
+            <ux:Keyframe Time="120.25" Value="0" />
+            <ux:Keyframe Time="121.953529729735" Value="0" />
+            <ux:Keyframe Time="124" RightValue="0" LeftValue="1" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:FloatTrack Name="Alpha">
+          <ux:Keyframe Time="1.25" Value="0" />
+          <ux:Keyframe Time="2.75" Value="1" />
+          <ux:Keyframe Time="4" Value="1" />
+          <ux:Keyframe Time="5.5" Value="0" />
+          <ux:Keyframe Time="124" Value="0" />
+          <ux:Keyframe Time="124.25" Value="1" />
+          <ux:Keyframe Time="126" Value="1" />
+          <ux:Keyframe Time="126.5" Value="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Index">
+          <ux:Keyframe Time="124" RightValue="1" LeftValue="0" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="WowFactory2">
+        <ux:VectorTrack Name="AOColor">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="2.75" Value="0" />
+            <ux:Keyframe Time="8" Value="0.200000002980232" />
+            <ux:Keyframe Time="124" RightValue="0" LeftValue="0.200000002980232" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="2.75" Value="0" />
+            <ux:Keyframe Time="8" Value="0.200000002980232" />
+            <ux:Keyframe Time="124" RightValue="0" LeftValue="0.200000002980232" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="2.75" Value="0" />
+            <ux:Keyframe Time="8" Value="0.200000002980232" />
+            <ux:Keyframe Time="124" RightValue="0" LeftValue="0.200000002980232" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="CameraControl1">
+        <ux:FloatTrack Name="CameraIndex">
+          <ux:Keyframe Time="0" Value="1" />
+          <ux:Keyframe Time="77.75" RightValue="0" LeftValue="1" />
+          <ux:Keyframe Time="93.4041894000002" RightValue="1" LeftValue="0" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="EnableSpinner">
+          <ux:Keyframe Time="77.75" RightValue="1" LeftValue="0" />
+          <ux:Keyframe Time="93.4041894000002" RightValue="0" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="GameTime">
+          <ux:Keyframe Time="0" Value="0" />
+          <ux:Keyframe Time="124" Value="124" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="GreetPanel1">
+        <ux:NodeTrack Name="GreetBrush1">
+          <ux:VectorTrack Name="StartColor">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.749019622802734" LeftValue="0.749019622802734" />
+              <ux:Keyframe Time="19.8822549739686" Value="0.749086286872625" />
+              <ux:Keyframe Time="23.75" Value="2.27921509742737" />
+              <ux:Keyframe Time="27.75" Value="0.509447336196899" />
+              <ux:Keyframe Time="32.25" Value="1.50482487678528" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="1" LeftValue="0.75" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="0.75" LeftValue="1" />
+              <ux:Keyframe Time="52.5" Value="0.75" />
+              <ux:Keyframe Time="56" Value="0.75" />
+              <ux:Keyframe Time="59.5" Value="0.0299999713897705" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.168627500534058" LeftValue="0.168627500534058" />
+              <ux:Keyframe Time="19.8822549739686" Value="1" />
+              <ux:Keyframe Time="23.75" Value="0.882903136312962" />
+              <ux:Keyframe Time="27.75" Value="0.0918022394180298" />
+              <ux:Keyframe Time="32.25" Value="0.0198041126132011" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="0" LeftValue="0.170000001788139" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="0.170000001788139" LeftValue="0" />
+              <ux:Keyframe Time="52.5" Value="0.170000001788139" />
+              <ux:Keyframe Time="56" Value="-0.109999999403954" />
+              <ux:Keyframe Time="59.5" Value="-0.109999999403954" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.168627500534058" LeftValue="0.168627500534058" />
+              <ux:Keyframe Time="19.8822549739686" Value="0.16872082836926" />
+              <ux:Keyframe Time="23.75" Value="0.168901287019253" />
+              <ux:Keyframe Time="27.75" Value="0.859087944030762" />
+              <ux:Keyframe Time="32.25" Value="0.700453329831362" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="1" LeftValue="0.170000001788139" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="0.170000001788139" LeftValue="1" />
+              <ux:Keyframe Time="52.5" Value="0.689999997615814" />
+              <ux:Keyframe Time="56" Value="0.189999997615814" />
+              <ux:Keyframe Time="59.5" Value="0.319999992847443" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="EndColor">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.607843220233917" LeftValue="0.607843220233917" />
+              <ux:Keyframe Time="21.75" Value="0" />
+              <ux:Keyframe Time="25.5" Value="0.0895394161343575" />
+              <ux:Keyframe Time="29.75" Value="0.821017384529114" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="1" LeftValue="0.610000014305115" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="1" LeftValue="1" />
+              <ux:Keyframe Time="52.5" Value="0.610000014305115" />
+              <ux:Keyframe Time="54.25" Value="0.0600000023841858" />
+              <ux:Keyframe Time="57.5" Value="1.07999992370605" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.513725519180298" LeftValue="0.513725519180298" />
+              <ux:Keyframe Time="21.75" Value="0.513725519180298" />
+              <ux:Keyframe Time="25.5" Value="0.513725511729717" />
+              <ux:Keyframe Time="29.75" Value="0.91372549533844" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="0" LeftValue="0.513725519180298" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="0" LeftValue="0" />
+              <ux:Keyframe Time="52.5" Value="0.509999990463257" />
+              <ux:Keyframe Time="54.25" Value="0.809999942779541" />
+              <ux:Keyframe Time="57.5" Value="0.809999942779541" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="17.8822549739686" RightValue="0.0588235296308994" LeftValue="0.0588235296308994" />
+              <ux:Keyframe Time="21.75" Value="0.668823540210724" />
+              <ux:Keyframe Time="25.5" Value="1.1692841053009" />
+              <ux:Keyframe Time="29.75" Value="0.952769526280463" />
+              <ux:Keyframe Time="47.2974081843963" RightValue="1" LeftValue="0.0588235296308994" />
+              <ux:Keyframe Time="50.6188236928758" RightValue="1" LeftValue="1" />
+              <ux:Keyframe Time="52.5" Value="0.100000001490116" />
+              <ux:Keyframe Time="54.25" Value="0.100000001490116" />
+              <ux:Keyframe Time="57.5" Value="0.0600000023841858" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:FloatTrack Name="Alpha">
+            <ux:Keyframe Time="17.8822549739686" RightValue="0.675280928611755" LeftValue="0" />
+            <ux:Keyframe Time="33.9972396939902" RightValue="0.675280928611755" LeftValue="0.675280928611755" />
+            <ux:Keyframe Time="35.6255258876268" Value="0" />
+            <ux:Keyframe Time="47.2974081843963" RightValue="0.899999976158142" LeftValue="0" />
+            <ux:Keyframe Time="50.6188236928758" RightValue="0.899999976158142" LeftValue="0.899999976158142" />
+            <ux:Keyframe Time="62.3333708862655" RightValue="0" LeftValue="0.899999976158142" />
+          </ux:FloatTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="GroupController1">
+        <ux:VectorTrack Name="Color">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="17.8822549739686" RightValue="1" LeftValue="1" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="17.8822549739686" RightValue="1" LeftValue="1" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="17.8822549739686" RightValue="1" LeftValue="1" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="W">
+            <ux:Keyframe Time="17.8822549739686" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="33.9972396939902" RightValue="1" LeftValue="1" />
+            <ux:Keyframe Time="36.3913982753879" Value="0" />
+            <ux:Keyframe Time="47.2974081843963" RightValue="1" LeftValue="0" />
+            <ux:Keyframe Time="50.6188236928758" Value="1" />
+            <ux:Keyframe Time="62.3333708862655" RightValue="0" LeftValue="1" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:FloatTrack Name="Index">
+          <ux:Keyframe Time="17.8822549739686" Value="0" />
+          <ux:Keyframe Time="32.8822549739686" Value="11" />
+          <ux:Keyframe Time="47.2974081843963" RightValue="12.5" LeftValue="11" />
+          <ux:Keyframe Time="50.6188236928758" RightValue="13" LeftValue="12.5" />
+          <ux:Keyframe Time="52.5" Value="14" />
+          <ux:Keyframe Time="60" Value="20" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="TunnelBatch1">
+        <ux:FloatTrack Name="Freq">
+          <ux:Keyframe Time="0" Value="10" />
+          <ux:Keyframe Time="34.6322549739686" RightValue="10" LeftValue="10" />
+          <ux:Keyframe Time="47" Value="1.36794871091843" />
+          <ux:Keyframe Time="48" RightValue="0.469999998807907" LeftValue="-0.28999999165535" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Amp">
+          <ux:Keyframe Time="0" Value="50" />
+          <ux:Keyframe Time="34.6322549739686" RightValue="50" LeftValue="50" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const1">
+          <ux:Keyframe Time="44" RightValue="0" LeftValue="0" Easing="RampIn" />
+          <ux:Keyframe Time="48" RightValue="48.4422225952148" LeftValue="14.4610939025879" />
+          <ux:Keyframe Time="51.5" RightValue="339.678985595703" LeftValue="468.540924072266" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const2">
+          <ux:Keyframe Time="44" RightValue="0.140000000596046" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const3">
+          <ux:Keyframe Time="44" RightValue="0.0799999982118607" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const4">
+          <ux:Keyframe Time="44" RightValue="0" LeftValue="0" />
+          <ux:Keyframe Time="51.5" RightValue="400" LeftValue="163.530029296875" />
+          <ux:Keyframe Time="54.7010815697912" Value="1055.93127441406" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="NewNodeSwitcher1">
+        <ux:FloatTrack Name="CurrentNodeIndex">
+          <ux:Keyframe Time="0" Value="1" />
+          <ux:Keyframe Time="47.6023534872377" RightValue="2" LeftValue="1" />
+          <ux:Keyframe Time="77.75" RightValue="3.5" LeftValue="2" />
+          <ux:Keyframe Time="103.5" RightValue="0" LeftValue="3.5" />
+          <ux:Keyframe Time="124" RightValue="1" LeftValue="0" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="GlowBatch1">
+        <ux:VectorTrack Name="GlowColor">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="47.6023534872377" Value="0.752941191196442" />
+            <ux:Keyframe Time="50" Value="0.200000002980232" />
+            <ux:Keyframe Time="51" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="51.5" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="51.75" RightValue="1" LeftValue="1" />
+            <ux:Keyframe Time="52" Value="0.200000002980232" />
+            <ux:Keyframe Time="53.5" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="53.75" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="54" Value="0.200000002980232" />
+            <ux:Keyframe Time="66.25" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="66.5" Value="0.200000002980232" />
+            <ux:Keyframe Time="66.75" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="67.25" Value="0.400000005960464" />
+            <ux:Keyframe Time="70.5" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="70.75" Value="0.200000002980232" />
+            <ux:Keyframe Time="71" RightValue="0.400000005960464" LeftValue="1" />
+            <ux:Keyframe Time="74" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="74.25" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="74.5" Value="0.400000005960464" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="47.6023534872377" Value="0.752941191196442" />
+            <ux:Keyframe Time="50" Value="0.200000002980232" />
+            <ux:Keyframe Time="51" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="51.5" RightValue="0.200000002980232" LeftValue="1" />
+            <ux:Keyframe Time="51.75" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="52" Value="0.200000002980232" />
+            <ux:Keyframe Time="53.5" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.3217177019725" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.5717177019725" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.8217177019725" Value="0.200000002980232" />
+            <ux:Keyframe Time="59.25" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="59.5" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="59.75" Value="0.200000002980232" />
+            <ux:Keyframe Time="66.25" RightValue="0.400000005960464" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="68.5" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="68.75" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="69" Value="0.400000005960464" />
+            <ux:Keyframe Time="74" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="74.25" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="74.5" Value="0.400000005960464" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="47.6023534872377" Value="0.752941191196442" />
+            <ux:Keyframe Time="50" Value="0.200000002980232" />
+            <ux:Keyframe Time="51" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="51.5" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="51.75" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="52" Value="0.200000002980232" />
+            <ux:Keyframe Time="53.5" RightValue="0.200000002980232" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.3217177019725" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.5717177019725" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="55.8217177019725" Value="0.200000002980232" />
+            <ux:Keyframe Time="59.25" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="59.5" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="59.75" Value="0.200000002980232" />
+            <ux:Keyframe Time="66.25" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="66.5" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="66.75" Value="0.400000005960464" />
+            <ux:Keyframe Time="70.5" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="70.75" Value="0.200000002980232" />
+            <ux:Keyframe Time="71" RightValue="0.400000005960464" LeftValue="1" />
+            <ux:Keyframe Time="74" RightValue="1" LeftValue="0.400000005960464" />
+            <ux:Keyframe Time="74.25" RightValue="1" LeftValue="0.200000002980232" />
+            <ux:Keyframe Time="74.5" Value="0.400000005960464" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:VectorTrack Name="NoColor">
+          <ux:FloatTrack Name="X">
+            <ux:Keyframe Time="47.6023534872377" Value="0.26274511218071" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Y">
+            <ux:Keyframe Time="47.6023534872377" Value="0.26274511218071" />
+          </ux:FloatTrack>
+          <ux:FloatTrack Name="Z">
+            <ux:Keyframe Time="47.6023534872377" Value="0.26274511218071" />
+          </ux:FloatTrack>
+        </ux:VectorTrack>
+        <ux:FloatTrack Name="Const1">
+          <ux:Keyframe Time="47.6023534872377" Value="16.8539295196533" />
+          <ux:Keyframe Time="52.5" RightValue="243.487426757813" LeftValue="113.07258605957" />
+          <ux:Keyframe Time="56.25" RightValue="113.07258605957" LeftValue="113.07258605957" />
+          <ux:Keyframe Time="63" RightValue="0" LeftValue="445.367858886719" />
+          <ux:Keyframe Time="77.75" Value="274.530120849609" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const4">
+          <ux:Keyframe Time="47.6023534872377" Value="62.9213485717773" />
+          <ux:Keyframe Time="52.5" Value="357.6337890625" />
+          <ux:Keyframe Time="56.25" RightValue="62.9213485717773" LeftValue="62.9213485717773" />
+          <ux:Keyframe Time="63" RightValue="0" LeftValue="62.9213485717773" />
+          <ux:Keyframe Time="68" Value="0" Easing="RampIn" />
+          <ux:Keyframe Time="77.75" Value="-467.690216064453" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const2">
+          <ux:Keyframe Time="56.25" RightValue="1.63999998569489" LeftValue="1" />
+        </ux:FloatTrack>
+        <ux:FloatTrack Name="Const3">
+          <ux:Keyframe Time="56.25" RightValue="1" LeftValue="1" />
+        </ux:FloatTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="Frustum1">
+        <ux:NodeTrack Name="Transform4">
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="77.75" RightValue="0" LeftValue="0" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="-204.587936401367" LeftValue="0" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="-37.7688827514648" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="77.75" RightValue="-70.6358947753906" LeftValue="0" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="-231.534057617188" LeftValue="-70.6358947753906" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="-49.1012992858887" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="77.75" RightValue="21.743350982666" LeftValue="0" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="18.6326522827148" LeftValue="21.743350982666" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="19.0299186706543" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="RotationDegrees">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="77.75" RightValue="-262.743194580078" LeftValue="-260" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="-315.725189208984" LeftValue="-262.743194580078" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="-315.725189208984" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="77.75" RightValue="175.259201049805" LeftValue="179" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="282.402221679688" LeftValue="175.259201049805" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="282.402221679688" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="77.75" RightValue="-184.278701782227" LeftValue="-151.190399169922" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="-79.8366241455078" LeftValue="-184.278701782227" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="277.419342041016" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="PointLight1">
+        <ux:NodeTrack Name="Transform11">
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="85" RightValue="-474.788208007813" LeftValue="-10" />
+              <ux:Keyframe Time="89" Value="-400" />
+              <ux:Keyframe Time="92" Value="198.039901733398" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="0" LeftValue="198.039901733398" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="85" RightValue="0" LeftValue="0" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="0" LeftValue="0" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="85" RightValue="37" LeftValue="37" />
+              <ux:Keyframe Time="93.4041894000002" RightValue="37" LeftValue="37" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+        <ux:NodeTrack Name="PointLight1PointLight">
+          <ux:FloatTrack Name="Range">
+            <ux:Keyframe Time="93.4041894000002" RightValue="0" LeftValue="110.112396240234" />
+            <ux:Keyframe Time="93.75" Value="110" />
+          </ux:FloatTrack>
+          <ux:VectorTrack Name="Color">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="93.4041894000002" RightValue="1" LeftValue="1" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="93.4041894000002" RightValue="0.478431403636932" LeftValue="0.478431403636932" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="93.4041894000002" RightValue="0.149019598960876" LeftValue="0.149019598960876" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+      <ux:NodeTrack Name="CubeRenderer1">
+        <ux:NodeTrack Name="CubeRenderer1CubeRenderer">
+          <ux:NodeTrack Name="DefaultMaterial2">
+            <ux:VectorTrack Name="EmissiveColor">
+              <ux:FloatTrack Name="X">
+                <ux:Keyframe Time="93.4041894000002" Value="0" />
+                <ux:Keyframe Time="99.7612787776471" Value="0" />
+              </ux:FloatTrack>
+              <ux:FloatTrack Name="Y">
+                <ux:Keyframe Time="93.4041894000002" Value="0" />
+                <ux:Keyframe Time="99.7612787776471" Value="1" />
+              </ux:FloatTrack>
+              <ux:FloatTrack Name="Z">
+                <ux:Keyframe Time="93.4041894000002" Value="0" />
+                <ux:Keyframe Time="99.7612787776471" Value="0.862745106220245" />
+              </ux:FloatTrack>
+            </ux:VectorTrack>
+          </ux:NodeTrack>
+        </ux:NodeTrack>
+        <ux:NodeTrack Name="Transform12">
+          <ux:VectorTrack Name="Position">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="93.4041894000002" Value="0" />
+              <ux:Keyframe Time="99.7612787776471" Value="0" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="93.4041894000002" Value="0" />
+              <ux:Keyframe Time="99.7612787776471" Value="0" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="93.4041894000002" Value="-67.1154022216797" Easing="RampOut" />
+              <ux:Keyframe Time="99.7612787776471" Value="20.0301475524902" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="RotationDegrees">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="93.4041894000002" Value="0" />
+              <ux:Keyframe Time="104" Value="300" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="93.4041894000002" Value="0" />
+              <ux:Keyframe Time="104" Value="300" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="93.4041894000002" Value="0" />
+              <ux:Keyframe Time="104" Value="300" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+          <ux:VectorTrack Name="Scaling">
+            <ux:FloatTrack Name="X">
+              <ux:Keyframe Time="97.7879916474331" Value="1" Easing="RampIn" />
+              <ux:Keyframe Time="104" Value="10" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Y">
+              <ux:Keyframe Time="97.7879916474331" Value="1" Easing="RampIn" />
+              <ux:Keyframe Time="104" Value="10" />
+            </ux:FloatTrack>
+            <ux:FloatTrack Name="Z">
+              <ux:Keyframe Time="97.7879916474331" Value="1" Easing="RampIn" />
+              <ux:Keyframe Time="104" Value="10" />
+            </ux:FloatTrack>
+          </ux:VectorTrack>
+        </ux:NodeTrack>
+      </ux:NodeTrack>
+    </Animation>
+  </u:MusicPlayer>
+  <Animation ux:Ref="uxid0" />
+  <u:CameraControl GameTime="0" EnableSpinner="0" Radius="126.4045" Speed="0.2247191" Height="44.94382" CameraIndex="0" ux:Name="CameraControl1">
+    <Entity ux:Binding="Cameras" ux:AutoBind="false" ux:Name="Camera1">
+      <Transform Position="-76.22715, 100.8341, 44.94382" RotationDegrees="336.1525, 309.2168, 251.7402" ux:Name="uxid0" />
+      <Frustum FovDegrees="45" Aspect="2.4" ZNear="10" ZFar="5000" />
+    </Entity>
+    <Entity ux:Binding="Cameras" ux:AutoBind="false" ux:Name="Frustum1">
+      <Frustum FovDegrees="45" ZFar="2900" ux:Name="Frustum1Frustum" />
+      <Transform Position="0, 0, 0" RotationDegrees="-260, 179, -151.1904" ux:Name="Transform4" />
+    </Entity>
+  </u:CameraControl>
+  <u:Postproc ClearColor="0.2627451, 0.2627451, 0.2627451" Alpha="0" Flicker="0" postProc="1" ScanAlpha="0.3483146" RGBDist="0.04044944" RGBAngle="0" SinAmp="0" SinFreq="1.910112" SinNoise="1.685393" SinRoll="0" OverlayColor="1, 1, 1, 0" OverlayFlicker="0" ux:Name="Postproc1">
+    <u:NewNodeSwitcher CurrentNodeIndex="1" ux:Name="NewNodeSwitcher1">
+      <owf:WowFactory AOColor="0.5490196, 0.5490196, 0.5490196" AOEnabled="true" AOMultiplier="4.662921" AOExponent="1.775281" AORadius="10.67416" BBEnabled="true" GEnabled="true" ux:Name="WowFactory1">
+        <Entity ux:Name="SpotLight1">
+          <SpotLight Color="1, 1, 1" Multiplier="0.2134831" CastShadow="true" ShadowMapDepthBias="2.747191" ShowDesignerSprite="true" ux:Name="SpotLight1SpotLight" />
+          <Transform Position="0, 0, 97.01907" ux:Name="Transform5" />
+        </Entity>
+        <Entity ux:Name="Squid">
+          <Entity ux:Name="Entity12">
+            <Entity ux:Name="Entity13">
+              <MeshRenderer ux:Name="MeshRenderer8">
+                <Mesh ux:Name="Mesh2" ux:MeshIndex="0" ux:Path="Assets/Squid.fbx" />
+              </MeshRenderer>
+            </Entity>
+          </Entity>
+          <MeshRenderer ux:Name="MeshRenderer7">
+            <u:DistortMaterial Amplitude="1.460675" Frequence="3.595506" Coords="0, 0, 1" DiffuseColor="1, 0.5568628, 0.9921569" SpecularColor="1, 1, 1" ux:Name="DistortMaterial1" />
+          </MeshRenderer>
+          <Transform Position="0, 0, 0" Scaling="10, 10, 10" ux:Name="Transform7" />
+          <DefaultMaterial ux:AutoBind="false" DiffuseColor="0.3116468, 0.3415853, 0.5255432" ux:Name="DefaultMaterial4" />
+        </Entity>
+        <Entity ux:Name="Box">
+          <Entity ux:Name="Entity2">
+            <Entity ux:Name="Entity3">
+              <Transform Position="0, 0, 0" RotationDegrees="270, 0, 0" Scaling="1, 1, 1" ux:Name="Transform3" />
+              <MeshRenderer ux:Name="MeshRenderer2">
+                <Mesh ux:Name="Mesh1" ux:MeshIndex="0" ux:Path="Assets/skybox.DAE" />
+              </MeshRenderer>
+            </Entity>
+          </Entity>
+          <MeshRenderer ux:Name="MeshRenderer1">
+            <DefaultMaterial DiffuseColor="0.2156863, 0.9882353, 1" SpecularColor="1, 1, 1" Shininess="6" IsEmissive="true" EmissiveColor="0.08627451, 0.2784314, 0.2941177" ux:Name="DefaultMaterial1">
+              <texture2D ux:Binding="DiffuseMap" ux:Name="Perlin.png" ux:Path="Assets/Perlin.png" />
+            </DefaultMaterial>
+          </MeshRenderer>
+          <Transform Position="0, 0, 0" Scaling="2, 2, 1.25" ux:Name="Transform1" />
+        </Entity>
+      </owf:WowFactory>
+      <owf:WowFactory Enabled="true" AOColor="0.1607843, 0.1607843, 0.1607843" AOEnabled="true" AOMaxScreenRadius="0.24" DOFPasses="5" CCEnabled="false" DOFEnabled="true" DOFFocusRange="1000" DOFFocusOffset="0" GEnabled="false" ux:Name="WowFactory2">
+        <u:TunnelBatch Freq="1" Amp="158" CubeScale="6" cubeScale="1" scaleRandomScale="0.5" cubeSpacing="10" positionRandomScale="5" circleSize="128.4494" cubeLength="4.129213" Const2="1" Const3="1" ux:Name="TunnelBatch1">
+          <Transform Position="0, 0, 0" ux:Name="Transform2" />
+        </u:TunnelBatch>
+        <Entity ux:Name="PointLight2">
+          <PointLight Range="112.3596" Color="0.8, 0.1607843, 0" Multiplier="3.808989" CastShadow="false" ShowDesignerSprite="false" ux:Name="PointLight2PointLight" />
+          <Transform Position="0, 0, 0" ux:Name="Transform10" />
+        </Entity>
+      </owf:WowFactory>
+      <owf:WowFactory AOColor="0.8941177, 0.8941177, 0.8941177" DOFEnabled="true" DOFFocusRange="10000" DOFFocusOffset="0" GEnabled="true" ux:Name="WowFactory3">
+        <g:GlowBatch Freq="0.8539327" Amp="50" RandSeed="62" GlowColor="0.7529412, 0.7529412, 0.7529412" NoColor="0.2627451, 0.2627451, 0.2627451" Const1="16.85393" Const2="1" Const3="1" Const4="62.92135" ux:Name="GlowBatch1">
+          <Transform ux:Name="Transform6" />
+        </g:GlowBatch>
+      </owf:WowFactory>
+      <owf:WowFactory Enabled="true" AOColor="0, 0, 0" DOFEnabled="true" DOFFocusRange="1000" GEnabled="true" ux:Name="WowFactory4">
+        <mb:ModelBatcher ux:Name="ModelBatcher1">
+          <Transform ux:Name="Transform8" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetY="-49" ux:Name="ModelBatcher2">
+          <Transform ux:Name="Transform9" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="-49" offsetY="-49" ux:Name="ModelBatcher Copy 2">
+          <Transform ux:Name="Transform9" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="-49" ux:Name="ModelBatcher Copy">
+          <Transform ux:Name="Transform8" />
+        </mb:ModelBatcher>
+        <Entity ux:Name="PointLight1">
+          <PointLight Range="110.1124" Color="1, 0.4784314, 0.1490196" Multiplier="1.11236" ux:Name="PointLight1PointLight" />
+          <Transform Position="-10, 0, 37" ux:Name="Transform11" />
+        </Entity>
+        <mb:ModelBatcher offsetX="-98" offsetY="-49" ux:Name="ModelBatcher Copy 3">
+          <Transform ux:Name="Transform9" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="-98" ux:Name="ModelBatcher Copy 4">
+          <Transform ux:Name="Transform8" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="-98" offsetY="-98" ux:Name="ModelBatcher Copy 5">
+          <Transform ux:Name="Transform9" />
+          <Transform ux:AutoBind="false" ux:Name="Transform92" />
+          <Transform ux:AutoBind="false" ux:Name="Transform92" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="-49" offsetY="-98" ux:Name="ModelBatcher Copy 6">
+          <Transform ux:Name="Transform8" />
+        </mb:ModelBatcher>
+        <mb:ModelBatcher offsetX="0" offsetY="-98" ux:Name="ModelBatcher Copy 7">
+          <Transform ux:Name="Transform8" />
+          <Transform ux:AutoBind="false" ux:Name="Transform82" />
+          <Transform ux:AutoBind="false" ux:Name="Transform82" />
+          <Transform ux:AutoBind="false" ux:Name="Transform82" />
+        </mb:ModelBatcher>
+        <Entity ux:Name="CubeRenderer1">
+          <usp:CubeRenderer ux:Name="CubeRenderer1CubeRenderer">
+            <DefaultMaterial DiffuseColor="0, 1, 0.7843137" SpecularColor="0, 1, 0.8196079" Shininess="4.044944" IsEmissive="true" EmissiveColor="0, 1, 0.8627451" ux:Name="DefaultMaterial2" />
+          </usp:CubeRenderer>
+          <Transform Position="0, 0, 20.03015" ux:Name="Transform12" />
+        </Entity>
+      </owf:WowFactory>
+    </u:NewNodeSwitcher>
+    <u:GreetPanel Orientation="Vertical" Width="500" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" Color="0.7294118, 0.06666667, 0.06666667, 0" ForegroundColor="0.5568628, 0.1647059, 0.1647059, 0.627451" ux:Name="GreetPanel1">
+      <u:CustomTextBlock Value="Foobar" TextAlignment="Center" Margin="10, 10, 10, 10" Padding="0, 0, 0, 0" FontSize="25" ForegroundColor="1, 1, 1, 1" ux:Name="AtomNumber">
+        <ux:PropertyBinding Destination="Value" SourceRef="GroupController1" SourceProperty="Number" />
+        <ux:PropertyBinding Destination="FuckbarColorFaen" SourceRef="GroupController1" SourceProperty="Color" />
+        <Brush ux:Binding="Brush" ux:Name="Brush1" />
+      </u:CustomTextBlock>
+      <u:CustomTextBlock TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="0, 110, 0, 0" FontSize="100" ForegroundColor="1, 1, 1, 1" ux:Name="ChemicalSymbol">
+        <ux:PropertyBinding Destination="Value" SourceRef="GroupController1" SourceProperty="Short" />
+        <ux:PropertyBinding Destination="FuckbarColorFaen" SourceRef="GroupController1" SourceProperty="Color" />
+        <Brush ux:Binding="Brush" ux:Ref="Brush1" />
+      </u:CustomTextBlock>
+      <u:CustomTextBlock TextAlignment="Stretch" HorizontalAlignment="Center" Margin="0, 45, 0, 0" FontSize="60" ForegroundColor="1, 1, 1, 1" ux:Name="Name">
+        <ux:PropertyBinding Destination="Value" SourceRef="GroupController1" SourceProperty="Name" />
+        <ux:PropertyBinding Destination="FuckbarColorFaen" SourceRef="GroupController1" SourceProperty="Color" />
+        <Brush ux:Binding="Brush" ux:Ref="Brush1" />
+      </u:CustomTextBlock>
+      <u:CustomTextBlock HorizontalAlignment="Center" Margin="0, 0, 0, 0" FontSize="40" ForegroundColor="1, 1, 1, 1" ux:Name="Density">
+        <ux:PropertyBinding Destination="Value" SourceRef="GroupController1" SourceProperty="Density" />
+        <ux:PropertyBinding Destination="FuckbarColorFaen" SourceRef="GroupController1" SourceProperty="Color" />
+        <Brush ux:Binding="Brush" ux:Ref="Brush1" />
+      </u:CustomTextBlock>
+      <u:GreetBrush ux:Binding="Brush" StartColor="0.7490196, 0.1686275, 0.1686275" EndColor="0.6078432, 0.5137255, 0.05882353" Alpha="0.6752809" ux:Name="GreetBrush1" />
+    </u:GreetPanel>
+  </u:Postproc>
+  <Style ux:Name="Style1" ux:StaticRef="Uno.UI.DefaultStyle.Style" />
+  <u:GroupController ux:AutoBind="false" Index="17" Color="1, 1, 1, 1" ux:Name="GroupController1" />
+</Scene>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project>
+  <References>
+    <PackageReference Name="Experimental.Audio" Version="0.1.0.0" />
+    <PackageReference Name="Outracks.WowFactory" Version="0.1.0.0" />
+    <PackageReference Name="Uno.Content.Utilities" />
+    <PackageReference Name="Uno.Designer" />
+    <PackageReference Name="Uno.Scenes" />
+    <PackageReference Name="Uno.Styling" />
+    <PackageReference Name="Uno.UI" />
+  </References>
+  <Files>
+    <UxFile Path="Scene1.ux" />
+    <SourceFile Path="CameraControl.uno" />
+    <SourceFile Path="CustomTextBlock.uno" />
+    <SourceFile Path="DistortMaterial.uno" />
+    <SourceFile Path="GlowBatch.uno" />
+    <SourceFile Path="GreetBrush.uno" />
+    <SourceFile Path="GreetPanel.uno" />
+    <SourceFile Path="Group.uno" />
+    <SourceFile Path="GroupController.uno" />
+    <SourceFile Path="ModelBatch.uno" />
+    <SourceFile Path="MusicPlayer.uno" />
+    <SourceFile Path="NewNodeSwitcher.uno" />
+    <SourceFile Path="Postproc.uno" />
+    <SourceFile Path="TunnelBatch.uno" />
+    <ExtraFile Path="Assets/blurrycubemap.jpg" />
+    <ExtraFile Path="Assets/Perlin.png" />
+    <ExtraFile Path="Assets/perlinline.PNG" />
+    <ExtraFile Path="Assets/skybox.DAE" />
+    <ExtraFile Path="Assets/skybox_original_fixed.jpg" />
+    <ExtraFile Path="Assets/Squid.fbx" />
+    <ExtraFile Path="Assets/untitled.fbx" />
+    <ExtraFile Path="Assets/white.png" />
+    <StartupFile Path="Scene1.ux" />
+  </Files>
+</Project>
